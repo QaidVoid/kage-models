@@ -93,25 +93,25 @@ jobs:
       # updated and the site on the previous catalog, which is the safe
       # direction: the TOML is reviewable, the deploy is reproducible.
       #
-      # `--branch main` is a production deployment only while the
-      # project's production branch is `main`; a mismatch would publish
-      # to a preview alias and leave the domain on the old file. The
-      # check below is what turns that silent failure into a loud one.
+      # No `--branch` flag: on a Direct Upload project wrangler treats
+      # any `--branch` value as a request for a *preview* deployment, and
+      # the custom domain keeps serving the previous file. Omitting it
+      # is what deploys to production.
       - name: Deploy to Cloudflare Pages
         run: |
           set -euo pipefail
           npx --yes wrangler@latest pages deploy public \
             --project-name kage-models \
-            --branch main
-          # A production deployment lands in the project's production
-          # environment; a preview one does not, and the custom domain
-          # keeps serving the previous file. Query the environment rather
-          # than parsing wrangler's table output.
+            --commit-hash "$(git rev-parse HEAD)" \
+            --commit-message "$(git log -1 --pretty=%s)"
+          # Confirm the deploy landed in production rather than in a
+          # preview environment: a preview leaves the domain stale while
+          # the run reports success.
           count="$(npx --yes wrangler@latest pages deployment list \
             --project-name kage-models --environment production --json \
             | python3 -c 'import json,sys; print(len(json.load(sys.stdin)))')"
           if [ "$count" -lt 1 ]; then
-            echo "::error::no production deployment exists; models.kage.qaidvoid.dev is not being updated. Check that the project production branch is main."
+            echo "::error::no production deployment exists; models.kage.qaidvoid.dev is not being updated"
             exit 1
           fi
           echo "production deployments: $count"
