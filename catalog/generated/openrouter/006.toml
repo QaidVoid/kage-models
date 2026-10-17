@@ -437,9 +437,9 @@ efforts = [
 release_date = "2026-07-06"
 
 [models.cost]
-input = 0.132
-output = 0.528
-cache_read = 0.033
+input = 0.0825
+output = 0.33
+cache_read = 0.020625
 
 [[models]]
 id = "tencent/hy3-preview"
@@ -475,9 +475,9 @@ efforts = [
 release_date = "2026-08-28"
 
 [models.cost]
-input = 0.834
-output = 2.501
-cache_read = 0.042
+input = 0.7506
+output = 2.2509
+cache_read = 0.0378
 
 [[models]]
 id = "thinkingmachines/inkling"

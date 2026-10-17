@@ -153,9 +153,9 @@ release_date = "2025-12-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.54
-output = 1.98
-cache_read = 0.099
+input = 0.6
+output = 2.2
+cache_read = 0.11
 
 [[models]]
 id = "z-ai/glm-4.7-flash"
@@ -452,7 +452,7 @@ cache_write = 2.5
 id = "~deepseek/deepseek-flash-latest"
 name = "DeepSeek Flash Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = [
     "text",
     "image",
@@ -467,9 +467,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.1
-output = 0.5
-cache_read = 0.002
+input = 0.09
+output = 0.55
+cache_read = 0.008
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -507,9 +507,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.0171
+input = 0.0119
 output = 1.28
-cache_read = 0.0171
+cache_read = 0.0119
 
 [[models]]
 id = "~google/gemini-flash-latest"

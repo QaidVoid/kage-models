@@ -28,6 +28,10 @@
 //!   date with the upstreams. The CI drift gate.
 //! * `bundle`: print the document kage fetches, for publishing.
 //!
+//! `generate` also snapshots each provider's logo into `logos/`, and
+//! `bundle` copies those into the deploy directory, so kage reads them
+//! from here rather than reaching models.dev for an image.
+//!
 //! Every upstream URL can be overridden with `--*-url`, and a `file://`
 //! URL reads a local file, so the whole pipeline runs offline against
 //! the fixtures in `tests/fixtures/`.
@@ -37,7 +41,7 @@ use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
 use clap::{Parser, Subcommand};
-use kage_models::{build, catalog::CuratedProvider, fetch, layout, sources};
+use kage_models::{build, catalog::CuratedProvider, fetch, layout, logos, sources};
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -65,6 +69,11 @@ struct Urls {
     /// Override the `command-code` CLI catalog URL.
     #[arg(long, default_value = sources::COMMAND_CODE_CLI_CATALOG_URL)]
     command_code_cli_url: String,
+    /// Where the provider logos are fetched from, as a directory of
+    /// `<id>.svg` files. A `file://` URL reads local files, which is
+    /// how an offline run supplies them.
+    #[arg(long, default_value = sources::LOGOS_BASE_URL)]
+    logos_base_url: String,
 }
 
 #[derive(Subcommand, Debug)]
@@ -101,6 +110,7 @@ fn main() -> ExitCode {
 fn generate(urls: &Urls, check: bool) -> Result<String, String> {
     let curation = read_curation()?;
     let built = build::build(&fetch_all(urls)?, &curation)?;
+    let (logos, logo_warnings) = logos::fetch_all(&urls.logos_base_url);
 
     let mut written: Vec<(PathBuf, String)> = Vec::new();
     for provider in &built.providers {
@@ -133,6 +143,13 @@ fn generate(urls: &Urls, check: bool) -> Result<String, String> {
         }
     }
 
+    // The logos go through the same written/keep path as the catalog,
+    // so `check` reports a stale one and `generate` prunes a provider
+    // that lost its logo.
+    for (provider_id, body) in &logos {
+        written.push((layout::logo_path(provider_id), body.clone()));
+    }
+
     if check {
         let stale: Vec<&Path> = written
             .iter()
@@ -150,9 +167,10 @@ fn generate(urls: &Urls, check: bool) -> Result<String, String> {
             ));
         }
         return Ok(format!(
-            "up to date ({} models, {} providers)",
+            "up to date ({} models, {} providers, {} logos)",
             built.models,
-            built.providers.len()
+            built.providers.len(),
+            logos.len()
         ));
     }
 
@@ -170,18 +188,20 @@ fn generate(urls: &Urls, check: bool) -> Result<String, String> {
     layout::prune_stale(&keep)?;
 
     let mut warnings = String::new();
-    for warning in &built.warnings {
+    for warning in built.warnings.iter().chain(&logo_warnings) {
         let _ = writeln!(warnings, "kage-models: warning: {warning}");
     }
     Ok(format!(
-        "wrote {} ({} models, {} providers)\n{warnings}",
+        "wrote {} ({} models, {} providers, {} logos)\n{warnings}",
         layout::catalog_dir().display(),
         built.models,
-        built.providers.len()
+        built.providers.len(),
+        logos.len()
     ))
 }
 
-/// Print the bundled document, and copy the routing config beside it.
+/// Print the bundled document, and copy the routing config and the
+/// provider logos beside it.
 ///
 /// The routing file is committed under `static/` and copied into the
 /// deploy directory here, because `public/` is gitignored while this
@@ -199,7 +219,40 @@ fn bundle() -> Result<String, String> {
     std::fs::create_dir_all(&public).map_err(|e| format!("create {}: {e}", public.display()))?;
     std::fs::write(public.join("_redirects"), &rules)
         .map_err(|e| format!("write public/_redirects: {e}"))?;
-    Ok(format!("{} bytes", body.len()))
+    let logos = publish_logos()?;
+    Ok(format!("{} bytes, {} logos", body.len(), logos))
+}
+
+/// Copy every committed logo into the deploy directory.
+///
+/// The logos are published under the catalog's own origin, which is what
+/// kage's GUI fetches them from. A logo with no file is simply absent:
+/// the GUI falls back to its own glyph rather than failing.
+///
+/// # Errors
+///
+/// A logo cannot be read or written.
+fn publish_logos() -> Result<usize, String> {
+    let mut copied = 0;
+    let entries = std::fs::read_dir(layout::logo_dir()).map_err(|e| format!("read logos: {e}"))?;
+    for entry in entries {
+        let entry = entry.map_err(|e| format!("read logos: {e}"))?;
+        let path = entry.path();
+        if path.extension().is_none_or(|ext| ext != "svg") {
+            continue;
+        }
+        let Some(stem) = path.file_stem().and_then(|s| s.to_str()) else {
+            continue;
+        };
+        let dest = layout::public_logo_path(stem);
+        if let Some(parent) = dest.parent() {
+            std::fs::create_dir_all(parent)
+                .map_err(|e| format!("create {}: {e}", parent.display()))?;
+        }
+        std::fs::copy(&path, &dest).map_err(|e| format!("copy {}: {e}", path.display()))?;
+        copied += 1;
+    }
+    Ok(copied)
 }
 
 /// The committed curation, one entry per provider file that holds any.

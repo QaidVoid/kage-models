@@ -477,7 +477,7 @@ output = 2.6
 id = "qwen/qwen3.5-35b-a3b"
 name = "Qwen3.5 35B-A3B"
 context = 262144
-output = 16384
+output = 235929
 input = [
     "text",
     "image",

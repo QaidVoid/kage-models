@@ -1,2 +1,4 @@
 /target
 public/
+# Per-test logo directories, built and torn down by the pipeline tests.
+crates/kage-models/tests/fixtures/logos/

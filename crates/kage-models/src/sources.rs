@@ -25,3 +25,8 @@ pub const COMMAND_CODE_MODELS_URL: &str = "https://api.commandcode.ai/provider/v
 /// from the npm package. The authority for reasoning effort levels, which
 /// the endpoint above publishes nothing about.
 pub const COMMAND_CODE_CLI_CATALOG_URL: &str = "https://cdn.jsdelivr.net/npm/command-code/dist/bundled/command-code-knowledge/reference/models.md";
+
+/// Where models.dev serves one SVG per provider, as `<id>.svg`. The
+/// source of the logos snapshotted under `logos/`; kage reads them from
+/// kage-models instead, so this is only ever read at generation time.
+pub const LOGOS_BASE_URL: &str = "https://models.dev/logos";

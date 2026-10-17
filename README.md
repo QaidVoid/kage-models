@@ -34,6 +34,7 @@ editing that remains is a few lines per model in a small TOML file.
 | Which Kenari models a subscription covers | `https://kenari.id/api/plans` |
 | Which Command Code models exist, what they serve | `https://api.commandcode.ai/provider/v1/models` |
 | Command Code reasoning effort levels | the `command-code` npm package's generated `models.md` |
+| Provider logos | `https://models.dev/logos/<id>.svg` |
 
 models.dev alone is not enough. Its Kenari entry lists the pay-as-you-go
 catalog, which is far wider than what Kenari's subscription plans serve.
@@ -44,6 +45,7 @@ catalog, which is far wider than what Kenari's subscription plans serve.
 catalog/generated/<provider>.toml        upstream data, rewritten each run
 catalog/generated/<provider>/NNN.toml    the same, sharded past 40 models
 catalog/curated/<provider>.toml          the fields no upstream publishes
+logos/<provider>.svg                     provider logos, one file each
 ```
 
 The generated files are the review surface. A new Command Code model
@@ -78,14 +80,38 @@ them and both are observed rather than derived:
 A curated entry for a model the upstream dropped is reported and removed,
 so the file cannot grow back a model that is no longer served.
 
+## Logos
+
+kage's settings screens draw a provider's logo. It used to fetch one
+from models.dev at runtime, which made every window open a round trip to
+a third party and left the web build unable to show any at all. The
+logos are snapshotted here instead, one SVG per provider, and published
+beside the catalog at `/logos/<id>.svg`.
+
+Two replies are rejected rather than stored:
+
+- **The generic glyph.** models.dev answers an id it has no logo for with
+  HTTP 200 and a placeholder sparkle, so an unchecked fetch would commit
+  a file that looks like a logo and draws as one.
+- **Anything that is not an SVG.** A provider whose domain is parked
+  answers with an HTML page.
+
+`commandcode-claude` and `kenari-claude` read their parent provider's
+logo, because models.dev files them under no name of their own. A
+provider with no logo gets no file, and kage falls back to its own glyph;
+the run names it in a warning rather than passing over it.
+
 ## Publishing
 
-`generate` writes the TOML files. `bundle` turns them into the single
-models.dev-shaped document kage fetches. The scheduled workflow bundles
-into `public/models.json` and deploys it to Cloudflare Pages, where kage
-reads it from `https://models.kage.qaidvoid.dev/`. The
-deploy step verifies the served file before reporting success, so a
-truncated or empty catalog never goes live silently.
+`generate` writes the TOML files and the logos. `bundle` turns the TOML
+into the single models.dev-shaped document kage fetches and copies the
+logos and the routing config into `public/`. The scheduled workflow
+deploys that directory to Cloudflare Pages, where kage reads the catalog
+from `https://models.kage.qaidvoid.dev/` and its logos from
+`https://models.kage.qaidvoid.dev/logos/<id>.svg`. The
+deploy step verifies both the served catalog and a served logo before
+reporting success, so a truncated catalog or a missing image directory
+never goes live silently.
 
 The bundle is read back from the committed TOML rather than from the run
 in memory, so a hand correction to a file reaches kage even if a
@@ -96,8 +122,13 @@ To deploy by hand:
 ```sh
 cargo run -p kage-models -- generate
 mkdir -p public && cargo run -p kage-models -- bundle > public/models.json
-npx wrangler pages deploy public --project-name kage-models --branch main
+npx wrangler pages deploy public --project-name kage-models
 ```
+
+No `--branch` flag: on a Direct Upload project wrangler treats any
+`--branch` value as a request for a *preview* deployment, which leaves
+the custom domain serving the previous file while the run reports
+success.
 
 The workflow needs two repository secrets: `CF_API_TOKEN` and
 `CF_ACCOUNT_ID`.
@@ -105,7 +136,7 @@ The workflow needs two repository secrets: `CF_API_TOKEN` and
 ## Use
 
 ```sh
-cargo run -p kage-models -- generate   # fetch, rebuild the TOML files
+cargo run -p kage-models -- generate   # fetch, rebuild the TOML and logo files
 cargo run -p kage-models -- check      # fail if the files are stale (CI gate)
 cargo run -p kage-models -- bundle     # print the document kage fetches
 cargo test                             # the pipeline over recorded fixtures

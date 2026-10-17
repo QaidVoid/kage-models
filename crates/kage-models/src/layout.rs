@@ -6,6 +6,9 @@
 //! models is split across numbered shards, because one 318-model file
 //! is a diff nobody reads.
 //!
+//! Provider logos sit beside them in `logos/<id>.svg`, one file per
+//! catalog key, and are copied into the deploy directory unchanged.
+//!
 //! Reads are always by provider: shards are concatenated in name order,
 //! so the numbering is invisible to a caller.
 
@@ -83,6 +86,80 @@ pub fn public_dir() -> PathBuf {
     crate::repo_root().join("public")
 }
 
+/// The committed provider logos, by catalog id.
+#[must_use]
+pub fn logo_dir() -> PathBuf {
+    crate::repo_root().join("logos")
+}
+
+/// One committed logo, `logos/<id>.svg`.
+#[must_use]
+pub fn logo_path(provider_id: &str) -> PathBuf {
+    logo_dir().join(provider_id).with_extension("svg")
+}
+
+/// Where the deploy directory's logos are published.
+#[must_use]
+pub fn public_logo_path(provider_id: &str) -> PathBuf {
+    public_dir()
+        .join("logos")
+        .join(provider_id)
+        .with_extension("svg")
+}
+
+/// Delete every catalog TOML the run did not write.
+///
+/// This is what keeps the tree honest when a provider shrinks below the
+/// shard threshold or loses its curation: without it the old shard, or
+/// an emptied curated file, would survive and be concatenated back in on
+/// the next read. Logos are pruned the same way, so a provider that
+/// loses its logo upstream does not keep serving the old file.
+///
+/// # Errors
+///
+/// A stale file cannot be removed.
+pub fn prune_stale(keep: &[PathBuf]) -> Result<(), String> {
+    for path in catalog_files() {
+        if keep.iter().any(|k| k == &path) {
+            continue;
+        }
+        fs::remove_file(&path).map_err(|e| format!("remove {}: {e}", path.display()))?;
+        // A shard directory left empty goes with its file.
+        if let Some(dir) = path.parent()
+            && dir.file_name().is_some_and(|n| n != "generated")
+            && dir.file_name().is_some_and(|n| n != "curated")
+            && fs::read_dir(dir).is_ok_and(|mut d| d.next().is_none())
+        {
+            let _ = fs::remove_dir(dir);
+        }
+    }
+    prune_stale_logos(keep)
+}
+
+/// Every committed logo on disk.
+fn logo_files() -> Vec<PathBuf> {
+    fs::read_dir(logo_dir())
+        .map(|entries| {
+            entries
+                .filter_map(Result::ok)
+                .map(|e| e.path())
+                .filter(|p| p.extension().is_some_and(|e| e == "svg"))
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+/// Delete every logo the run did not write.
+fn prune_stale_logos(keep: &[PathBuf]) -> Result<(), String> {
+    for path in logo_files() {
+        if keep.iter().any(|k| k == &path) {
+            continue;
+        }
+        fs::remove_file(&path).map_err(|e| format!("remove {}: {e}", path.display()))?;
+    }
+    Ok(())
+}
+
 /// The reviewed, committed routing config copied into [`public_dir`].
 #[must_use]
 pub fn redirects_path() -> PathBuf {
@@ -120,34 +197,6 @@ fn catalog_files() -> Vec<PathBuf> {
         }
     }
     found
-}
-
-/// Delete every catalog TOML the run did not write.
-///
-/// This is what keeps the tree honest when a provider shrinks below the
-/// shard threshold or loses its curation: without it the old shard, or
-/// an emptied curated file, would survive and be concatenated back in on
-/// the next read.
-///
-/// # Errors
-///
-/// A stale file cannot be removed.
-pub fn prune_stale(keep: &[PathBuf]) -> Result<(), String> {
-    for path in catalog_files() {
-        if keep.iter().any(|k| k == &path) {
-            continue;
-        }
-        fs::remove_file(&path).map_err(|e| format!("remove {}: {e}", path.display()))?;
-        // A shard directory left empty goes with its file.
-        if let Some(dir) = path.parent()
-            && dir.file_name().is_some_and(|n| n != "generated")
-            && dir.file_name().is_some_and(|n| n != "curated")
-            && fs::read_dir(dir).is_ok_and(|mut d| d.next().is_none())
-        {
-            let _ = fs::remove_dir(dir);
-        }
-    }
-    Ok(())
 }
 
 /// Every provider kage supports, deduplicated by catalog key.

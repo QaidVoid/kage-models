@@ -67,6 +67,10 @@ jobs:
           # than serving it, so assert the rule survived the copy.
           test -f public/_redirects
           grep -q '^/ /models.json 200$' public/_redirects
+          # `bundle` copies the logos too. A deploy missing them leaves
+          # the GUI drawing its fallback glyph for every provider.
+          test -d public/logos
+          test -f public/logos/groq.svg
           cargo test --workspace
           python3 -c "import json; d=json.load(open('public/models.json')); assert isinstance(d, dict) and d"
           # A deploy that silently shipped a truncated file would be
@@ -85,12 +89,14 @@ jobs:
       - name: Commit the catalog TOML
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- catalog)" ]; then
+          # `logos` is committed alongside the TOML: a logo is upstream
+          # data like any other, and a reviewer should see it change.
+          if [ -z "$(git status --porcelain -- catalog logos)" ]; then
             echo "catalog unchanged"
           else
             git config user.name "kage-models[bot]"
             git config user.email "kage-models[bot]@users.noreply.github.com"
-            git add catalog
+            git add catalog logos
             git commit -m "chore: refresh the model catalog"
             git push origin HEAD:main
           fi
@@ -129,4 +135,9 @@ jobs:
           # rule serves the bundle there.
           curl -fsSL --max-time 60 https://models.kage.qaidvoid.dev/ -o /tmp/deployed.json
           python3 -c "import json; d=json.load(open('/tmp/deployed.json')); assert all(d[p]['models'] for p in ('anthropic','commandcode','kenari')), 'the deployed file is missing providers'"
+          # The GUI loads a provider's logo from this path. A 404 there
+          # is silent in the app, so the deploy check is the only place
+          # it surfaces.
+          curl -fsSL --max-time 30 https://models.kage.qaidvoid.dev/logos/groq.svg -o /tmp/deployed-logo.svg
+          grep -q '<svg' /tmp/deployed-logo.svg
           echo "deployed and verified"

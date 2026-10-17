@@ -98,9 +98,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.0171
+input = 0.0119
 output = 1.28
-cache_read = 0.0171
+cache_read = 0.0119
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"

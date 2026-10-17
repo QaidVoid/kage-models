@@ -7,6 +7,7 @@
 
 use kage_models::build::{self, Curated};
 use kage_models::catalog::{self, CuratedProvider};
+use kage_models::logos;
 use kage_provider::catalog::source::{self, SUPPORTED_PROVIDERS};
 use serde_json::Value;
 
@@ -449,5 +450,140 @@ fn a_second_run_is_idempotent() {
         assert_eq!(a.provider_id, b.provider_id);
         assert_eq!(a.generated, b.generated, "{} is not stable", a.provider_id);
         assert_eq!(a.curated, b.curated, "{} is not stable", a.provider_id);
+    }
+}
+
+/// The path of a per-test logo directory, cleared of any earlier run.
+fn logo_case(name: &str) -> std::path::PathBuf {
+    let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("tests/fixtures/logos")
+        .join(name);
+    let _ = std::fs::remove_dir_all(&path);
+    std::fs::create_dir_all(&path).unwrap_or_else(|e| panic!("create {}: {e}", path.display()));
+    path
+}
+
+/// The `file://` URL a logo directory is fetched through.
+fn logo_url_of(path: &std::path::Path) -> String {
+    format!("file://{}", path.display())
+}
+
+fn write_logo(dir: &std::path::Path, id: &str, body: &str) {
+    let path = dir.join(format!("{id}.svg"));
+    std::fs::write(&path, body).unwrap_or_else(|e| panic!("write {}: {e}", path.display()));
+}
+
+/// A recorded logo, used as the stand-in for a provider models.dev knows.
+fn recorded_logo() -> String {
+    read("logo_groq.svg")
+}
+
+/// The generic glyph, served with HTTP 200 for an id models.dev has no
+/// logo for.
+fn placeholder_logo() -> String {
+    read("logo_placeholder.svg")
+}
+
+#[test]
+fn a_logo_is_snapshotted_under_its_catalog_key() {
+    let dir = logo_case("fetch_snapshots_a_logo");
+    write_logo(&dir, "groq", &recorded_logo());
+    let (logos, warnings) = logos::fetch_all(&logo_url_of(&dir));
+    assert_eq!(
+        logos.get("groq").map(String::as_str),
+        Some(recorded_logo().as_str())
+    );
+    assert!(
+        !warnings.iter().any(|w| w.starts_with("groq:")),
+        "{warnings:?}"
+    );
+}
+
+#[test]
+fn the_placeholder_is_reported_rather_than_snapshotted() {
+    // `kenari-claude` reads `kenari`'s slot, so that is where the
+    // placeholder has to land to be reached.
+    let dir = logo_case("fetch_rejects_placeholder");
+    write_logo(&dir, "kenari", &placeholder_logo());
+    let (logos, warnings) = logos::fetch_all(&logo_url_of(&dir));
+    // A missing logo is not a failure: the provider simply has none.
+    for id in ["kenari", "kenari-claude"] {
+        assert!(
+            !logos.contains_key(id),
+            "{id} was snapshotted from the placeholder"
+        );
+    }
+    assert!(
+        warnings
+            .iter()
+            .any(|w| w.starts_with("kenari:") && w.contains("no logo")),
+        "expected a no-logo warning, got: {warnings:?}"
+    );
+}
+
+#[test]
+fn an_html_body_is_not_snapshotted_as_a_logo() {
+    // A provider whose host parks its domain answers /favicon.ico with
+    // a page. Reading that as a logo would draw a broken image.
+    let dir = logo_case("fetch_rejects_html");
+    write_logo(&dir, "kenari", &read("logo_parked_page.svg"));
+    let (logos, warnings) = logos::fetch_all(&logo_url_of(&dir));
+    assert!(
+        !logos.contains_key("kenari"),
+        "an HTML page was snapshotted"
+    );
+    assert!(
+        warnings
+            .iter()
+            .any(|w| w.starts_with("kenari:") && w.contains("not an SVG")),
+        "expected a not-an-SVG warning, got: {warnings:?}"
+    );
+}
+
+#[test]
+fn a_claude_variant_is_snapshotted_from_its_parent_providers_logo() {
+    let dir = logo_case("fetch_aliases_the_claude_variants");
+    write_logo(&dir, "commandcode", &recorded_logo());
+    write_logo(&dir, "kenari", &recorded_logo());
+    let (logos, _) = logos::fetch_all(&logo_url_of(&dir));
+    for id in [
+        "commandcode",
+        "commandcode-claude",
+        "kenari",
+        "kenari-claude",
+    ] {
+        assert_eq!(
+            logos.get(id).map(String::as_str),
+            Some(recorded_logo().as_str()),
+            "{id} did not resolve to the parent provider's logo"
+        );
+    }
+}
+
+#[test]
+fn a_missing_logo_file_is_reported_and_does_not_fail_the_run() {
+    let dir = logo_case("fetch_tolerates_absent_logos");
+    write_logo(&dir, "groq", &recorded_logo());
+    let (logos, warnings) = logos::fetch_all(&logo_url_of(&dir));
+    assert_eq!(logos.len(), 1, "only the recorded logo comes back");
+    // Every other provider's file is absent, and each is named.
+    assert!(
+        warnings.iter().filter(|w| w.contains("groq:")).count() <= 1,
+        "{warnings:?}"
+    );
+    assert_eq!(logos::catalog_keys().len(), SUPPORTED_PROVIDERS.len() - 1);
+}
+
+#[test]
+fn every_provider_the_catalog_publishes_has_a_logo_file() {
+    // The committed tree must cover every catalog key, so the GUI never
+    // falls back to its glyph for a provider kage actually supports.
+    for key in logos::catalog_keys() {
+        let path = kage_models::layout::logo_path(key);
+        assert!(
+            path.is_file(),
+            "{} has no committed logo; run `cargo run -p kage-models -- generate`",
+            path.display()
+        );
     }
 }

@@ -10,6 +10,7 @@ pub mod commandcode;
 pub mod fetch;
 pub mod kenari;
 pub mod layout;
+pub mod logos;
 pub mod sources;
 
 use std::path::PathBuf;
