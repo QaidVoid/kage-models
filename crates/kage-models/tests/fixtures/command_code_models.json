@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "vendor/chat-thinker",
+      "object": "model",
+      "name": "Chat Thinker",
+      "context_length": 1000000,
+      "supported_endpoints": ["/chat/completions"]
+    },
+    {
+      "id": "vendor/chat-plain",
+      "object": "model",
+      "name": "Chat Plain",
+      "context_length": 200000,
+      "supported_endpoints": ["/chat/completions"]
+    },
+    {
+      "id": "vendor/claude-1",
+      "object": "model",
+      "name": "Claude 1",
+      "context_length": 1000000,
+      "supported_endpoints": ["/messages"]
+    }
+  ]
+}

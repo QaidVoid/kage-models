@@ -1,0 +1,123 @@
+name: catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # 04:17 UTC daily. An off-hour minute keeps the load off the
+    # upstream providers' busiest minute.
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # The gate every push runs: the generator's tests, lint and format.
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: rustup toolchain install
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - run: cargo fmt --all --check
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo test --workspace
+
+  # Rewrites the catalog TOML from the live upstreams, then publishes the
+  # bundled JSON as a release asset. Only the scheduled and manual runs
+  # fetch the upstreams, so a branch cannot publish.
+  publish:
+    name: publish
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      # Cloudflare Pages deploy. Set as a repository secret; wrangler
+      # reads it without the dashboard git integration.
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: rustup toolchain install
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+
+      - name: Generate the catalog TOML
+        run: cargo run --release -p kage-models -- generate
+
+      # The bundle is what kage fetches, and it is built from the
+      # committed files rather than from the run in memory. Running the
+      # tests again here means a bad generation fails before anything is
+      # deployed, not after.
+      - name: Build the static site
+        run: |
+          mkdir -p public
+          cargo run --release -p kage-models -- bundle > public/models.json
+          cargo test --workspace
+          python3 -c "import json; d=json.load(open('public/models.json')); assert isinstance(d, dict) and d"
+          # A deploy that silently shipped a truncated file would be
+          # worse than one that failed, so check the providers kage
+          # cannot start without are all present.
+          python3 -c "import json; d=json.load(open('public/models.json')); assert all(d[p]['models'] for p in ('anthropic','openai','commandcode','commandcode-claude','kenari','kenari-claude')), 'a provider kage needs is empty'"
+
+      # models.dev, Kenari and Command Code each publish on their own
+      # schedule, so a run that fails leaves the previous deployment in
+      # place. A slightly stale catalog beats an empty one.
+      #
+      # `git status --porcelain` is the change test rather than
+      # `git diff --quiet`: diff only sees tracked files, so a provider
+      # that is new to the catalog would read as "unchanged" and its file
+      # would never be committed.
+      - name: Commit the catalog TOML
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- catalog)" ]; then
+            echo "catalog unchanged"
+          else
+            git config user.name "kage-models[bot]"
+            git config user.email "kage-models[bot]@users.noreply.github.com"
+            git add catalog
+            git commit -m "chore: refresh the model catalog"
+            git push origin HEAD:main
+          fi
+
+      # Cloudflare Pages serves the file at models.kage.qaidvoid.dev.
+      # The commit lands first so a deploy failure leaves the TOML
+      # updated and the site on the previous catalog, which is the safe
+      # direction: the TOML is reviewable, the deploy is reproducible.
+      #
+      # `--branch main` is a production deployment only while the
+      # project's production branch is `main`; a mismatch would publish
+      # to a preview alias and leave the domain on the old file. The
+      # check below is what turns that silent failure into a loud one.
+      - name: Deploy to Cloudflare Pages
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest pages deploy public \
+            --project-name kage-models \
+            --branch main
+          # A production deployment lands in the project's production
+          # environment; a preview one does not, and the custom domain
+          # keeps serving the previous file. Query the environment rather
+          # than parsing wrangler's table output.
+          count="$(npx --yes wrangler@latest pages deployment list \
+            --project-name kage-models --environment production --json \
+            | python3 -c 'import json,sys; print(len(json.load(sys.stdin)))')"
+          if [ "$count" -lt 1 ]; then
+            echo "::error::no production deployment exists; models.kage.qaidvoid.dev is not being updated. Check that the project production branch is main."
+            exit 1
+          fi
+          echo "production deployments: $count"
+      - name: Verify the deployed catalog
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 60 https://models.kage.qaidvoid.dev/models.json -o /tmp/deployed.json
+          python3 -c "import json; d=json.load(open('/tmp/deployed.json')); assert all(d[p]['models'] for p in ('anthropic','commandcode','kenari')), 'the deployed file is missing providers'"
+          echo "deployed and verified"

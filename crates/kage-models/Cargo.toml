@@ -1,0 +1,31 @@
+[package]
+name = "kage-models"
+description = "Curated provider/model catalog for kage, generated from upstream model lists."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[lib]
+name = "kage_models"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kage-models"
+path = "src/main.rs"
+
+[dependencies]
+clap.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+ureq.workspace = true
+kage-core.workspace = true
+kage-provider.workspace = true
+
+[dev-dependencies]
+tempfile = "3"

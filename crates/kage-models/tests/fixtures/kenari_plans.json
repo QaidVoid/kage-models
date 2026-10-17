@@ -1,0 +1,12 @@
+[
+  {
+    "id": "plan-basic",
+    "name": "Basic",
+    "scope_models": ["kenari-covered", "claude-covered", "no-tools", "chat-not-served"]
+  },
+  {
+    "id": "plan-pro",
+    "name": "Pro",
+    "scope_models": ["kenari-covered", "claude-covered"]
+  }
+]

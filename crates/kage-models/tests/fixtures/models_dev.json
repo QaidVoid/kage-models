@@ -1,0 +1,59 @@
+{
+  "anthropic": {
+    "name": "Anthropic",
+    "api": "https://api.anthropic.com/v1",
+    "models": {
+      "claude-fixture-1": {
+        "id": "claude-fixture-1",
+        "name": "Claude Fixture 1",
+        "tool_call": true,
+        "reasoning": true,
+        "reasoning_options": [{ "type": "effort", "values": ["low", "high"] }],
+        "release_date": "2026-01-02",
+        "modalities": { "input": ["text", "image"] },
+        "limit": { "context": 200000, "output": 64000 },
+        "cost": { "input": 3.0, "output": 15.0 }
+      },
+      "claude-fixture-no-tools": {
+        "id": "claude-fixture-no-tools",
+        "name": "No Tools",
+        "tool_call": false
+      }
+    }
+  },
+  "openai": {
+    "name": "OpenAI",
+    "api": "https://api.openai.com/v1",
+    "models": {
+      "gpt-fixture-1": {
+        "id": "gpt-fixture-1",
+        "name": "GPT Fixture 1",
+        "tool_call": true,
+        "reasoning": false,
+        "limit": { "context": 128000 }
+      }
+    }
+  },
+  "zai": { "name": "Z.ai", "models": {} },
+  "zai-coding-plan": { "name": "Z.ai Coding Plan", "models": {} },
+  "zhipuai-coding-plan": { "name": "Zhipu AI Coding Plan", "models": {} },
+  "deepseek": { "name": "DeepSeek", "models": {} },
+  "groq": { "name": "Groq", "models": {} },
+  "mistral": { "name": "Mistral", "models": {} },
+  "cerebras": { "name": "Cerebras", "models": {} },
+  "xai": { "name": "xAI", "models": {} },
+  "openrouter": { "name": "OpenRouter", "models": {} },
+  "fireworks-ai": { "name": "Fireworks AI", "models": {} },
+  "moonshotai": { "name": "Moonshot", "models": {} },
+  "kimi-code-plan-cn": { "name": "Kimi Code Plan CN", "models": {} },
+  "xiaomi": { "name": "Xiaomi", "models": {} },
+  "xiaomi-token-plan-ams": { "name": "Xiaomi Token Plan AMS", "models": {} },
+  "xiaomi-token-plan-cn": { "name": "Xiaomi Token Plan CN", "models": {} },
+  "xiaomi-token-plan-sgp": { "name": "Xiaomi Token Plan SGP", "models": {} },
+  "opencode-go": { "name": "OpenCode Go", "models": {} },
+  "google": { "name": "Google", "models": {} },
+  "not-a-kage-provider": {
+    "name": "Dropped",
+    "models": { "whatever": { "id": "whatever", "tool_call": true } }
+  }
+}

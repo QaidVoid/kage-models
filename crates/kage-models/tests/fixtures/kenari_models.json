@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "kenari-covered",
+      "object": "model",
+      "context_length": 200000,
+      "endpoints": ["chat"],
+      "modalities": { "input": ["text", "image", "file"], "output": ["text"] },
+      "tool_call": true,
+      "reasoning": true,
+      "reasoning_toggle": true,
+      "reasoning_options": ["low", "high"],
+      "max_output_tokens": 32000
+    },
+    {
+      "id": "claude-covered",
+      "object": "model",
+      "context_length": 1000000,
+      "endpoints": ["chat"],
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "tool_call": true,
+      "reasoning": false
+    },
+    {
+      "id": "not-plan-covered",
+      "object": "model",
+      "context_length": 200000,
+      "endpoints": ["chat"],
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "tool_call": true,
+      "reasoning": false
+    },
+    {
+      "id": "no-tools",
+      "object": "model",
+      "context_length": 200000,
+      "endpoints": ["chat"],
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "tool_call": false,
+      "reasoning": false
+    },
+    {
+      "id": "chat-not-served",
+      "object": "model",
+      "context_length": 200000,
+      "endpoints": ["responses"],
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "tool_call": true,
+      "reasoning": false
+    }
+  ]
+}
