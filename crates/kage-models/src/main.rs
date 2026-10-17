@@ -12,12 +12,14 @@
 //! * `catalog/generated/<provider>.toml`, the upstream-published data,
 //!   rewritten on every run and split across numbered shards past a
 //!   threshold so a diff stays readable.
-//! * `catalog/curated/<provider>.toml`, the two fields no upstream
+//! * `catalog/curated/<provider>.toml`, the one field no upstream
 //!   publishes, kept by hand.
 //!
 //! `bundle` turns those files into the single models.dev-shaped
-//! document kage's runtime fetches. The JSON is a packaging step, not a
-//! translation: kage's existing parser reads it unchanged.
+//! document kage's runtime fetches, and copies the committed
+//! `static/_redirects` in beside it so the catalog also answers at the
+//! site root. The JSON is a packaging step, not a translation: kage's
+//! existing parser reads it unchanged.
 //!
 //! Subcommands:
 //!
@@ -179,10 +181,24 @@ fn generate(urls: &Urls, check: bool) -> Result<String, String> {
     ))
 }
 
-/// Print the bundled document.
+/// Print the bundled document, and copy the routing config beside it.
+///
+/// The routing file is committed under `static/` and copied into the
+/// deploy directory here, because `public/` is gitignored while this
+/// one is config worth reviewing. The deploy directory is created here
+/// too, so `bundle` works on its own; the workflow still has to create it
+/// before the shell opens `> public/models.json`, which happens before
+/// this runs.
 fn bundle() -> Result<String, String> {
     let body = layout::bundle()?;
     println!("{body}");
+    let redirects = layout::redirects_path();
+    let rules = std::fs::read_to_string(&redirects)
+        .map_err(|e| format!("read {}: {e}", redirects.display()))?;
+    let public = layout::public_dir();
+    std::fs::create_dir_all(&public).map_err(|e| format!("create {}: {e}", public.display()))?;
+    std::fs::write(public.join("_redirects"), &rules)
+        .map_err(|e| format!("write public/_redirects: {e}"))?;
     Ok(format!("{} bytes", body.len()))
 }
 

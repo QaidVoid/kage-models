@@ -1,0 +1,11 @@
+# Serve the catalog at the site root.
+#
+# Pages serves `index.html` at `/`, and this site has none, so the
+# bundle would 404 there on its own. A `200` rule proxies the root to
+# the file, which is why kage's `CATALOG_URL` is the bare origin:
+#
+#     https://models.kage.qaidvoid.dev/
+#
+# `200` rather than a `302` so the client gets the catalog in one
+# request with no redirect hop to follow.
+/ /models.json 200

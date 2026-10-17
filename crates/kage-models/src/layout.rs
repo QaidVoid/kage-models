@@ -76,6 +76,19 @@ pub fn shards(generated: &GeneratedProvider) -> Vec<GeneratedProvider> {
         .collect()
 }
 
+/// The deploy directory the workflow publishes. Gitignored: it holds
+/// generated output, not source.
+#[must_use]
+pub fn public_dir() -> PathBuf {
+    crate::repo_root().join("public")
+}
+
+/// The reviewed, committed routing config copied into [`public_dir`].
+#[must_use]
+pub fn redirects_path() -> PathBuf {
+    crate::repo_root().join("static/_redirects")
+}
+
 /// Every catalog TOML currently on disk.
 ///
 /// Used by [`prune_stale`] to tell a file this run produced from one it

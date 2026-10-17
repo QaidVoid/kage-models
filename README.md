@@ -83,7 +83,7 @@ so the file cannot grow back a model that is no longer served.
 `generate` writes the TOML files. `bundle` turns them into the single
 models.dev-shaped document kage fetches. The scheduled workflow bundles
 into `public/models.json` and deploys it to Cloudflare Pages, where kage
-reads it from `https://models.kage.qaidvoid.dev/models.json`. The
+reads it from `https://models.kage.qaidvoid.dev/`. The
 deploy step verifies the served file before reporting success, so a
 truncated or empty catalog never goes live silently.
 

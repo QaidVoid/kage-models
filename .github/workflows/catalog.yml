@@ -58,8 +58,15 @@ jobs:
       # deployed, not after.
       - name: Build the static site
         run: |
+          # The redirect below creates public/models.json, so the
+          # directory has to exist first: a shell opens the target
+          # before the command runs.
           mkdir -p public
           cargo run --release -p kage-models -- bundle > public/models.json
+          # Pages parses this file out of the asset directory rather
+          # than serving it, so assert the rule survived the copy.
+          test -f public/_redirects
+          grep -q '^/ /models.json 200$' public/_redirects
           cargo test --workspace
           python3 -c "import json; d=json.load(open('public/models.json')); assert isinstance(d, dict) and d"
           # A deploy that silently shipped a truncated file would be
@@ -118,6 +125,8 @@ jobs:
       - name: Verify the deployed catalog
         run: |
           set -euo pipefail
-          curl -fsSL --max-time 60 https://models.kage.qaidvoid.dev/models.json -o /tmp/deployed.json
+          # The bare origin is the URL kage fetches; the `_redirects`
+          # rule serves the bundle there.
+          curl -fsSL --max-time 60 https://models.kage.qaidvoid.dev/ -o /tmp/deployed.json
           python3 -c "import json; d=json.load(open('/tmp/deployed.json')); assert all(d[p]['models'] for p in ('anthropic','commandcode','kenari')), 'the deployed file is missing providers'"
           echo "deployed and verified"
