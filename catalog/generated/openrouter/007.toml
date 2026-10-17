@@ -507,9 +507,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.0047
+input = 0.0171
 output = 1.28
-cache_read = 0.0047
+cache_read = 0.0171
 
 [[models]]
 id = "~google/gemini-flash-latest"
