@@ -9,7 +9,7 @@ api = "https://kenari.id/v1"
 id = "deepseek-v4-1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1000000
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -156,7 +156,7 @@ release_date = "2026-08-14"
 id = "glm-5-3-flash"
 name = "GLM-5.3-Flash"
 context = 1000000
-output = 943717
+output = 943718
 input = [
     "text",
     "image",

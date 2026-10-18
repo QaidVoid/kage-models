@@ -98,9 +98,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.0119
-output = 1.28
-cache_read = 0.0119
+input = 0.1
+output = 0.3
+cache_read = 0.03
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"
@@ -149,7 +149,7 @@ cache_read = 0.0174
 id = "deepseek/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 context = 1048576
-output = 393216
+output = 384000
 input = ["text"]
 thinks = true
 efforts = [
@@ -169,7 +169,7 @@ cache_read = 0.022
 id = "deepseek/deepseek-v4.1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1048576
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -184,9 +184,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.003
+input = 0.072
+output = 0.144
+cache_read = 0.0016
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -728,7 +728,7 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.45
+output = 0.35
 cache_read = 0.04
 
 [[models]]

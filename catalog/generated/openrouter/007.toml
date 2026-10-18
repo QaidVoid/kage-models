@@ -6,6 +6,26 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.6-flash"
+name = "MiMo-V2.6-Flash"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.14
+output = 0.28
+cache_read = 0.0028
+
+[[models]]
 id = "xiaomi/mimo-v2.6-pro"
 name = "MiMo-V2.6-Pro"
 context = 1050000
@@ -153,9 +173,9 @@ release_date = "2025-12-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
+input = 0.54
+output = 1.98
+cache_read = 0.099
 
 [[models]]
 id = "z-ai/glm-4.7-flash"
@@ -256,14 +276,14 @@ release_date = "2026-08-14"
 
 [models.cost]
 input = 0.079
-output = 4.8
+output = 3.2
 cache_read = 0.078
 
 [[models]]
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 943717
+output = 943718
 input = [
     "text",
     "image",
@@ -278,9 +298,9 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.15
-output = 0.5
-cache_read = 0.03
+input = 0.048
+output = 0.2
+cache_read = 0.006
 
 [[models]]
 id = "z-ai/glm-5.3-flashx"
@@ -452,7 +472,7 @@ cache_write = 2.5
 id = "~deepseek/deepseek-flash-latest"
 name = "DeepSeek Flash Latest"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -467,8 +487,8 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.09
-output = 0.55
+input = 0.08
+output = 0.5
 cache_read = 0.008
 
 [[models]]
@@ -507,9 +527,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.0119
-output = 1.28
-cache_read = 0.0119
+input = 0.01208
+output = 0.143616
+cache_read = 0.001523
 
 [[models]]
 id = "~google/gemini-flash-latest"
@@ -721,7 +741,7 @@ cache_write = 2.5
 [[models]]
 id = "~unbiased/pareto-latest"
 name = "Pareto Latest"
-context = 262144
+context = 1048576
 output = 131072
 input = [
     "text",
@@ -730,9 +750,9 @@ input = [
 release_date = "2026-10-13"
 
 [models.cost]
-input = 2.5
-output = 7.5
-cache_read = 0.25
+input = 0.8
+output = 3.2
+cache_read = 0.03
 
 [[models]]
 id = "~x-ai/grok-latest"
@@ -777,9 +797,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.06
-output = 1.6
-cache_read = 0.04
+input = 0.048
+output = 0.2
+cache_read = 0.006
 
 [[models]]
 id = "~z-ai/glm-latest"

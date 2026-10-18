@@ -437,9 +437,9 @@ efforts = [
 release_date = "2026-07-06"
 
 [models.cost]
-input = 0.0825
-output = 0.33
-cache_read = 0.020625
+input = 0.132
+output = 0.528
+cache_read = 0.033
 
 [[models]]
 id = "tencent/hy3-preview"
@@ -475,9 +475,9 @@ efforts = [
 release_date = "2026-08-28"
 
 [models.cost]
-input = 0.7506
-output = 2.2509
-cache_read = 0.0378
+input = 0.834
+output = 2.501
+cache_read = 0.042
 
 [[models]]
 id = "thinkingmachines/inkling"
@@ -580,6 +580,22 @@ release_date = "2026-07-15"
 [models.cost]
 input = 0.0
 output = 0.0
+
+[[models]]
+id = "unbiased/pareto-26.10"
+name = "Pareto 26.10"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+]
+release_date = "2026-10-15"
+
+[models.cost]
+input = 0.8
+output = 3.2
+cache_read = 0.03
 
 [[models]]
 id = "unbiased/pareto-26.9"
@@ -832,23 +848,3 @@ interleaved = "reasoning_content"
 input = 0.435
 output = 0.87
 cache_read = 0.0036
-
-[[models]]
-id = "xiaomi/mimo-v2.6-flash"
-name = "MiMo-V2.6-Flash"
-context = 1050000
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.14
-output = 0.28
-cache_read = 0.0028
