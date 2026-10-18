@@ -276,7 +276,7 @@ release_date = "2026-08-14"
 
 [models.cost]
 input = 0.079
-output = 3.2
+output = 2.5
 cache_read = 0.078
 
 [[models]]
@@ -472,7 +472,7 @@ cache_write = 2.5
 id = "~deepseek/deepseek-flash-latest"
 name = "DeepSeek Flash Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = [
     "text",
     "image",
@@ -487,8 +487,8 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.08
-output = 0.5
+input = 0.05
+output = 0.6
 cache_read = 0.008
 
 [[models]]
@@ -527,7 +527,7 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.01208
+input = 0.00912
 output = 0.143616
 cache_read = 0.001523
 
