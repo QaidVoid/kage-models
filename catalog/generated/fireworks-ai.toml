@@ -30,6 +30,30 @@ output = 1.2
 cache_read = 0.006
 
 [[models]]
+id = "accounts/fireworks/models/deepseek-v4p1-flash-1017"
+name = "DeepSeek V4.1 Flash 1017"
+context = 1000000
+output = 384000
+input = [
+    "text",
+    "image",
+]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+toggle = true
+release_date = "2026-10-17"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.3
+output = 1.2
+cache_read = 0.006
+
+[[models]]
 id = "accounts/fireworks/models/ember-1"
 name = "Ember-1"
 context = 1048576

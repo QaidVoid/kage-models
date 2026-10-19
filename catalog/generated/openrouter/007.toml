@@ -138,9 +138,9 @@ toggle = true
 release_date = "2025-09-30"
 
 [models.cost]
-input = 0.5
-output = 2.0
-cache_read = 0.1
+input = 0.55
+output = 2.2
+cache_read = 0.11
 
 [[models]]
 id = "z-ai/glm-4.6v"
@@ -276,7 +276,7 @@ release_date = "2026-08-14"
 
 [models.cost]
 input = 0.079
-output = 2.5
+output = 1.4
 cache_read = 0.078
 
 [[models]]
@@ -488,8 +488,8 @@ release_date = "2026-09-14"
 
 [models.cost]
 input = 0.05
-output = 0.6
-cache_read = 0.008
+output = 0.15
+cache_read = 0.012
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -507,9 +507,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.12
+input = 0.225
 output = 8.0
-cache_read = 0.12
+cache_read = 0.23
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
@@ -528,8 +528,8 @@ release_date = "2026-08-01"
 
 [models.cost]
 input = 0.00912
-output = 0.143616
-cache_read = 0.001523
+output = 0.12
+cache_read = 0.00336
 
 [[models]]
 id = "~google/gemini-flash-latest"
@@ -561,7 +561,7 @@ cache_write = 0.041667
 id = "~google/gemini-pro-latest"
 name = "Gemini Pro Latest"
 context = 1048576
-output = 65536
+output = 943718
 input = [
     "text",
     "image",
@@ -603,9 +603,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.27
-output = 14.0
-cache_read = 0.27
+input = 0.238
+output = 16.0
+cache_read = 0.228
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -805,7 +805,7 @@ cache_read = 0.006
 id = "~z-ai/glm-latest"
 name = "GLM Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = ["text"]
 thinks = true
 efforts = [
@@ -816,6 +816,6 @@ efforts = [
 release_date = "2026-08-19"
 
 [models.cost]
-input = 0.0632
-output = 4.4
-cache_read = 0.0588
+input = 0.04
+output = 6.0
+cache_read = 0.025

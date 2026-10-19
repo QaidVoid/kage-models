@@ -98,9 +98,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.0114
-output = 0.45
-cache_read = 0.0114
+input = 0.15
+output = 0.15
+cache_read = 0.042
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"
@@ -141,9 +141,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.2088
-output = 0.4176
-cache_read = 0.0174
+input = 0.95526
+output = 1.91052
+cache_read = 0.079605
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -184,8 +184,8 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.0648
-output = 0.144
+input = 0.0448
+output = 0.08
 cache_read = 0.0016
 
 [[models]]
@@ -207,9 +207,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.003
+input = 0.3
+output = 1.2
+cache_read = 0.006
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"
@@ -657,7 +657,7 @@ cache_write = 0.041667
 id = "google/gemini-4-argon"
 name = "Gemini 4 Argon"
 context = 1048576
-output = 65536
+output = 943718
 input = [
     "text",
     "image",
@@ -746,9 +746,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.0675
-output = 0.225
-cache_read = 0.0375
+input = 0.09
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
