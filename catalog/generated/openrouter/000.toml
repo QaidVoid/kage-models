@@ -12,7 +12,7 @@ context = 131072
 output = 32768
 input = ["text"]
 thinks = true
-release_date = "2026-02-23"
+release_date = "2025-12-21"
 
 [models.cost]
 input = 0.8
@@ -26,7 +26,7 @@ context = 131072
 output = 32768
 input = ["text"]
 thinks = true
-release_date = "2026-07-07"
+release_date = "2026-05-05"
 
 [models.cost]
 input = 3.0
@@ -40,7 +40,7 @@ context = 131072
 output = 32768
 input = ["text"]
 thinks = true
-release_date = "2026-07-07"
+release_date = "2026-05-14"
 
 [models.cost]
 input = 0.7
@@ -140,7 +140,7 @@ input = [
     "text",
     "image",
 ]
-release_date = "2025-10-31"
+release_date = "2025-04-30"
 
 [models.cost]
 input = 2.5
@@ -555,7 +555,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2025-12-23"
+release_date = "2025-10-15"
 
 [models.cost]
 input = 0.25
@@ -573,7 +573,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2025-12-23"
+release_date = "2025-08-28"
 
 [models.cost]
 input = 0.075
@@ -591,7 +591,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-08-12"
+release_date = "2026-06-23"
 
 [models.cost]
 input = 0.5
@@ -669,6 +669,18 @@ input = 0.1
 output = 0.4
 
 [[models]]
+id = "cohere/command-a"
+name = "Command A"
+context = 256000
+output = 8192
+input = ["text"]
+release_date = "2025-03-13"
+
+[models.cost]
+input = 2.5
+output = 10.0
+
+[[models]]
 id = "cohere/command-a-plus"
 name = "Command A+"
 context = 192000
@@ -679,7 +691,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-09-22"
+release_date = "2026-05-20"
 
 [models.cost]
 input = 0.3
@@ -709,70 +721,3 @@ release_date = "2024-08-30"
 [models.cost]
 input = 2.5
 output = 10.0
-
-[[models]]
-id = "cohere/north-mini-code:free"
-name = "North Mini Code (free)"
-context = 256000
-output = 64000
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-06-17"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "deepseek/deepseek-chat"
-name = "DeepSeek Chat"
-context = 163840
-output = 16384
-input = ["text"]
-release_date = "2025-12-01"
-
-[models.cost]
-input = 0.32
-output = 0.89
-
-[[models]]
-id = "deepseek/deepseek-chat-v3-0324"
-name = "DeepSeek V3 0324"
-context = 163840
-output = 115200
-input = ["text"]
-release_date = "2025-03-24"
-
-[models.cost]
-input = 0.29
-output = 1.14
-cache_read = 0.11
-
-[[models]]
-id = "deepseek/deepseek-chat-v3.1"
-name = "DeepSeek V3.1"
-context = 163840
-output = 32768
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-21"
-
-[models.cost]
-input = 0.25
-output = 0.95
-cache_read = 0.13
-
-[[models]]
-id = "deepseek/deepseek-r1"
-name = "DeepSeek-R1"
-context = 64000
-output = 16000
-input = ["text"]
-thinks = true
-release_date = "2025-01-20"
-
-[models.cost]
-input = 0.7
-output = 2.5

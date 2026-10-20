@@ -302,24 +302,6 @@ output = 14.0
 cache_read = 0.175
 
 [[models]]
-id = "gpt-5.2-chat-latest"
-name = "GPT-5.2 Chat"
-context = 128000
-output = 16384
-input = [
-    "text",
-    "image",
-]
-thinks = true
-efforts = ["medium"]
-release_date = "2025-12-11"
-
-[models.cost]
-input = 1.75
-output = 14.0
-cache_read = 0.175
-
-[[models]]
 id = "gpt-5.2-pro"
 name = "GPT-5.2 Pro"
 context = 400000
@@ -340,22 +322,6 @@ release_date = "2025-12-11"
 [models.cost]
 input = 21.0
 output = 168.0
-
-[[models]]
-id = "gpt-5.3-chat-latest"
-name = "GPT-5.3 Chat (latest)"
-context = 128000
-output = 16384
-input = [
-    "text",
-    "image",
-]
-release_date = "2026-03-03"
-
-[models.cost]
-input = 1.75
-output = 14.0
-cache_read = 0.175
 
 [[models]]
 id = "gpt-5.3-codex"
@@ -434,3 +400,28 @@ release_date = "2026-03-05"
 input = 2.5
 output = 15.0
 cache_read = 0.25
+
+[[models]]
+id = "gpt-5.4-mini"
+name = "GPT-5.4 mini"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-03-17"
+
+[models.cost]
+input = 0.75
+output = 4.5
+cache_read = 0.075

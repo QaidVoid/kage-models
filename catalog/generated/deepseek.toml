@@ -8,7 +8,7 @@ api = "https://api.deepseek.com"
 [[models]]
 id = "deepseek-flash"
 name = "DeepSeek V4.1 Flash 1017"
-context = 1000000
+context = 1048576
 output = 393216
 input = [
     "text",
@@ -32,7 +32,7 @@ cache_read = 0.003
 [[models]]
 id = "deepseek-v4-flash"
 name = "DeepSeek V4 Flash"
-context = 1000000
+context = 1048576
 output = 393216
 input = [
     "text",
@@ -56,7 +56,7 @@ cache_read = 0.003
 [[models]]
 id = "deepseek-v4-flash-vision-exp"
 name = "DeepSeek V4 Flash Vision Exp"
-context = 1000000
+context = 1048576
 output = 393216
 input = [
     "text",
@@ -80,7 +80,7 @@ cache_read = 0.003
 [[models]]
 id = "deepseek-v4-pro"
 name = "DeepSeek V4 Pro"
-context = 1000000
+context = 1048576
 output = 393216
 input = ["text"]
 thinks = true
@@ -90,7 +90,7 @@ efforts = [
     "max",
 ]
 toggle = true
-release_date = "2026-08-12"
+release_date = "2026-08-13"
 interleaved = "reasoning_content"
 
 [models.cost]

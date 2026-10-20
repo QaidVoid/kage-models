@@ -55,6 +55,7 @@ efforts = [
     "low",
     "medium",
     "high",
+    "xhigh",
 ]
 release_date = "2026-04-17"
 
@@ -78,6 +79,7 @@ efforts = [
     "low",
     "medium",
     "high",
+    "xhigh",
 ]
 release_date = "2026-07-08"
 

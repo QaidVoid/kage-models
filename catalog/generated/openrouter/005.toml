@@ -6,6 +6,502 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/gpt-5.6-sol-pro"
+name = "GPT-5.6 Sol Pro"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 4.0
+output = 20.0
+cache_read = 0.4
+cache_write = 5.0
+
+[[models]]
+id = "openai/gpt-5.6-terra"
+name = "GPT-5.6 Terra"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 2.0
+output = 12.0
+cache_read = 0.2
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-5.6-terra-pro"
+name = "GPT-5.6 Terra Pro"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 2.0
+output = 12.0
+cache_read = 0.2
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-6-astra"
+name = "GPT-6 Astra"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-04"
+
+[models.cost]
+input = 10.0
+output = 50.0
+cache_read = 1.0
+cache_write = 12.5
+
+[[models]]
+id = "openai/gpt-6-astra-pro"
+name = "GPT-6 Astra Pro"
+context = 1050000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-04"
+
+[models.cost]
+input = 10.0
+output = 50.0
+cache_read = 1.0
+cache_write = 12.5
+
+[[models]]
+id = "openai/gpt-6-luna"
+name = "GPT-6 Luna"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.1
+output = 0.5
+cache_read = 0.01
+cache_write = 0.125
+
+[[models]]
+id = "openai/gpt-6-luna-pro"
+name = "GPT-6 Luna Pro"
+context = 1050000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.1
+output = 0.5
+cache_read = 0.01
+cache_write = 0.125
+
+[[models]]
+id = "openai/gpt-6-sol"
+name = "GPT-6 Sol"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-22"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.2
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-6-sol-pro"
+name = "GPT-6 Sol Pro"
+context = 1050000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-22"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.2
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-6.1-sol"
+name = "GPT-6.1 Sol"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-29"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-6.1-sol-pro"
+name = "GPT-6.1 Sol Pro"
+context = 1050000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-29"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+cache_write = 2.5
+
+[[models]]
+id = "openai/gpt-audio"
+name = "GPT-Audio"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "audio",
+]
+release_date = "2025-08-28"
+
+[models.cost]
+input = 2.5
+output = 10.0
+
+[[models]]
+id = "openai/gpt-audio-mini"
+name = "GPT-Audio Mini"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "audio",
+]
+release_date = "2025-10-06"
+
+[models.cost]
+input = 0.6
+output = 2.4
+
+[[models]]
+id = "openai/gpt-chat-latest"
+name = "GPT Chat Latest"
+context = 400000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2026-05-05"
+
+[models.cost]
+input = 5.0
+output = 30.0
+cache_read = 0.5
+
+[[models]]
+id = "openai/gpt-oss-120b"
+name = "GPT OSS 120B"
+context = 131072
+output = 65536
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-05"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.075
+
+[[models]]
+id = "openai/gpt-oss-20b"
+name = "GPT OSS 20B"
+context = 131072
+output = 32768
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-05"
+
+[models.cost]
+input = 0.018
+output = 0.09
+cache_read = 0.009
+
+[[models]]
+id = "openai/gpt-oss-safeguard-20b"
+name = "GPT OSS Safeguard 20B"
+context = 131072
+output = 65536
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-10-29"
+
+[models.cost]
+input = 0.075
+output = 0.3
+cache_read = 0.0375
+
+[[models]]
+id = "openai/o1"
+name = "o1"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+toggle = true
+release_date = "2024-12-05"
+
+[models.cost]
+input = 15.0
+output = 60.0
+cache_read = 7.5
+
+[[models]]
+id = "openai/o3"
+name = "o3"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+toggle = true
+release_date = "2025-04-16"
+
+[models.cost]
+input = 2.0
+output = 8.0
+cache_read = 0.5
+
+[[models]]
+id = "openai/o3-mini"
+name = "o3-mini"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "pdf",
+]
+thinks = true
+toggle = true
+release_date = "2024-12-20"
+
+[models.cost]
+input = 1.1
+output = 4.4
+cache_read = 0.55
+
+[[models]]
+id = "openai/o3-mini-high"
+name = "o3 Mini High"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "pdf",
+]
+thinks = true
+efforts = ["high"]
+release_date = "2025-02-12"
+
+[models.cost]
+input = 1.1
+output = 4.4
+cache_read = 0.55
+
+[[models]]
+id = "openai/o3-pro"
+name = "o3-pro"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+toggle = true
+release_date = "2025-06-10"
+
+[models.cost]
+input = 20.0
+output = 80.0
+
+[[models]]
 id = "openai/o4-mini"
 name = "o4-mini"
 context = 200000
@@ -231,413 +727,3 @@ release_date = "2025-04-28"
 [models.cost]
 input = 0.12
 output = 0.24
-
-[[models]]
-id = "qwen/qwen3-235b-a22b-2507"
-name = "Qwen3 235B A22B Instruct 2507"
-context = 262144
-output = 16384
-input = ["text"]
-release_date = "2025-07-21"
-
-[models.cost]
-input = 0.09
-output = 0.55
-
-[[models]]
-id = "qwen/qwen3-235b-a22b-thinking-2507"
-name = "Qwen3 235B A22B Thinking 2507"
-context = 128000
-output = 16384
-input = ["text"]
-thinks = true
-release_date = "2025-07-25"
-
-[models.cost]
-input = 0.45
-output = 3.5
-
-[[models]]
-id = "qwen/qwen3-30b-a3b"
-name = "Qwen3 30B A3B"
-context = 40960
-output = 16384
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-04-28"
-
-[models.cost]
-input = 0.12
-output = 0.5
-
-[[models]]
-id = "qwen/qwen3-30b-a3b-instruct-2507"
-name = "Qwen3 30B A3B Instruct 2507"
-context = 262144
-output = 235929
-input = ["text"]
-release_date = "2025-07-29"
-
-[models.cost]
-input = 0.09
-output = 0.3
-
-[[models]]
-id = "qwen/qwen3-32b"
-name = "Qwen3 32B"
-context = 131072
-output = 16384
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-04"
-
-[models.cost]
-input = 0.08
-output = 0.28
-
-[[models]]
-id = "qwen/qwen3-coder"
-name = "Qwen3 Coder 480B A35B"
-context = 262144
-output = 65536
-input = ["text"]
-release_date = "2025-07-23"
-
-[models.cost]
-input = 0.3
-output = 1.0
-cache_read = 0.1
-
-[[models]]
-id = "qwen/qwen3-coder-30b-a3b-instruct"
-name = "Qwen3-Coder 30B-A3B Instruct"
-context = 262144
-output = 235929
-input = ["text"]
-release_date = "2025-04"
-
-[models.cost]
-input = 0.07
-output = 0.28
-
-[[models]]
-id = "qwen/qwen3-coder-flash"
-name = "Qwen3 Coder Flash"
-context = 1000000
-output = 65536
-input = ["text"]
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.195
-output = 0.975
-cache_read = 0.039
-cache_write = 0.24375
-
-[[models]]
-id = "qwen/qwen3-coder-next"
-name = "Qwen3 Coder Next"
-context = 262144
-output = 235929
-input = ["text"]
-release_date = "2026-02-03"
-
-[models.cost]
-input = 0.12
-output = 0.8
-cache_read = 0.07
-
-[[models]]
-id = "qwen/qwen3-next-80b-a3b-instruct"
-name = "Qwen3-Next 80B-A3B Instruct"
-context = 262144
-output = 16384
-input = ["text"]
-release_date = "2025-09"
-
-[models.cost]
-input = 0.09
-output = 1.1
-
-[[models]]
-id = "qwen/qwen3-next-80b-a3b-thinking"
-name = "Qwen3-Next 80B-A3B (Thinking)"
-context = 262144
-output = 235929
-input = ["text"]
-thinks = true
-release_date = "2025-09"
-
-[models.cost]
-input = 0.15
-output = 1.2
-
-[[models]]
-id = "qwen/qwen3-vl-235b-a22b-instruct"
-name = "Qwen3 VL 235B A22B Instruct"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-]
-release_date = "2025-09-23"
-
-[models.cost]
-input = 0.21
-output = 1.9
-cache_read = 0.1
-
-[[models]]
-id = "qwen/qwen3-vl-30b-a3b-instruct"
-name = "Qwen3 VL 30B A3B Instruct"
-context = 262144
-output = 16384
-input = [
-    "text",
-    "image",
-]
-release_date = "2025-10-04"
-
-[models.cost]
-input = 0.15
-output = 0.6
-
-[[models]]
-id = "qwen/qwen3-vl-30b-a3b-thinking"
-name = "Qwen3 VL 30B A3B Thinking"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-]
-thinks = true
-release_date = "2025-10-06"
-
-[models.cost]
-input = 0.29
-output = 1.0
-
-[[models]]
-id = "qwen/qwen3-vl-8b-instruct"
-name = "Qwen3 VL 8B Instruct"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-]
-release_date = "2025-10-14"
-
-[models.cost]
-input = 0.25
-output = 0.75
-cache_read = 0.12
-
-[[models]]
-id = "qwen/qwen3.5-122b-a10b"
-name = "Qwen3.5 122B-A10B"
-context = 262144
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-23"
-
-[models.cost]
-input = 0.26
-output = 2.08
-
-[[models]]
-id = "qwen/qwen3.5-27b"
-name = "Qwen3.5 27B"
-context = 262144
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-23"
-
-[models.cost]
-input = 0.27
-output = 2.16
-cache_read = 0.27
-
-[[models]]
-id = "qwen/qwen3.5-35b-a3b"
-name = "Qwen3.5 35B-A3B"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-23"
-
-[models.cost]
-input = 0.15
-output = 1.0
-cache_read = 0.05
-
-[[models]]
-id = "qwen/qwen3.5-397b-a17b"
-name = "Qwen3.5 397B-A17B"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-15"
-
-[models.cost]
-input = 0.5
-output = 3.6
-cache_read = 0.3
-
-[[models]]
-id = "qwen/qwen3.5-9b"
-name = "Qwen3.5 9B"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-23"
-
-[models.cost]
-input = 0.1
-output = 0.15
-
-[[models]]
-id = "qwen/qwen3.5-flash-02-23"
-name = "Qwen3.5-Flash"
-context = 1000000
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-25"
-
-[models.cost]
-input = 0.065
-output = 0.26
-
-[[models]]
-id = "qwen/qwen3.5-plus-02-15"
-name = "Qwen3.5 Plus 2026-02-15"
-context = 1000000
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-02-16"
-
-[models.cost]
-input = 0.26
-output = 1.56
-
-[[models]]
-id = "qwen/qwen3.5-plus-20260420"
-name = "Qwen3.5 Plus 2026-04-20"
-context = 1000000
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.3
-output = 1.8
-cache_write = 0.375
-
-[[models]]
-id = "qwen/qwen3.6-27b"
-name = "Qwen3.6 27B"
-context = 262144
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-22"
-
-[models.cost]
-input = 0.25
-output = 2.0
-cache_read = 0.025
-
-[[models]]
-id = "qwen/qwen3.6-35b-a3b"
-name = "Qwen3.6 35B-A3B"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-17"
-
-[models.cost]
-input = 0.15
-output = 1.0
-cache_read = 0.05
-
-[[models]]
-id = "qwen/qwen3.6-flash"
-name = "Qwen3.6 Flash"
-context = 1000000
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.1875
-output = 1.125
-cache_write = 0.234375

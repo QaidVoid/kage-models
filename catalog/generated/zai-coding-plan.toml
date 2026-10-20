@@ -50,6 +50,7 @@ efforts = [
     "high",
     "max",
 ]
+toggle = true
 release_date = "2026-06-13"
 interleaved = "reasoning_content"
 
@@ -70,6 +71,7 @@ efforts = [
     "high",
     "max",
 ]
+toggle = true
 release_date = "2026-06-13"
 interleaved = "reasoning_content"
 

@@ -14,6 +14,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.6
@@ -30,6 +31,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.2
@@ -46,6 +48,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.0
@@ -66,11 +69,13 @@ input = [
 thinks = true
 toggle = true
 release_date = "2025-08-11"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.6
 output = 1.8
 cache_read = 0.11
+cache_write = 0.0
 
 [[models]]
 id = "glm-4.6"
@@ -81,6 +86,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-30"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.6
@@ -101,11 +107,13 @@ input = [
 thinks = true
 toggle = true
 release_date = "2025-12-08"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.3
 output = 0.9
 cache_read = 0.05
+cache_write = 0.0
 
 [[models]]
 id = "glm-4.6v-flash"
@@ -120,6 +128,7 @@ input = [
 thinks = true
 toggle = true
 release_date = "2025-12-08"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.0
@@ -153,6 +162,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-01-19"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.0
@@ -169,6 +179,7 @@ input = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-01-19"
+interleaved = "reasoning_content"
 
 [models.cost]
 input = 0.07
@@ -238,6 +249,7 @@ efforts = [
     "high",
     "max",
 ]
+toggle = true
 release_date = "2026-06-13"
 interleaved = "reasoning_content"
 

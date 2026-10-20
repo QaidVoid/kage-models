@@ -373,7 +373,7 @@ input = [
     "image",
 ]
 thinks = true
-release_date = "2026-04-21"
+release_date = "2026-04-20"
 
 [[models]]
 id = "kimi-k2-7-code"
@@ -427,6 +427,18 @@ input = [
 thinks = true
 
 [[models]]
+id = "mimo-v2-6-pro"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+thinks = true
+
+[[models]]
 id = "minimax-m3"
 name = "MiniMax-M3"
 context = 1048576
@@ -438,6 +450,24 @@ input = [
 ]
 thinks = true
 release_date = "2026-06-01"
+
+[[models]]
+id = "minimax-m3-1-flash"
+context = 1000000
+output = 512000
+input = [
+    "text",
+    "image",
+    "video",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
 
 [[models]]
 id = "muse-spark-1-2"

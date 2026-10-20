@@ -6,6 +6,315 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/gpt-3.5-turbo"
+name = "GPT-3.5-turbo"
+context = 16385
+output = 4096
+input = ["text"]
+release_date = "2023-03-01"
+
+[models.cost]
+input = 0.5
+output = 1.5
+
+[[models]]
+id = "openai/gpt-3.5-turbo-0613"
+name = "GPT-3.5 Turbo (older v0613)"
+context = 4095
+output = 3685
+input = ["text"]
+release_date = "2024-01-25"
+
+[models.cost]
+input = 1.0
+output = 2.0
+
+[[models]]
+id = "openai/gpt-3.5-turbo-16k"
+name = "GPT-3.5 Turbo 16k"
+context = 16385
+output = 4096
+input = ["text"]
+release_date = "2023-08-28"
+
+[models.cost]
+input = 3.0
+output = 4.0
+
+[[models]]
+id = "openai/gpt-4"
+name = "GPT-4"
+context = 8191
+output = 4096
+input = ["text"]
+release_date = "2023-11-06"
+
+[models.cost]
+input = 30.0
+output = 60.0
+
+[[models]]
+id = "openai/gpt-4-turbo"
+name = "GPT-4 Turbo"
+context = 128000
+output = 4096
+input = [
+    "text",
+    "image",
+]
+release_date = "2023-11-06"
+
+[models.cost]
+input = 10.0
+output = 30.0
+
+[[models]]
+id = "openai/gpt-4.1"
+name = "GPT-4.1"
+context = 1047576
+output = 32768
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2025-04-14"
+
+[models.cost]
+input = 2.0
+output = 8.0
+cache_read = 0.5
+
+[[models]]
+id = "openai/gpt-4.1-mini"
+name = "GPT-4.1 mini"
+context = 1047576
+output = 32768
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2025-04-14"
+
+[models.cost]
+input = 0.4
+output = 1.6
+cache_read = 0.1
+
+[[models]]
+id = "openai/gpt-4.1-nano"
+name = "GPT-4.1 nano"
+context = 1047576
+output = 32768
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2025-04-14"
+
+[models.cost]
+input = 0.1
+output = 0.4
+cache_read = 0.025
+
+[[models]]
+id = "openai/gpt-4o"
+name = "GPT-4o"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-05-13"
+
+[models.cost]
+input = 2.5
+output = 10.0
+cache_read = 1.25
+
+[[models]]
+id = "openai/gpt-4o-2024-05-13"
+name = "GPT-4o (2024-05-13)"
+context = 128000
+output = 4096
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-05-13"
+
+[models.cost]
+input = 5.0
+output = 15.0
+
+[[models]]
+id = "openai/gpt-4o-2024-08-06"
+name = "GPT-4o (2024-08-06)"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-08-06"
+
+[models.cost]
+input = 2.5
+output = 10.0
+cache_read = 1.25
+
+[[models]]
+id = "openai/gpt-4o-2024-11-20"
+name = "GPT-4o (2024-11-20)"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-11-20"
+
+[models.cost]
+input = 2.5
+output = 10.0
+cache_read = 1.25
+
+[[models]]
+id = "openai/gpt-4o-mini"
+name = "GPT-4o mini"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.075
+
+[[models]]
+id = "openai/gpt-4o-mini-2024-07-18"
+name = "GPT-4o-mini (2024-07-18)"
+context = 128000
+output = 16384
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.075
+
+[[models]]
+id = "openai/gpt-5"
+name = "GPT-5"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 1.25
+output = 10.0
+cache_read = 0.125
+
+[[models]]
+id = "openai/gpt-5-mini"
+name = "GPT-5 Mini"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.25
+output = 2.0
+cache_read = 0.025
+
+[[models]]
+id = "openai/gpt-5-nano"
+name = "GPT-5 Nano"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.05
+output = 0.4
+cache_read = 0.005
+
+[[models]]
+id = "openai/gpt-5-pro"
+name = "GPT-5 Pro"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+thinks = true
+efforts = ["high"]
+release_date = "2025-10-06"
+
+[models.cost]
+input = 15.0
+output = 120.0
+
+[[models]]
 id = "openai/gpt-5.1"
 name = "GPT-5.1"
 context = 400000
@@ -136,7 +445,7 @@ input = [
     "image",
     "pdf",
 ]
-release_date = "2025-12-10"
+release_date = "2025-12-11"
 
 [models.cost]
 input = 1.75
@@ -449,499 +758,3 @@ input = 4.0
 output = 20.0
 cache_read = 0.4
 cache_write = 5.0
-
-[[models]]
-id = "openai/gpt-5.6-sol-pro"
-name = "GPT-5.6 Sol Pro"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-07-09"
-
-[models.cost]
-input = 4.0
-output = 20.0
-cache_read = 0.4
-cache_write = 5.0
-
-[[models]]
-id = "openai/gpt-5.6-terra"
-name = "GPT-5.6 Terra"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-07-09"
-
-[models.cost]
-input = 2.0
-output = 12.0
-cache_read = 0.2
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-5.6-terra-pro"
-name = "GPT-5.6 Terra Pro"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-07-09"
-
-[models.cost]
-input = 2.0
-output = 12.0
-cache_read = 0.2
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-6-astra"
-name = "GPT-6 Astra"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-04"
-
-[models.cost]
-input = 10.0
-output = 50.0
-cache_read = 1.0
-cache_write = 12.5
-
-[[models]]
-id = "openai/gpt-6-astra-pro"
-name = "GPT-6 Astra Pro"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-04"
-
-[models.cost]
-input = 10.0
-output = 50.0
-cache_read = 1.0
-cache_write = 12.5
-
-[[models]]
-id = "openai/gpt-6-luna"
-name = "GPT-6 Luna"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.1
-output = 0.5
-cache_read = 0.01
-cache_write = 0.125
-
-[[models]]
-id = "openai/gpt-6-luna-pro"
-name = "GPT-6 Luna Pro"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.1
-output = 0.5
-cache_read = 0.01
-cache_write = 0.125
-
-[[models]]
-id = "openai/gpt-6-sol"
-name = "GPT-6 Sol"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-22"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.2
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-6-sol-pro"
-name = "GPT-6 Sol Pro"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-22"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.2
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-6.1-sol"
-name = "GPT-6.1 Sol"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-29"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.1
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-6.1-sol-pro"
-name = "GPT-6.1 Sol Pro"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-29"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.1
-cache_write = 2.5
-
-[[models]]
-id = "openai/gpt-audio"
-name = "GPT Audio"
-context = 128000
-output = 16384
-input = [
-    "text",
-    "audio",
-]
-release_date = "2026-01-19"
-
-[models.cost]
-input = 2.5
-output = 10.0
-
-[[models]]
-id = "openai/gpt-audio-mini"
-name = "GPT Audio Mini"
-context = 128000
-output = 16384
-input = [
-    "text",
-    "audio",
-]
-release_date = "2026-01-19"
-
-[models.cost]
-input = 0.6
-output = 2.4
-
-[[models]]
-id = "openai/gpt-chat-latest"
-name = "GPT Chat Latest"
-context = 400000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-release_date = "2026-05-05"
-
-[models.cost]
-input = 5.0
-output = 30.0
-cache_read = 0.5
-
-[[models]]
-id = "openai/gpt-oss-120b"
-name = "GPT OSS 120B"
-context = 131072
-output = 65536
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-05"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.075
-
-[[models]]
-id = "openai/gpt-oss-20b"
-name = "GPT OSS 20B"
-context = 131072
-output = 32768
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-05"
-
-[models.cost]
-input = 0.018
-output = 0.09
-cache_read = 0.009
-
-[[models]]
-id = "openai/gpt-oss-safeguard-20b"
-name = "GPT OSS Safeguard 20B"
-context = 131072
-output = 65536
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-10-29"
-
-[models.cost]
-input = 0.075
-output = 0.3
-cache_read = 0.0375
-
-[[models]]
-id = "openai/o1"
-name = "o1"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-toggle = true
-release_date = "2024-12-05"
-
-[models.cost]
-input = 15.0
-output = 60.0
-cache_read = 7.5
-
-[[models]]
-id = "openai/o3"
-name = "o3"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-toggle = true
-release_date = "2025-04-16"
-
-[models.cost]
-input = 2.0
-output = 8.0
-cache_read = 0.5
-
-[[models]]
-id = "openai/o3-mini"
-name = "o3-mini"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "pdf",
-]
-thinks = true
-toggle = true
-release_date = "2024-12-20"
-
-[models.cost]
-input = 1.1
-output = 4.4
-cache_read = 0.55
-
-[[models]]
-id = "openai/o3-mini-high"
-name = "o3 Mini High"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "pdf",
-]
-thinks = true
-efforts = ["high"]
-release_date = "2025-02-12"
-
-[models.cost]
-input = 1.1
-output = 4.4
-cache_read = 0.55
-
-[[models]]
-id = "openai/o3-pro"
-name = "o3-pro"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-toggle = true
-release_date = "2025-06-10"
-
-[models.cost]
-input = 20.0
-output = 80.0
