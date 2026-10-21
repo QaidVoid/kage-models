@@ -341,6 +341,11 @@ fn kenari_lists_only_what_its_plans_cover() {
         "`file` is dropped: kage cannot send it"
     );
     assert_eq!(
+        row["modalities"]["output"],
+        serde_json::json!(["text", "image"]),
+        "an output kage cannot name is dropped"
+    );
+    assert_eq!(
         row["reasoning_options"],
         serde_json::json!([
             { "type": "toggle" },

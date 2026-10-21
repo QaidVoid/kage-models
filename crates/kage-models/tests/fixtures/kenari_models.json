@@ -5,7 +5,7 @@
       "object": "model",
       "context_length": 200000,
       "endpoints": ["chat"],
-      "modalities": { "input": ["text", "image", "file"], "output": ["text"] },
+      "modalities": { "input": ["text", "image", "file"], "output": ["text", "image", "hologram"] },
       "tool_call": true,
       "reasoning": true,
       "reasoning_toggle": true,

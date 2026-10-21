@@ -665,8 +665,8 @@ dependencies = [
 
 [[package]]
 name = "kage-core"
-version = "0.3.0"
-source = "git+https://github.com/QaidVoid/kage?rev=f28ed0ad955c106a442e799e7f348043778692dc#f28ed0ad955c106a442e799e7f348043778692dc"
+version = "0.4.0"
+source = "git+https://github.com/QaidVoid/kage?rev=415a84da7bc163029c464d785f54732247ee6d15#415a84da7bc163029c464d785f54732247ee6d15"
 dependencies = [
  "chrono",
  "crossbeam-channel",
@@ -699,8 +699,8 @@ dependencies = [
 
 [[package]]
 name = "kage-provider"
-version = "0.3.0"
-source = "git+https://github.com/QaidVoid/kage?rev=f28ed0ad955c106a442e799e7f348043778692dc#f28ed0ad955c106a442e799e7f348043778692dc"
+version = "0.4.0"
+source = "git+https://github.com/QaidVoid/kage?rev=415a84da7bc163029c464d785f54732247ee6d15#415a84da7bc163029c464d785f54732247ee6d15"
 dependencies = [
  "chrono",
  "crossbeam-channel",

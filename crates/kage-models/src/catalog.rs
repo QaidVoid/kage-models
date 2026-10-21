@@ -17,7 +17,7 @@
 
 use std::collections::BTreeMap;
 
-use kage_core::{Effort, Efforts, Input, Inputs, Reasoning, ReasoningField};
+use kage_core::{Effort, Efforts, Modalities, Modality, Reasoning, ReasoningField};
 use kage_provider::catalog::ModelCost;
 use kage_provider::catalog::source::{self, SourceModel, SourceProvider};
 use serde::{Deserialize, Serialize};
@@ -60,7 +60,11 @@ pub struct ModelEntry {
     pub output: Option<u64>,
     /// Inputs the model accepts.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub input: Vec<Input>,
+    pub input: Vec<Modality>,
+    /// Media the model produces. Absent when the upstream publishes
+    /// none, which kage reads as text only.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub produces: Vec<Modality>,
     /// Whether the model thinks at all. `false` is written only when
     /// the upstream says so; a model that does not publish the field
     /// leaves it unset and is read as not thinking.
@@ -214,6 +218,7 @@ fn model_entry(model: &SourceModel) -> ModelEntry {
         input_limit: model.input_limit,
         output: model.output,
         input: model.input.iter().collect(),
+        produces: model.produces.iter().collect(),
         thinks,
         efforts,
         toggle,
@@ -287,11 +292,17 @@ fn model_json(entry: &ModelEntry, curated: &CuratedProvider) -> serde_json::Valu
         row.insert("reasoning_options".into(), options);
     }
 
-    if !entry.input.is_empty() {
-        let inputs: Vec<&str> = entry.input.iter().map(|i| i.as_str()).collect();
+    if !entry.input.is_empty() || !entry.produces.is_empty() {
+        let names =
+            |kinds: &[Modality]| -> Vec<&str> { kinds.iter().map(|k| k.as_str()).collect() };
+        let output = if entry.produces.is_empty() {
+            vec!["text"]
+        } else {
+            names(&entry.produces)
+        };
         row.insert(
             "modalities".into(),
-            serde_json::json!({ "input": inputs, "output": ["text"] }),
+            serde_json::json!({ "input": names(&entry.input), "output": output }),
         );
     }
 
@@ -389,7 +400,8 @@ fn to_model(entry: &ModelEntry, curated: &CuratedProvider) -> Result<SourceModel
         input_limit: entry.input_limit,
         output: entry.output,
         reasoning: reasoning_from(entry),
-        input: Inputs::of(&entry.input),
+        input: Modalities::of(&entry.input),
+        produces: Modalities::of(&entry.produces),
         interleaved,
         release_date: entry.release_date.clone(),
         cost: entry.cost.map(|c| ModelCost {
@@ -450,7 +462,8 @@ mod tests {
             input_limit: None,
             output: Some(64_000),
             reasoning: Reasoning::None,
-            input: Inputs::of(&[Input::Text]),
+            input: Modalities::of(&[Modality::Text]),
+            produces: Modalities::of(&[]),
             interleaved: None,
             release_date: None,
             cost: None,
@@ -480,7 +493,7 @@ mod tests {
         let back = round_trip(&source);
         assert_eq!(back.models[0].reasoning, Reasoning::None);
         assert_eq!(back.models[0].context, Some(200_000));
-        assert_eq!(back.models[0].input, Inputs::of(&[Input::Text]));
+        assert_eq!(back.models[0].input, Modalities::of(&[Modality::Text]));
         assert_eq!(back.models[0].output, Some(64_000));
     }
 
@@ -539,17 +552,19 @@ mod tests {
     }
 
     #[test]
-    fn inputs_and_limits_survive_the_round_trip() {
+    fn modalities_and_limits_survive_the_round_trip() {
         let source = provider(
             "zai",
             vec![SourceModel {
-                input: Inputs::of(&[Input::Text, Input::Image, Input::Pdf]),
+                input: Modalities::of(&[Modality::Text, Modality::Image, Modality::Pdf]),
+                produces: Modalities::of(&[Modality::Text, Modality::Image]),
                 input_limit: Some(272_000),
                 ..model("m")
             }],
         );
         let back = round_trip(&source);
         assert_eq!(back.models[0].input, source.models[0].input);
+        assert_eq!(back.models[0].produces, source.models[0].produces);
         assert_eq!(back.models[0].input_limit, Some(272_000));
     }
 

@@ -4,7 +4,7 @@
 //! it serves; models.dev supplies the display metadata those endpoints
 //! omit. Nothing here is hand-maintained.
 
-use kage_core::Input;
+use kage_core::Modality;
 use serde_json::Value;
 
 /// The `kenari` and `kenari-claude` providers, rebuilt from Kenari's
@@ -70,13 +70,19 @@ pub fn sync(
             limit["output"] = output.into();
         }
         row.insert("limit".into(), limit);
-        // Keep only modalities kage knows how to send, so the catalog
-        // cannot offer an input the wire format cannot carry.
-        let mut inputs = strs(item.get("modalities").and_then(|m| m.get("input")));
-        inputs.retain(|input| Input::parse(input).is_some());
+        // Keep only modalities kage knows, so the catalog cannot offer
+        // an input the wire format cannot carry.
+        let modalities = item.get("modalities");
+        let mut inputs = strs(modalities.and_then(|m| m.get("input")));
+        inputs.retain(|input| Modality::parse(input).is_some());
+        let mut outputs = strs(modalities.and_then(|m| m.get("output")));
+        outputs.retain(|output| Modality::parse(output).is_some());
+        if outputs.is_empty() {
+            outputs.push("text");
+        }
         row.insert(
             "modalities".into(),
-            serde_json::json!({ "input": inputs, "output": ["text"] }),
+            serde_json::json!({ "input": inputs, "output": outputs }),
         );
         let name = known.get("name").and_then(Value::as_str).unwrap_or(id);
         row.insert("name".into(), name.into());

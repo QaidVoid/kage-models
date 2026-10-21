@@ -24,8 +24,8 @@ unsafe_code = "forbid"
 # so the two can never disagree about which providers exist or how a
 # models.dev document is read. Pinned to a revision rather than a
 # branch: a moving branch would silently change what this repo emits.
-kage-core = { git = "https://github.com/QaidVoid/kage", rev = "f28ed0ad955c106a442e799e7f348043778692dc" }
-kage-provider = { git = "https://github.com/QaidVoid/kage", rev = "f28ed0ad955c106a442e799e7f348043778692dc" }
+kage-core = { git = "https://github.com/QaidVoid/kage", rev = "415a84da7bc163029c464d785f54732247ee6d15" }
+kage-provider = { git = "https://github.com/QaidVoid/kage", rev = "415a84da7bc163029c464d785f54732247ee6d15" }
 clap = { version = "4", features = ["derive"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
