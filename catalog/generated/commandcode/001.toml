@@ -6,6 +6,147 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
+id = "gpt-5.4-mini"
+name = "GPT-5.4 Mini"
+context = 400000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+
+[[models]]
+id = "gpt-5.5"
+name = "GPT-5.5"
+context = 400000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+
+[[models]]
+id = "gpt-5.6-luna"
+name = "GPT-5.6 Luna"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-5.6-sol"
+name = "GPT-5.6 Sol"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-5.6-terra"
+name = "GPT-5.6 Terra"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6-astra"
+name = "GPT-6 Astra"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6-luna"
+name = "GPT-6 Luna"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6-sol"
+name = "GPT-6 Sol"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6.1-sol"
+name = "GPT-6.1 Sol"
+context = 1050000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "inclusionai/ling-3.1-flash"
+name = "Ling 3.1 Flash"
+context = 262144
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+
+[[models]]
+id = "meituan/LongCat-2.0"
+name = "LongCat 2.0"
+context = 1048576
+input = ["text"]
+
+[[models]]
 id = "meta/muse-spark-1.1"
 name = "Muse Spark 1.1"
 context = 1048576
@@ -97,6 +238,34 @@ efforts = [
 ]
 
 [[models]]
+id = "minimax/minimax-m3.1-flash"
+name = "MiniMax M3.1 Flash"
+context = 1000000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "minimax/minimax-m3.1-flash:free"
+name = "MiniMax M3.1 Flash"
+context = 1000000
+input = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
 id = "mistral/mistral-large-4"
 name = "Mistral Large 4"
 context = 524288
@@ -163,218 +332,7 @@ efforts = [
 ]
 
 [[models]]
-id = "poolside/laguna-s-2.1-free"
-name = "Laguna S 2.1"
-context = 256000
-input = ["text"]
-
-[[models]]
-id = "sakana/fugu-ultra"
-name = "Fugu Ultra"
-context = 1000000
-input = ["text"]
-thinks = true
-efforts = [
-    "high",
-    "xhigh",
-]
-
-[[models]]
-id = "stealth/glyph-cluster:free"
-name = "Glyph Cluster"
-context = 256000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-
-[[models]]
-id = "stepfun/Step-3.5-Flash"
-name = "Step 3.5 Flash"
+id = "ornith/ornith-1.5-122b"
+name = "Ornith 1.5 122B"
 context = 262144
 input = ["text"]
-
-[[models]]
-id = "stepfun/Step-3.7-Flash"
-name = "Step 3.7 Flash"
-context = 256000
-input = ["text"]
-
-[[models]]
-id = "stepfun/Step-5-Preview"
-name = "Step 5 Preview"
-context = 1000000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-
-[[models]]
-id = "tencent/hy3-paid"
-name = "Tencent Hy3"
-context = 262144
-input = ["text"]
-
-[[models]]
-id = "tencent/hy4-preview"
-name = "Tencent Hy4 Preview"
-context = 1048576
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-
-[[models]]
-id = "thinkingmachines/inkling"
-name = "Inkling"
-context = 256000
-input = ["text"]
-
-[[models]]
-id = "thinkingmachines/inkling-small"
-name = "Inkling Small"
-context = 1000000
-input = ["text"]
-
-[[models]]
-id = "xai/grok-4.5"
-name = "Grok 4.5"
-context = 500000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-
-[[models]]
-id = "xai/grok-4.6"
-name = "Grok 4.6"
-context = 500000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-
-[[models]]
-id = "xai/grok-4.7"
-name = "Grok 4.7"
-context = 500000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-
-[[models]]
-id = "xiaomi/mimo-v2.5"
-name = "MiMo V2.5"
-context = 1000000
-input = ["text"]
-
-[[models]]
-id = "xiaomi/mimo-v2.5-pro"
-name = "MiMo V2.5 Pro"
-context = 1000000
-input = ["text"]
-
-[[models]]
-id = "xiaomi/mimo-v2.6-flash"
-name = "MiMo V2.6 Flash"
-context = 1048576
-input = ["text"]
-
-[[models]]
-id = "xiaomi/mimo-v2.6-pro"
-name = "MiMo V2.6 Pro"
-context = 1048576
-input = ["text"]
-
-[[models]]
-id = "xiaomi/mimo-v2.6-pro-ultraspeed"
-name = "MiMo V2.6 Pro UltraSpeed"
-context = 1048576
-input = ["text"]
-
-[[models]]
-id = "z-ai/glm-5.3-flash"
-name = "GLM-5.3 Flash"
-context = 1048576
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-
-[[models]]
-id = "z-ai/glm-5.3-flashx"
-name = "GLM-5.3 FlashX"
-context = 1000000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-
-[[models]]
-id = "zai-org/GLM-5"
-name = "GLM-5"
-context = 200000
-input = ["text"]
-
-[[models]]
-id = "zai-org/GLM-5.1"
-name = "GLM-5.1"
-context = 200000
-input = ["text"]
-
-[[models]]
-id = "zai-org/GLM-5.2"
-name = "GLM-5.2"
-context = 1000000
-input = ["text"]
-thinks = true
-efforts = [
-    "high",
-    "max",
-]
-
-[[models]]
-id = "zai-org/GLM-5.2-Fast"
-name = "GLM-5.2 Fast"
-context = 1000000
-input = ["text"]
-
-[[models]]
-id = "zai-org/GLM-5.3"
-name = "GLM-5.3"
-context = 1000000
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]

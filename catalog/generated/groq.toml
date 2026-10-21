@@ -83,6 +83,7 @@ release_date = "2025-10-29"
 [models.cost]
 input = 0.075
 output = 0.3
+cache_read = 0.0375
 
 [[models]]
 id = "qwen/qwen3.6-27b"
@@ -105,7 +106,7 @@ cache_read = 0.3
 [[models]]
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
-context = 131042
+context = 131072
 output = 16384
 input = [
     "text",

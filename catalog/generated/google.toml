@@ -511,6 +511,31 @@ output = 2.5
 cache_read = 0.03
 
 [[models]]
+id = "gemini-pro-latest"
+name = "Gemini Pro Latest"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-02-19"
+
+[models.cost]
+input = 2.0
+output = 12.0
+cache_read = 0.2
+
+[[models]]
 id = "gemma-4-26b-a4b-it"
 name = "Gemma 4 26B A4B IT"
 context = 262144

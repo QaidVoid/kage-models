@@ -165,7 +165,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-07-27"
+release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.budget]
@@ -188,7 +188,7 @@ efforts = [
     "medium",
     "high",
 ]
-release_date = "2026-06-12"
+release_date = "2026-06-01"
 interleaved = "reasoning_content"
 
 [models.cost]
@@ -303,7 +303,7 @@ efforts = [
     "max",
 ]
 toggle = true
-release_date = "2026-09-10"
+release_date = "2026-10-17"
 interleaved = "reasoning_content"
 
 [models.cost]
@@ -323,7 +323,7 @@ efforts = [
     "high",
     "max",
 ]
-release_date = "2026-08-28"
+release_date = "2026-08-14"
 interleaved = "reasoning_content"
 
 [models.cost]
@@ -343,7 +343,7 @@ efforts = [
     "high",
     "max",
 ]
-release_date = "2026-08-28"
+release_date = "2026-08-14"
 interleaved = "reasoning_content"
 
 [models.cost]
@@ -405,7 +405,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-07-27"
+release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.budget]
@@ -427,7 +427,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-07-27"
+release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.budget]
@@ -449,7 +449,7 @@ input = [
 ]
 thinks = true
 toggle = true
-release_date = "2026-07-27"
+release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.budget]
@@ -472,7 +472,7 @@ efforts = [
     "medium",
     "high",
 ]
-release_date = "2026-06-12"
+release_date = "2026-06-01"
 interleaved = "reasoning_content"
 
 [models.cost]

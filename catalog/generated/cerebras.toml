@@ -21,6 +21,7 @@ release_date = "2025-08-05"
 [models.cost]
 input = 0.35
 output = 0.75
+cache_read = 0.35
 
 [[models]]
 id = "qwen-3.8-27b"

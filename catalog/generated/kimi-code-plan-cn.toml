@@ -58,6 +58,7 @@ cache_write = 0.0
 
 [[models]]
 id = "kimi-for-coding"
+name = "Kimi K2.8 Preview"
 context = 1048576
 output = 32768
 input = [
