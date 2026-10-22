@@ -14,6 +14,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2026-03-09"
 
 [models.cost]
@@ -31,6 +32,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-03-09"
 
@@ -49,6 +51,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -74,6 +77,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -98,6 +102,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -122,6 +127,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -146,6 +152,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-04-16"
 

@@ -10,6 +10,7 @@ name = "GPT OSS 120B"
 context = 131072
 output = 40960
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -32,6 +33,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",

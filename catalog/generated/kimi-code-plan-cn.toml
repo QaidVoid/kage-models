@@ -15,6 +15,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -40,6 +41,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -66,6 +68,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -92,6 +95,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-06-12"
 interleaved = "reasoning_content"

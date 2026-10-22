@@ -16,6 +16,10 @@ input = [
     "audio",
     "video",
 ]
+produces = [
+    "text",
+    "image",
+]
 thinks = true
 release_date = "2026-04-21"
 
@@ -36,6 +40,10 @@ input = [
     "audio",
     "video",
 ]
+produces = [
+    "text",
+    "image",
+]
 thinks = true
 release_date = "2026-04-21"
 
@@ -53,6 +61,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2025-10-07"
 
@@ -72,6 +81,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-06-17"
@@ -97,6 +107,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-06-17"
@@ -122,6 +133,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2025-06-17"
 
@@ -146,6 +158,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -172,6 +185,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -192,6 +206,10 @@ name = "Nano Banana 2 Lite"
 context = 65536
 output = 4096
 input = [
+    "text",
+    "image",
+]
+produces = [
     "text",
     "image",
 ]
@@ -218,6 +236,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -242,6 +261,10 @@ input = [
     "image",
     "audio",
     "video",
+]
+produces = [
+    "text",
+    "audio",
 ]
 thinks = true
 efforts = [
@@ -268,6 +291,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -293,6 +317,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -318,6 +343,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -344,6 +370,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -370,6 +397,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -396,6 +424,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -421,6 +450,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -446,6 +476,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -471,6 +502,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -496,6 +528,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -522,6 +555,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -544,6 +578,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-02"
@@ -557,6 +592,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-02"

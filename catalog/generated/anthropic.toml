@@ -14,6 +14,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -40,6 +41,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -66,6 +68,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-10-15"
@@ -89,6 +92,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-10-15"
@@ -112,6 +116,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -139,6 +144,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-11-24"
@@ -162,6 +168,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-11-24"
@@ -185,6 +192,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-02-04"
@@ -208,6 +216,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -234,6 +243,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -260,6 +270,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -286,6 +297,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -312,6 +324,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-29"
@@ -335,6 +348,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-29"
@@ -358,6 +372,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-02-17"
@@ -381,6 +396,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -408,6 +424,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",

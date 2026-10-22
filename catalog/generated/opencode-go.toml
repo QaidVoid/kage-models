@@ -11,6 +11,7 @@ name = "Beam Free"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -33,6 +34,7 @@ name = "Cat Jam Free"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -59,6 +61,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -82,6 +85,7 @@ name = "DeepSeek V4 Pro (New)"
 context = 1000000
 output = 384000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "high",
@@ -104,6 +108,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -130,6 +135,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -149,6 +155,7 @@ name = "GLM-5.2"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "high",
@@ -168,6 +175,7 @@ name = "GLM-5.3"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -193,6 +201,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -218,6 +227,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -246,6 +256,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -273,6 +284,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -294,6 +306,7 @@ context = 256000
 input_limit = 192000
 output = 128000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -313,6 +326,7 @@ name = "Hy4 preview"
 context = 1024000
 output = 64000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -335,6 +349,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-06-12"
 interleaved = "reasoning_content"
@@ -354,6 +369,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = ["max"]
 release_date = "2026-07-16"
@@ -370,6 +386,7 @@ name = "LongCat-2.0"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-06-30"
@@ -389,6 +406,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-25"
@@ -410,6 +428,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-04-22"
 interleaved = "reasoning_content"
@@ -425,6 +444,7 @@ name = "MiMo V2.5 Pro"
 context = 1048576
 output = 128000
 input = ["text"]
+produces = ["text"]
 thinks = true
 release_date = "2026-04-22"
 interleaved = "reasoning_content"
@@ -445,6 +465,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-09-22"
 interleaved = "reasoning_content"
@@ -465,6 +486,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-09-22"
 interleaved = "reasoning_content"
@@ -480,6 +502,7 @@ name = "MiniMax-M2.7"
 context = 204800
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 release_date = "2026-03-18"
 
@@ -499,9 +522,10 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2026-05-31"
+release_date = "2026-06-01"
 
 [models.cost]
 input = 0.3
@@ -518,6 +542,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -546,6 +571,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -573,6 +599,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -598,6 +625,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-06-02"
@@ -622,6 +650,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-08-26"
@@ -645,6 +674,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-08-03"
@@ -670,6 +700,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -698,6 +729,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -723,6 +755,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",

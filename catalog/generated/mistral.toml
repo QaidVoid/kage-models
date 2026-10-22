@@ -13,6 +13,7 @@ input = [
     "text",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-07-30"
 
 [models.cost]
@@ -29,6 +30,7 @@ input = [
     "text",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-05-29"
 
 [models.cost]
@@ -42,6 +44,7 @@ name = "Devstral 2"
 context = 262144
 output = 262144
 input = ["text"]
+produces = ["text"]
 release_date = "2025-12-09"
 
 [models.cost]
@@ -54,6 +57,7 @@ name = "Devstral 2"
 context = 262144
 output = 262144
 input = ["text"]
+produces = ["text"]
 release_date = "2025-12-09"
 
 [models.cost]
@@ -66,6 +70,7 @@ name = "Devstral Medium"
 context = 128000
 output = 128000
 input = ["text"]
+produces = ["text"]
 release_date = "2025-07-10"
 
 [models.cost]
@@ -78,6 +83,7 @@ name = "Devstral 2 (latest)"
 context = 262144
 output = 262144
 input = ["text"]
+produces = ["text"]
 release_date = "2025-12-02"
 
 [models.cost]
@@ -90,6 +96,7 @@ name = "Devstral Small 2505"
 context = 128000
 output = 128000
 input = ["text"]
+produces = ["text"]
 release_date = "2025-05-07"
 
 [models.cost]
@@ -102,6 +109,7 @@ name = "Devstral Small"
 context = 128000
 output = 128000
 input = ["text"]
+produces = ["text"]
 release_date = "2025-07-10"
 
 [models.cost]
@@ -114,6 +122,7 @@ name = "GLM-5.2"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -136,6 +145,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-12-09"
 
 [models.cost]
@@ -151,6 +161,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -171,6 +182,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -192,6 +204,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-12-02"
 
 [models.cost]
@@ -209,6 +222,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-12-02"
 
 [models.cost]
@@ -226,6 +240,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-10-01"
 
 [models.cost]
@@ -243,6 +258,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-12-02"
 
 [models.cost]
@@ -260,6 +276,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-10-01"
 
 [models.cost]
@@ -273,6 +290,7 @@ name = "Mistral Large 2.1"
 context = 131072
 output = 16384
 input = ["text"]
+produces = ["text"]
 release_date = "2024-11-18"
 
 [models.cost]
@@ -289,6 +307,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-11-01"
 
 [models.cost]
@@ -306,6 +325,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -328,6 +348,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-11-01"
 
 [models.cost]
@@ -344,6 +365,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-05-07"
 
 [models.cost]
@@ -359,6 +381,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-08-12"
 
 [models.cost]
@@ -375,6 +398,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -397,6 +421,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -415,6 +440,7 @@ name = "Mistral Nemo"
 context = 128000
 output = 128000
 input = ["text"]
+produces = ["text"]
 release_date = "2024-07-01"
 
 [models.cost]
@@ -430,6 +456,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-06-20"
 
 [models.cost]
@@ -446,6 +473,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -468,6 +496,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -486,6 +515,7 @@ name = "Open Mistral Nemo"
 context = 128000
 output = 128000
 input = ["text"]
+produces = ["text"]
 release_date = "2024-07-01"
 
 [models.cost]
@@ -501,6 +531,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2024-09-01"
 
 [models.cost]
@@ -516,6 +547,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2024-11-01"
 
 [models.cost]
@@ -532,6 +564,7 @@ input = [
     "pdf",
     "audio",
 ]
+produces = ["text"]
 release_date = "2025-07-15"
 
 [models.cost]
@@ -548,6 +581,7 @@ input = [
     "pdf",
     "audio",
 ]
+produces = ["text"]
 release_date = "2025-07-15"
 
 [models.cost]
@@ -560,6 +594,7 @@ name = "GLM-5.2"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -579,6 +614,7 @@ name = "GLM-5.3"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",

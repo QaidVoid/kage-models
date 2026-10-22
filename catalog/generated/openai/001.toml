@@ -14,6 +14,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -39,6 +40,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "medium",
@@ -62,6 +64,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -88,6 +91,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "medium",
@@ -111,6 +115,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -139,6 +144,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -167,6 +173,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -195,6 +202,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -223,6 +231,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -250,6 +259,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -278,6 +288,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -306,6 +317,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -333,6 +345,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -360,6 +373,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -388,6 +402,10 @@ input = [
     "image",
     "audio",
 ]
+produces = [
+    "text",
+    "audio",
+]
 thinks = true
 efforts = [
     "minimal",
@@ -412,6 +430,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -433,6 +452,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -454,6 +474,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -472,6 +493,7 @@ id = "o3-mini"
 context = 200000
 output = 100000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -493,6 +515,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -513,6 +536,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",

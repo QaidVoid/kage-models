@@ -6,11 +6,70 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-chat"
+name = "DeepSeek Chat"
+context = 163840
+output = 16000
+input = ["text"]
+produces = ["text"]
+release_date = "2025-12-01"
+
+[models.cost]
+input = 0.2574
+output = 1.0287
+
+[[models]]
+id = "deepseek/deepseek-chat-v3-0324"
+name = "DeepSeek V3 0324"
+context = 163840
+output = 115200
+input = ["text"]
+produces = ["text"]
+release_date = "2025-03-24"
+
+[models.cost]
+input = 0.29
+output = 1.14
+cache_read = 0.11
+
+[[models]]
+id = "deepseek/deepseek-chat-v3.1"
+name = "DeepSeek V3.1"
+context = 163840
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-21"
+
+[models.cost]
+input = 0.25
+output = 0.95
+cache_read = 0.13
+
+[[models]]
+id = "deepseek/deepseek-r1-0528"
+name = "DeepSeek R1 0528"
+context = 163840
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2025-05-28"
+
+[models.cost]
+input = 0.5
+output = 2.15
+cache_read = 0.35
+
+[[models]]
 id = "deepseek/deepseek-v3.1-terminus"
 name = "DeepSeek V3.1 Terminus"
 context = 163840
 output = 147456
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-22"
@@ -25,6 +84,7 @@ name = "DeepSeek V3.2"
 context = 163840
 output = 65536
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-01"
@@ -40,6 +100,7 @@ name = "DeepSeek V3.2 Exp"
 context = 163840
 output = 147456
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-29"
@@ -54,6 +115,7 @@ name = "DeepSeek V4 Flash"
 context = 1048576
 output = 943717
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -74,6 +136,7 @@ name = "DeepSeek V4 Flash 0731"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -97,6 +160,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -117,6 +181,7 @@ name = "DeepSeek V4 Pro"
 context = 1048576
 output = 384000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -135,8 +200,9 @@ cache_read = 0.079605
 id = "deepseek/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 context = 1048576
-output = 384000
+output = 393216
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -147,9 +213,9 @@ efforts = [
 release_date = "2026-08-13"
 
 [models.cost]
-input = 0.66
-output = 1.98
-cache_read = 0.022
+input = 1.32
+output = 3.96
+cache_read = 0.044
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -160,6 +226,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -170,9 +237,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.049
-output = 0.375
-cache_read = 0.001
+input = 0.3
+output = 1.2
+cache_read = 0.006
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -183,6 +250,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -206,6 +274,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-08-14"
@@ -224,6 +293,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-10-17"
@@ -242,6 +312,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -268,6 +339,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-06-17"
@@ -290,6 +362,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-06-17"
@@ -312,6 +385,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2025-06-17"
 
@@ -336,6 +410,7 @@ input = [
     "pdf",
     "audio",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2025-06-05"
 
@@ -361,6 +436,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -387,6 +463,10 @@ input = [
     "text",
     "image",
 ]
+produces = [
+    "text",
+    "image",
+]
 thinks = true
 release_date = "2026-05-28"
 
@@ -408,6 +488,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -436,6 +517,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -464,6 +546,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -491,6 +574,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -518,6 +602,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -545,6 +630,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -572,6 +658,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -599,6 +686,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -625,6 +713,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -651,6 +740,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -671,6 +761,10 @@ name = "Nano Banana 2.1"
 context = 65536
 output = 58982
 input = [
+    "text",
+    "image",
+]
+produces = [
     "text",
     "image",
 ]
@@ -695,6 +789,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-03-12"
 
 [models.cost]
@@ -710,161 +805,10 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
 output = 0.35
 cache_read = 0.04
-
-[[models]]
-id = "google/gemma-4-26b-a4b-it"
-name = "Gemma 4 26B A4B IT"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
-
-[[models]]
-id = "google/gemma-4-26b-a4b-it:free"
-name = "Gemma 4 26B A4B  (free)"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "google/gemma-4-31b-it"
-name = "Gemma 4 31B IT"
-context = 262144
-output = 16384
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.2
-output = 0.4
-
-[[models]]
-id = "google/gemma-4-31b-it:free"
-name = "Gemma 4 31B (free)"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.25
-cache_read = 0.015
-
-[[models]]
-id = "inception/mercury-2"
-name = "Mercury 2"
-context = 128000
-output = 50000
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-02-24"
-
-[models.cost]
-input = 0.25
-output = 0.75
-cache_read = 0.025
-
-[[models]]
-id = "inception/mercury-2.5"
-name = "Mercury 2.5"
-context = 260000
-output = 65536
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-09-08"
-
-[models.cost]
-input = 0.04
-output = 0.15
-cache_read = 0.004
-
-[[models]]
-id = "inception/mercury-3"
-name = "Mercury 3"
-context = 1000000
-output = 131072
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.1
-output = 0.35
-cache_read = 0.01

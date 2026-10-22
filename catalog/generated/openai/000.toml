@@ -10,6 +10,7 @@ name = "GPT-4"
 context = 8192
 output = 8192
 input = ["text"]
+produces = ["text"]
 release_date = "2023-11-06"
 
 [models.cost]
@@ -25,6 +26,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2023-11-06"
 
 [models.cost]
@@ -41,6 +43,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-04-14"
 
 [models.cost]
@@ -58,6 +61,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2025-04-14"
 
 [models.cost]
@@ -74,6 +78,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2025-04-14"
 
 [models.cost]
@@ -91,6 +96,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-05-13"
 
 [models.cost]
@@ -107,6 +113,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2024-05-13"
 
 [models.cost]
@@ -122,6 +129,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2024-08-06"
 
 [models.cost]
@@ -138,6 +146,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 release_date = "2024-11-20"
 
 [models.cost]
@@ -155,6 +164,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 release_date = "2024-07-18"
 
 [models.cost]
@@ -172,6 +182,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -196,6 +207,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -220,6 +232,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -244,6 +257,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = ["high"]
 release_date = "2025-10-06"
@@ -262,6 +276,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -286,6 +301,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -311,6 +327,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "medium",
@@ -334,6 +351,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -360,6 +378,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -386,6 +405,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -411,6 +431,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",

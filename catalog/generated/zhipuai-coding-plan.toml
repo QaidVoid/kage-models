@@ -15,6 +15,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-08"
@@ -32,6 +33,7 @@ name = "GLM-5.3"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -58,6 +60,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -79,6 +82,7 @@ name = "GLM-5.3 Highspeed"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",

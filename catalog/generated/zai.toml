@@ -11,6 +11,7 @@ name = "GLM-4.5"
 context = 131072
 output = 98304
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
@@ -28,6 +29,7 @@ name = "GLM-4.5-Air"
 context = 131072
 output = 98304
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
@@ -45,6 +47,7 @@ name = "GLM-4.5-Flash"
 context = 131072
 output = 98304
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
@@ -66,6 +69,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-08-11"
@@ -83,6 +87,7 @@ name = "GLM-4.6"
 context = 204800
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-09-30"
@@ -104,6 +109,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-08"
@@ -125,6 +131,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-08"
@@ -142,6 +149,7 @@ name = "GLM-4.7"
 context = 204800
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-22"
@@ -159,6 +167,7 @@ name = "GLM-4.7-Flash"
 context = 200000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-01-19"
@@ -176,6 +185,7 @@ name = "GLM-4.7-FlashX"
 context = 200000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-01-19"
@@ -193,6 +203,7 @@ name = "GLM-5"
 context = 204800
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-02-12"
@@ -210,6 +221,7 @@ name = "GLM-5-Turbo"
 context = 200000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-03-16"
@@ -227,6 +239,7 @@ name = "GLM-5.1"
 context = 200000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-07"
@@ -244,6 +257,7 @@ name = "GLM-5.2"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "high",
@@ -265,6 +279,7 @@ name = "GLM-5.3"
 context = 1000000
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -291,6 +306,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -317,6 +333,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -343,6 +360,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-01"

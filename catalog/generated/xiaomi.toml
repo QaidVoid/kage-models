@@ -11,6 +11,7 @@ name = "MiMo-V2-Flash"
 context = 262144
 output = 65536
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-12-16"
@@ -33,6 +34,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-03-18"
@@ -49,6 +51,7 @@ name = "MiMo-V2-Pro"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-03-18"
@@ -70,6 +73,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-22"
@@ -86,6 +90,7 @@ name = "MiMo-V2.5-Pro"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-22"
@@ -102,6 +107,7 @@ name = "MiMo-V2.5-Pro-UltraSpeed"
 context = 1048576
 output = 131072
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-06-08"
@@ -123,6 +129,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-22"
@@ -144,6 +151,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-22"
@@ -165,6 +173,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-21"

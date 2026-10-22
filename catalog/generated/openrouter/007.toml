@@ -6,11 +6,653 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "reflection/beam-1.0-501b-a23b"
+name = "Beam 1.0 501B A23B"
+context = 1048576
+output = 943718
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-10-05"
+
+[models.cost]
+input = 0.3
+output = 1.0
+cache_read = 0.04
+
+[[models]]
+id = "rekaai/reka-edge"
+name = "Reka Edge"
+context = 16384
+output = 14745
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+release_date = "2026-03-11"
+
+[models.cost]
+input = 0.1
+output = 0.1
+
+[[models]]
+id = "relace/relace-search"
+name = "Relace Search"
+context = 256000
+output = 128000
+input = ["text"]
+produces = ["text"]
+release_date = "2025-12-08"
+
+[models.cost]
+input = 1.0
+output = 3.0
+
+[[models]]
+id = "sakana/fugu-max"
+name = "Fugu Max"
+context = 1000000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-11"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.25
+
+[[models]]
+id = "sakana/fugu-ultra"
+name = "Fugu Ultra"
+context = 1000000
+output = 128000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-06-15"
+
+[models.cost]
+input = 5.0
+output = 30.0
+cache_read = 0.5
+
+[[models]]
+id = "sakana/fugu-ultra-v2"
+name = "Fugu Ultra v2"
+context = 1000000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-11"
+
+[models.cost]
+input = 5.0
+output = 30.0
+cache_read = 0.5
+
+[[models]]
+id = "sakana/sakana-namazu"
+name = "Sakana Namazu"
+context = 262144
+output = 65536
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-08-03"
+
+[models.cost]
+input = 0.95
+output = 4.0
+cache_read = 0.15
+
+[[models]]
+id = "stepfun/step-3.5-flash"
+name = "Step 3.5 Flash"
+context = 262144
+output = 65536
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2026-01-29"
+
+[models.cost]
+input = 0.1
+output = 0.3
+
+[[models]]
+id = "stepfun/step-3.7-flash"
+name = "Step 3.7 Flash"
+context = 262144
+input_limit = 256000
+output = 230400
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-05-29"
+
+[models.cost]
+input = 0.2
+output = 1.15
+cache_read = 0.04
+
+[[models]]
+id = "stepfun/step-5-preview"
+name = "Step 5 Preview"
+context = 1048576
+input_limit = 1000000
+output = 64000
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-09-16"
+
+[models.cost]
+input = 1.0
+output = 2.7
+cache_read = 0.1
+
+[[models]]
+id = "tencent/hy3"
+name = "Hy3"
+context = 262144
+input_limit = 192000
+output = 128000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-07-06"
+
+[models.cost]
+input = 0.132
+output = 0.528
+cache_read = 0.033
+
+[[models]]
+id = "tencent/hy3-preview"
+name = "Hy3 preview"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-04-20"
+
+[models.cost]
+input = 0.18
+output = 0.6
+cache_read = 0.06
+
+[[models]]
+id = "tencent/hy4-preview"
+name = "Hy4 preview"
+context = 1048576
+output = 64000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-08-28"
+
+[models.cost]
+input = 0.834
+output = 2.501
+cache_read = 0.042
+
+[[models]]
+id = "thinkingmachines/inkling"
+name = "Inkling"
+context = 524288
+output = 471859
+input = [
+    "text",
+    "image",
+    "audio",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-07-15"
+
+[models.cost]
+input = 1.0
+output = 4.05
+cache_read = 0.17
+
+[[models]]
+id = "thinkingmachines/inkling-small"
+name = "Inkling Small"
+context = 524288
+output = 262144
+input = [
+    "text",
+    "image",
+    "audio",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-07-30"
+
+[models.cost]
+input = 0.45
+output = 1.2
+cache_read = 0.1
+
+[[models]]
+id = "thinkingmachines/inkling-small:free"
+name = "Inkling Small (free)"
+context = 1048576
+output = 262144
+input = [
+    "text",
+    "image",
+    "audio",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-07-30"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "thinkingmachines/inkling:free"
+name = "Inkling (free)"
+context = 1048576
+output = 262144
+input = [
+    "text",
+    "image",
+    "audio",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-07-15"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "unbiased/pareto-26.10"
+name = "Pareto 26.10"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2026-10-15"
+
+[models.cost]
+input = 0.8
+output = 3.2
+cache_read = 0.03
+
+[[models]]
+id = "unbiased/pareto-26.9"
+name = "Pareto 26.9"
+context = 262144
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2026-10-13"
+
+[models.cost]
+input = 2.5
+output = 7.5
+cache_read = 0.25
+
+[[models]]
+id = "upstage/solar-mini4"
+name = "Solar Mini 4"
+context = 524288
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.05
+output = 0.2
+cache_read = 0.005
+
+[[models]]
+id = "upstage/solar-pro-3"
+name = "Solar Pro 3"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-01-26"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.015
+
+[[models]]
+id = "upstage/solar-pro4"
+name = "Solar Pro 4"
+context = 524288
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-08-06"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.03
+
+[[models]]
+id = "x-ai/grok-4.20"
+name = "Grok 4.20"
+context = 2000000
+output = 1800000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-03-31"
+
+[models.cost]
+input = 1.25
+output = 2.5
+cache_read = 0.2
+
+[[models]]
+id = "x-ai/grok-4.3"
+name = "Grok 4.3"
+context = 1000000
+output = 900000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-04-17"
+
+[models.cost]
+input = 1.25
+output = 2.5
+cache_read = 0.2
+
+[[models]]
+id = "x-ai/grok-4.5"
+name = "Grok 4.5"
+context = 500000
+output = 450000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-07-08"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.3
+
+[[models]]
+id = "x-ai/grok-4.6"
+name = "Grok 4.6"
+context = 500000
+output = 450000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-08-12"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.5
+
+[[models]]
+id = "x-ai/grok-4.7"
+name = "Grok 4.7"
+context = 500000
+output = 450000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-09-21"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.5
+
+[[models]]
+id = "x-ai/grok-build-0.1"
+name = "Grok Build 0.1"
+context = 256000
+output = 230400
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+release_date = "2026-04-16"
+
+[models.cost]
+input = 1.0
+output = 2.0
+cache_read = 0.2
+
+[[models]]
+id = "xiaomi/mimo-v2.5"
+name = "MiMo-V2.5"
+context = 1050000
+output = 945000
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-22"
+interleaved = "reasoning_details"
+
+[models.cost]
+input = 0.119
+output = 0.238
+cache_read = 0.00255
+
+[[models]]
 id = "xiaomi/mimo-v2.5-pro"
 name = "MiMo-V2.5-Pro"
 context = 1050000
 output = 945000
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-22"
@@ -32,6 +674,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-22"
@@ -52,6 +695,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-22"
@@ -72,6 +716,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-09-21"
@@ -87,6 +732,7 @@ name = "Xing4.0 29B A4B (free)"
 context = 262144
 output = 235929
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-10-16"
@@ -101,6 +747,7 @@ name = "GLM-4.5"
 context = 131072
 output = 98304
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
@@ -116,6 +763,7 @@ name = "GLM-4.5-Air"
 context = 131072
 output = 98304
 input = ["text"]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2025-07-28"
@@ -124,714 +772,3 @@ release_date = "2025-07-28"
 input = 0.13
 output = 0.85
 cache_read = 0.025
-
-[[models]]
-id = "z-ai/glm-4.5v"
-name = "GLM-4.5V"
-context = 65536
-output = 16384
-input = [
-    "text",
-    "image",
-]
-thinks = true
-toggle = true
-release_date = "2025-08-11"
-
-[models.cost]
-input = 0.6
-output = 1.8
-cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.6"
-name = "GLM-4.6"
-context = 204800
-output = 131072
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-09-30"
-
-[models.cost]
-input = 0.55
-output = 2.2
-cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.6v"
-name = "GLM-4.6V"
-context = 131072
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2025-12-08"
-
-[models.cost]
-input = 0.3
-output = 0.9
-cache_read = 0.055
-
-[[models]]
-id = "z-ai/glm-4.7"
-name = "GLM-4.7"
-context = 204800
-output = 131072
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-12-22"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.54
-output = 1.98
-cache_read = 0.099
-
-[[models]]
-id = "z-ai/glm-4.7-flash"
-name = "GLM-4.7-Flash"
-context = 200000
-output = 117964
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-01-19"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.0605
-output = 0.4
-
-[[models]]
-id = "z-ai/glm-5"
-name = "GLM-5"
-context = 204800
-output = 131072
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-02-12"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 1.0
-output = 3.2
-cache_read = 0.2
-
-[[models]]
-id = "z-ai/glm-5-turbo"
-name = "GLM-5-Turbo"
-context = 202752
-output = 131072
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-03-16"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 1.2
-output = 4.0
-cache_read = 0.24
-
-[[models]]
-id = "z-ai/glm-5.1"
-name = "GLM-5.1"
-context = 204800
-output = 131072
-input = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-07"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 1.4
-output = 4.4
-cache_read = 0.26
-
-[[models]]
-id = "z-ai/glm-5.2"
-name = "GLM-5.2"
-context = 1048576
-output = 943718
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "high",
-    "xhigh",
-]
-release_date = "2026-06-13"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 0.0341
-output = 7.0
-cache_read = 0.033
-
-[[models]]
-id = "z-ai/glm-5.3"
-name = "GLM-5.3"
-context = 1048576
-output = 943718
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.079
-output = 1.4
-cache_read = 0.078
-
-[[models]]
-id = "z-ai/glm-5.3-flash"
-name = "GLM-5.3-Flash"
-context = 1048576
-output = 943718
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-08-26"
-
-[models.cost]
-input = 0.041191
-output = 0.12
-cache_read = 0.00375
-
-[[models]]
-id = "z-ai/glm-5.3-flashx"
-name = "GLM 5.3 FlashX"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-09-18"
-
-[models.cost]
-input = 0.37
-output = 1.25
-cache_read = 0.09
-
-[[models]]
-id = "z-ai/glm-5.3-prime"
-name = "GLM 5.3 Prime"
-context = 1000000
-output = 131072
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-09-23"
-
-[models.cost]
-input = 2.8
-output = 8.8
-cache_read = 0.56
-
-[[models]]
-id = "z-ai/glm-5v-turbo"
-name = "GLM-5V-Turbo"
-context = 202752
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-toggle = true
-release_date = "2026-04-01"
-
-[models.cost]
-input = 1.2
-output = 4.0
-cache_read = 0.24
-
-[[models]]
-id = "~anthropic/claude-fable-latest"
-name = "Claude Fable Latest"
-context = 1000000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-06-09"
-
-[models.cost]
-input = 10.0
-output = 50.0
-cache_read = 0.25
-cache_write = 12.5
-
-[[models]]
-id = "~anthropic/claude-haiku-latest"
-name = "Claude Haiku Latest"
-context = 1000000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.1
-output = 0.5
-cache_read = 0.01
-cache_write = 0.125
-
-[[models]]
-id = "~anthropic/claude-opus-latest"
-name = "Claude Opus Latest"
-context = 1000000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-04-21"
-
-[models.cost]
-input = 4.0
-output = 20.0
-cache_read = 0.2
-cache_write = 5.0
-
-[[models]]
-id = "~anthropic/claude-sonnet-latest"
-name = "Claude Sonnet Latest"
-context = 1000000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.1
-cache_write = 2.5
-
-[[models]]
-id = "~deepseek/deepseek-flash-latest"
-name = "DeepSeek Flash Latest"
-context = 1048576
-output = 943718
-input = [
-    "text",
-    "image",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-09-14"
-
-[models.cost]
-input = 0.049
-output = 0.375
-cache_read = 0.001176
-
-[[models]]
-id = "~deepseek/deepseek-pro-latest"
-name = "DeepSeek Pro Latest"
-context = 1048576
-output = 393216
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-09-14"
-
-[models.cost]
-input = 0.225
-output = 8.0
-cache_read = 0.23
-
-[[models]]
-id = "~deepseek/deepseek-v4-flash-latest"
-name = "DeepSeek V4 Flash Latest"
-context = 1048576
-output = 943718
-input = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-08-01"
-
-[models.cost]
-input = 0.0475
-output = 0.1568
-cache_read = 0.028
-
-[[models]]
-id = "~google/gemini-flash-latest"
-name = "Gemini Flash Latest"
-context = 1048576
-output = 65536
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.75
-output = 3.75
-cache_read = 0.075
-cache_write = 0.041667
-
-[[models]]
-id = "~google/gemini-pro-latest"
-name = "Gemini Pro Latest"
-context = 1048576
-output = 943718
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.1
-cache_write = 0.1875
-
-[[models]]
-id = "~moonshotai/kimi-latest"
-name = "Kimi Latest"
-context = 1048576
-output = 943718
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.238
-output = 24.0
-cache_read = 0.228
-
-[[models]]
-id = "~openai/gpt-astra-latest"
-name = "GPT Astra Latest"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-11"
-
-[models.cost]
-input = 10.0
-output = 50.0
-cache_read = 1.0
-cache_write = 12.5
-
-[[models]]
-id = "~openai/gpt-luna-latest"
-name = "GPT Luna Latest"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-11"
-
-[models.cost]
-input = 0.1
-output = 0.5
-cache_read = 0.01
-cache_write = 0.125
-
-[[models]]
-id = "~openai/gpt-mini-latest"
-name = "GPT Mini Latest"
-context = 400000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-04-27"
-
-[models.cost]
-input = 0.75
-output = 4.5
-cache_read = 0.075
-
-[[models]]
-id = "~openai/gpt-sol-latest"
-name = "GPT Sol Latest"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-11"
-
-[models.cost]
-input = 2.0
-output = 10.0
-cache_read = 0.1
-cache_write = 2.5
-
-[[models]]
-id = "~openai/gpt-terra-latest"
-name = "GPT Terra Latest"
-context = 1050000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-09-11"
-
-[models.cost]
-input = 2.0
-output = 12.0
-cache_read = 0.2
-cache_write = 2.5
-
-[[models]]
-id = "~unbiased/pareto-latest"
-name = "Pareto Latest"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-]
-release_date = "2026-10-13"
-
-[models.cost]
-input = 0.8
-output = 3.2
-cache_read = 0.03
-
-[[models]]
-id = "~x-ai/grok-latest"
-name = "Grok Latest"
-context = 500000
-output = 450000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-07-08"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.5
-
-[[models]]
-id = "~z-ai/glm-flash-latest"
-name = "GLM Flash Latest"
-context = 1048576
-output = 943718
-input = [
-    "text",
-    "image",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-08-27"
-
-[models.cost]
-input = 0.041191
-output = 0.12
-cache_read = 0.00375
-
-[[models]]
-id = "~z-ai/glm-latest"
-name = "GLM Latest"
-context = 1048576
-output = 943718
-input = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-release_date = "2026-08-19"
-
-[models.cost]
-input = 0.079
-output = 1.4
-cache_read = 0.078

@@ -14,6 +14,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -29,6 +30,7 @@ name = "DeepSeek V4 Flash"
 context = 1000000
 output = 384000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -43,6 +45,7 @@ name = "DeepSeek V4 Pro"
 context = 1000000
 output = 384000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -50,47 +53,6 @@ efforts = [
     "max",
 ]
 release_date = "2026-04-24"
-
-[[models]]
-id = "gemini-3-6-flash"
-name = "Gemini 3.6 Flash"
-context = 1048576
-output = 65536
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-07-21"
-
-[[models]]
-id = "gemini-3-7-flash"
-name = "Gemini 3.7 Flash"
-context = 1048576
-output = 65536
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-08-13"
 
 [[models]]
 id = "gemini-3-8-flash"
@@ -103,6 +65,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -120,6 +83,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-02"
@@ -130,6 +94,7 @@ name = "GLM-5.2"
 context = 1048576
 output = 943718
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -144,6 +109,7 @@ name = "GLM-5.3"
 context = 1000000
 output = 128000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -162,6 +128,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -180,6 +147,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -201,6 +169,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -221,6 +190,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -239,6 +209,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -257,6 +228,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -276,6 +248,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -292,6 +265,7 @@ name = "GPT OSS 120B"
 context = 128000
 output = 65536
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -311,6 +285,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -329,6 +304,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -343,6 +319,7 @@ name = "Hy3"
 context = 262144
 output = 128000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -356,6 +333,7 @@ id = "hy4-preview"
 context = 1048576
 output = 64000
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -372,6 +350,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-04-20"
 
@@ -384,6 +363,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-06-12"
 
@@ -397,6 +377,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -415,6 +396,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 
 [[models]]
@@ -427,6 +409,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 
 [[models]]
@@ -439,6 +422,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-06-01"
 
@@ -451,6 +435,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
@@ -470,6 +455,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -489,6 +475,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -508,6 +495,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -528,6 +516,7 @@ input = [
     "pdf",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -547,6 +536,7 @@ input = [
     "image",
     "pdf",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "minimal",
@@ -563,6 +553,7 @@ name = "Nemotron 3 Super 120B A12B"
 context = 262144
 output = 235929
 input = ["text"]
+produces = ["text"]
 thinks = true
 efforts = [
     "none",
@@ -581,6 +572,7 @@ input = [
     "text",
     "image",
 ]
+produces = ["text"]
 thinks = true
 release_date = "2026-06-02"
 
@@ -593,6 +585,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 
 [[models]]
@@ -605,6 +598,7 @@ input = [
     "audio",
     "video",
 ]
+produces = ["text"]
 thinks = true
 
 [[models]]
@@ -616,6 +610,7 @@ input = [
     "image",
     "video",
 ]
+produces = ["text"]
 thinks = true
 efforts = [
     "low",
