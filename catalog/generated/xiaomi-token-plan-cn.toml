@@ -6,23 +6,6 @@ name = "Xiaomi Token Plan (China)"
 api = "https://token-plan-cn.xiaomimimo.com/v1"
 
 [[models]]
-id = "mimo-v2-pro"
-name = "MiMo-V2-Pro"
-context = 1048576
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-03-18"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 0.0
-output = 0.0
-cache_read = 0.0
-
-[[models]]
 id = "mimo-v2.5"
 name = "MiMo-V2.5"
 context = 1048576

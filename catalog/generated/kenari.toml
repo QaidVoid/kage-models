@@ -22,6 +22,7 @@ efforts = [
     "high",
     "max",
 ]
+toggle = true
 release_date = "2026-09-10"
 
 [[models]]
@@ -316,7 +317,7 @@ efforts = [
 [[models]]
 id = "hy3"
 name = "Hy3"
-context = 262144
+context = 196608
 output = 128000
 input = ["text"]
 produces = ["text"]

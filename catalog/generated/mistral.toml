@@ -65,19 +65,6 @@ input = 0.4
 output = 2.0
 
 [[models]]
-id = "devstral-medium-2507"
-name = "Devstral Medium"
-context = 128000
-output = 128000
-input = ["text"]
-produces = ["text"]
-release_date = "2025-07-10"
-
-[models.cost]
-input = 0.4
-output = 2.0
-
-[[models]]
 id = "devstral-medium-latest"
 name = "Devstral 2 (latest)"
 context = 262144
@@ -89,32 +76,6 @@ release_date = "2025-12-02"
 [models.cost]
 input = 0.4
 output = 2.0
-
-[[models]]
-id = "devstral-small-2505"
-name = "Devstral Small 2505"
-context = 128000
-output = 128000
-input = ["text"]
-produces = ["text"]
-release_date = "2025-05-07"
-
-[models.cost]
-input = 0.1
-output = 0.3
-
-[[models]]
-id = "devstral-small-2507"
-name = "Devstral Small"
-context = 128000
-output = 128000
-input = ["text"]
-produces = ["text"]
-release_date = "2025-07-10"
-
-[models.cost]
-input = 0.1
-output = 0.3
 
 [[models]]
 id = "glm-5-2"
@@ -285,19 +246,6 @@ output = 0.15
 cache_read = 0.015
 
 [[models]]
-id = "mistral-large-2411"
-name = "Mistral Large 2.1"
-context = 131072
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2024-11-18"
-
-[models.cost]
-input = 2.0
-output = 6.0
-
-[[models]]
 id = "mistral-large-2512"
 name = "Mistral Large 3"
 context = 262144
@@ -334,9 +282,9 @@ efforts = [
 release_date = "2026-10-06"
 
 [models.cost]
-input = 0.68
-output = 2.09
-cache_read = 0.07
+input = 1.36
+output = 4.18
+cache_read = 0.14
 
 [[models]]
 id = "mistral-large-latest"
@@ -435,19 +383,6 @@ output = 7.5
 cache_read = 0.15
 
 [[models]]
-id = "mistral-nemo"
-name = "Mistral Nemo"
-context = 128000
-output = 128000
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-01"
-
-[models.cost]
-input = 0.15
-output = 0.15
-
-[[models]]
 id = "mistral-small-2506"
 name = "Mistral Small 3.2"
 context = 128000
@@ -539,22 +474,6 @@ input = 0.15
 output = 0.15
 
 [[models]]
-id = "pixtral-large-latest"
-name = "Pixtral Large (latest)"
-context = 128000
-output = 128000
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-release_date = "2024-11-01"
-
-[models.cost]
-input = 2.0
-output = 6.0
-
-[[models]]
 id = "voxtral-small-2507"
 name = "Voxtral Small"
 context = 32768
@@ -627,3 +546,28 @@ release_date = "2026-08-14"
 input = 1.4
 output = 4.4
 cache_read = 0.14
+
+[[models]]
+id = "zai-glm-5-3-flash"
+name = "GLM-5.3-Flash"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "pdf",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-08-26"
+
+[models.cost]
+input = 0.15
+output = 0.5
+cache_read = 0.03

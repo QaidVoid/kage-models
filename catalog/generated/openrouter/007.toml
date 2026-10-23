@@ -9,7 +9,7 @@ api = "https://openrouter.ai/api/v1"
 id = "reflection/beam-1.0-501b-a23b"
 name = "Beam 1.0 501B A23B"
 context = 1048576
-output = 943718
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -23,9 +23,9 @@ efforts = [
 release_date = "2026-10-05"
 
 [models.cost]
-input = 0.3
+input = 0.25
 output = 1.0
-cache_read = 0.04
+cache_read = 0.05
 
 [[models]]
 id = "rekaai/reka-edge"

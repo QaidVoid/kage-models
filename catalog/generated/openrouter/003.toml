@@ -269,8 +269,8 @@ produces = ["text"]
 release_date = "2025-06-20"
 
 [models.cost]
-input = 0.09375
-output = 0.25
+input = 0.075
+output = 0.2
 
 [[models]]
 id = "mistralai/mixtral-8x22b-instruct"

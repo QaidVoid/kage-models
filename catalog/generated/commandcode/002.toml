@@ -6,6 +6,13 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
+id = "nvidia/nemotron-3-ultra-550b-a55b"
+name = "Nemotron 3 Ultra"
+context = 1000000
+input = ["text"]
+produces = ["text"]
+
+[[models]]
 id = "nvidia/nemotron-3.5-super-vl"
 name = "Nemotron 3.5 Super VL"
 context = 262144
@@ -174,20 +181,6 @@ efforts = [
     "high",
     "xhigh",
 ]
-
-[[models]]
-id = "xiaomi/mimo-v2.5"
-name = "MiMo V2.5"
-context = 1000000
-input = ["text"]
-produces = ["text"]
-
-[[models]]
-id = "xiaomi/mimo-v2.5-pro"
-name = "MiMo V2.5 Pro"
-context = 1000000
-input = ["text"]
-produces = ["text"]
 
 [[models]]
 id = "xiaomi/mimo-v2.6-flash"

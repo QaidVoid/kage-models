@@ -295,7 +295,7 @@ cache_read = 0.3
 id = "qwen/qwen3.5-9b"
 name = "Qwen3.5 9B"
 context = 262144
-output = 65536
+output = 235929
 input = [
     "text",
     "image",
@@ -307,9 +307,8 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.08
-output = 0.13
-cache_read = 0.04
+input = 0.17
+output = 0.25
 
 [[models]]
 id = "qwen/qwen3.5-flash-02-23"
@@ -535,7 +534,7 @@ cache_read = 0.25
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
 context = 1000000
-output = 65536
+output = 235929
 input = [
     "text",
     "image",
@@ -552,9 +551,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.04
-output = 1.35
-cache_read = 0.018
+input = 0.2
+output = 2.5
+cache_read = 0.09
 
 [[models]]
 id = "qwen/qwen3.8-flash"
