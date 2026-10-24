@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.13
+output = 0.85
+cache_read = 0.025
+
+[[models]]
 id = "z-ai/glm-4.5v"
 name = "GLM-4.5V"
 context = 65536
@@ -58,7 +74,7 @@ release_date = "2025-12-08"
 [models.cost]
 input = 0.3
 output = 0.9
-cache_read = 0.055
+cache_read = 0.05
 
 [[models]]
 id = "z-ai/glm-4.7"
@@ -189,7 +205,7 @@ cache_read = 0.078
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 943718
+output = 943717
 input = [
     "text",
     "image",
@@ -205,9 +221,9 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.0052
-output = 0.1985
-cache_read = 0.0052
+input = 0.15
+output = 0.5
+cache_read = 0.03
 
 [[models]]
 id = "z-ai/glm-5.3-flashx"
@@ -402,9 +418,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.07
-output = 0.5
-cache_read = 0.008
+input = 0.02
+output = 1.0
+cache_read = 0.015
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -423,9 +439,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.2247
+input = 0.1188
 output = 8.0
-cache_read = 0.22
+cache_read = 0.12
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
@@ -444,8 +460,8 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.0475
-output = 0.1568
+input = 0.0422
+output = 0.1694
 cache_read = 0.028
 
 [[models]]
@@ -523,9 +539,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.238
-output = 16.0
-cache_read = 0.228
+input = 0.19
+output = 7.7001
+cache_read = 0.19
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -709,7 +725,7 @@ cache_read = 0.5
 id = "~z-ai/glm-flash-latest"
 name = "GLM Flash Latest"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -725,15 +741,15 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0052
-output = 0.1985
-cache_read = 0.0052
+input = 0.0175
+output = 0.1425
+cache_read = 0.0175
 
 [[models]]
 id = "~z-ai/glm-latest"
 name = "GLM Latest"
 context = 1048576
-output = 943718
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -745,6 +761,6 @@ efforts = [
 release_date = "2026-08-19"
 
 [models.cost]
-input = 0.079
-output = 1.4
-cache_read = 0.078
+input = 0.075
+output = 1.575
+cache_read = 0.075

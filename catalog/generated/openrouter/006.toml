@@ -6,6 +6,19 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "qwen/qwen3-235b-a22b-2507"
+name = "Qwen3 235B A22B Instruct 2507"
+context = 262144
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2025-07-21"
+
+[models.cost]
+input = 0.09
+output = 0.55
+
+[[models]]
 id = "qwen/qwen3-235b-a22b-thinking-2507"
 name = "Qwen3 235B-A22B Thinking 2507"
 context = 128000
@@ -653,17 +666,3 @@ min = 0
 input = 0.15
 output = 0.47
 cache_read = 0.016
-
-[[models]]
-id = "recursive/flint-v1.0:free"
-name = "Flint (free)"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2026-10-21"
-
-[models.cost]
-input = 0.0
-output = 0.0

@@ -6,6 +6,20 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "recursive/flint-v1.0:free"
+name = "Flint (free)"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2026-10-21"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
 id = "reflection/beam-1.0-501b-a23b"
 name = "Beam 1.0 501B A23B"
 context = 1048576
@@ -756,19 +770,3 @@ release_date = "2025-07-28"
 input = 0.6
 output = 2.2
 cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.5-air"
-name = "GLM-4.5-Air"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.13
-output = 0.85
-cache_read = 0.025

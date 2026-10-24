@@ -6,6 +6,35 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/gpt-5.6-sol-pro"
+name = "GPT-5.6 Sol Pro"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 4.0
+output = 20.0
+cache_read = 0.4
+cache_write = 5.0
+
+[[models]]
 id = "openai/gpt-5.6-terra"
 name = "GPT-5.6 Terra"
 context = 1050000
@@ -743,16 +772,3 @@ release_date = "2025-04-28"
 [models.cost]
 input = 0.12
 output = 0.24
-
-[[models]]
-id = "qwen/qwen3-235b-a22b-2507"
-name = "Qwen3 235B A22B Instruct 2507"
-context = 262144
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2025-07-21"
-
-[models.cost]
-input = 0.09
-output = 0.55

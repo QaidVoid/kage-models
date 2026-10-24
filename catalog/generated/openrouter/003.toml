@@ -405,7 +405,7 @@ release_date = "2026-06-12"
 [models.cost]
 input = 0.6712
 output = 3.35
-cache_read = 0.18
+cache_read = 0.15
 
 [[models]]
 id = "moonshotai/kimi-k3"
@@ -429,8 +429,33 @@ release_date = "2026-07-16"
 
 [models.cost]
 input = 0.239
-output = 11.936
+output = 10.8
 cache_read = 0.21
+
+[[models]]
+id = "moonshotai/kimi-k3.1-pro"
+name = "Kimi K3.1 Pro"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-10-23"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.2
 
 [[models]]
 id = "nex-agi/nex-n2.5-pro"
@@ -632,16 +657,3 @@ release_date = "2026-10-15"
 [models.cost]
 input = 0.0
 output = 0.0
-
-[[models]]
-id = "openai/gpt-3.5-turbo"
-name = "GPT-3.5-turbo"
-context = 16385
-output = 4096
-input = ["text"]
-produces = ["text"]
-release_date = "2023-03-01"
-
-[models.cost]
-input = 0.5
-output = 1.5

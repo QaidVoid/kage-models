@@ -388,6 +388,23 @@ efforts = [
 release_date = "2026-07-16"
 
 [[models]]
+id = "kimi-k3-1-pro"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+
+[[models]]
 id = "mimo-v2-6-flash"
 context = 1050000
 output = 131072
@@ -576,6 +593,24 @@ input = [
 produces = ["text"]
 thinks = true
 release_date = "2026-06-02"
+
+[[models]]
+id = "qwen3-8-27b-uncensored"
+context = 262144
+output = 32768
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+toggle = true
 
 [[models]]
 id = "qwen3-8-flash"

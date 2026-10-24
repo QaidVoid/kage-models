@@ -147,9 +147,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.44
-output = 1.32
-cache_read = 0.014
+input = 0.04444
+output = 0.13332
+cache_read = 0.001414
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"
@@ -192,9 +192,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.95526
-output = 1.91052
-cache_read = 0.079605
+input = 0.439176
+output = 0.878352
+cache_read = 0.036598
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -213,9 +213,9 @@ efforts = [
 release_date = "2026-08-13"
 
 [models.cost]
-input = 1.32
-output = 3.96
-cache_read = 0.044
+input = 0.66
+output = 1.98
+cache_read = 0.022
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -237,9 +237,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.165
-output = 0.66
-cache_read = 0.006
+input = 0.02
+output = 1.0
+cache_read = 0.015
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -261,9 +261,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.3
-output = 1.2
-cache_read = 0.006
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"

@@ -21,9 +21,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.0675
+output = 0.225
+cache_read = 0.0375
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
