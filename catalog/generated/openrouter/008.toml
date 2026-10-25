@@ -205,7 +205,7 @@ cache_read = 0.078
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 943717
+output = 131072
 input = [
     "text",
     "image",
@@ -221,8 +221,8 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.15
-output = 0.5
+input = 0.0418
+output = 0.077
 cache_read = 0.03
 
 [[models]]
@@ -540,7 +540,7 @@ release_date = "2026-04-27"
 
 [models.cost]
 input = 0.19
-output = 7.7001
+output = 8.94
 cache_read = 0.19
 
 [[models]]
@@ -741,9 +741,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0175
-output = 0.1425
-cache_read = 0.0175
+input = 0.0418
+output = 0.077
+cache_read = 0.03
 
 [[models]]
 id = "~z-ai/glm-latest"
@@ -761,6 +761,6 @@ efforts = [
 release_date = "2026-08-19"
 
 [models.cost]
-input = 0.075
-output = 1.575
-cache_read = 0.075
+input = 0.0703
+output = 4.3843
+cache_read = 0.0703

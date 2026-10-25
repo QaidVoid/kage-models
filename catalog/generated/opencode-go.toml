@@ -124,6 +124,32 @@ output = 0.6
 cache_read = 0.003
 
 [[models]]
+id = "gemini-4-argon"
+name = "Gemini 4 Argon"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-13"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+
+[[models]]
 id = "gemini-4-argon-contributor"
 name = "Gemini 4 Argon Contributor"
 context = 1048576
@@ -198,7 +224,6 @@ output = 131072
 input = [
     "text",
     "image",
-    "pdf",
     "video",
 ]
 produces = ["text"]
@@ -338,6 +363,21 @@ release_date = "2026-08-28"
 input = 0.834
 output = 2.501
 cache_read = 0.042
+
+[[models]]
+id = "iceman-contributor-free"
+name = "Iceman Contributor Free"
+context = 262144
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2026-10-24"
+
+[models.cost]
+input = 0.0
+output = 0.0
+cache_read = 0.0
 
 [[models]]
 id = "kimi-k2.7-code"
