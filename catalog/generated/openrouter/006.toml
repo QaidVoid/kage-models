@@ -57,7 +57,7 @@ produces = ["text"]
 release_date = "2025-07-28"
 
 [models.cost]
-input = 0.09
+input = 0.1
 output = 0.3
 
 [[models]]
@@ -241,8 +241,8 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.4
-output = 3.2
+input = 0.26
+output = 2.08
 
 [[models]]
 id = "qwen/qwen3.5-27b"
@@ -385,7 +385,7 @@ cache_write = 0.375
 id = "qwen/qwen3.6-27b"
 name = "Qwen3.6 27B"
 context = 262144
-output = 65536
+output = 81920
 input = [
     "text",
     "image",
@@ -397,9 +397,8 @@ toggle = true
 release_date = "2026-04-22"
 
 [models.cost]
-input = 0.25
-output = 2.0
-cache_read = 0.025
+input = 0.32
+output = 3.2
 
 [[models]]
 id = "qwen/qwen3.6-35b-a3b"

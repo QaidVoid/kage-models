@@ -78,7 +78,7 @@ efforts = [
 id = "gemma-4-31b-it"
 name = "Gemma 4 31B IT"
 context = 262144
-output = 16384
+output = 32768
 input = [
     "text",
     "image",

@@ -21,9 +21,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.0675
-output = 0.225
-cache_read = 0.0375
+input = 0.09
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
@@ -48,7 +48,7 @@ output = 0.0
 id = "google/gemma-4-31b-it"
 name = "Gemma 4 31B IT"
 context = 262144
-output = 16384
+output = 235929
 input = [
     "text",
     "image",
@@ -60,8 +60,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.2
-output = 0.4
+input = 0.1
+output = 0.34
+cache_read = 0.1
 
 [[models]]
 id = "google/gemma-4-31b-it:free"

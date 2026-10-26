@@ -119,7 +119,7 @@ cache_read = 0.1
 id = "openai/gpt-4.1-nano"
 name = "GPT-4.1 nano"
 context = 1047576
-output = 32768
+output = 942818
 input = [
     "text",
     "image",
@@ -131,7 +131,7 @@ release_date = "2025-04-14"
 [models.cost]
 input = 0.1
 output = 0.4
-cache_read = 0.025
+cache_read = 0.03
 
 [[models]]
 id = "openai/gpt-4o"
