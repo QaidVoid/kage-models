@@ -555,21 +555,6 @@ cache_read = 0.1
 cache_write = 2.5
 
 [[models]]
-id = "arcee-ai/trinity-large-thinking"
-name = "Trinity Large Thinking"
-context = 262144
-output = 80000
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2026-04-01"
-
-[models.cost]
-input = 0.25
-output = 0.8
-cache_read = 0.06
-
-[[models]]
 id = "bytedance-seed/seed-1.6"
 name = "Seed 1.6"
 context = 262144
@@ -759,3 +744,16 @@ release_date = "2026-06-09"
 [models.cost]
 input = 0.0
 output = 0.0
+
+[[models]]
+id = "deepseek/deepseek-chat"
+name = "DeepSeek Chat"
+context = 163840
+output = 16000
+input = ["text"]
+produces = ["text"]
+release_date = "2025-12-01"
+
+[models.cost]
+input = 0.2574
+output = 1.0287

@@ -6,38 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "nvidia/nemotron-3.5-super-vl:free"
-name = "Nemotron 3.5 Super VL (free)"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-10-15"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "openai/gpt-3.5-turbo-0613"
-name = "GPT-3.5 Turbo (older v0613)"
-context = 4095
-output = 3685
-input = ["text"]
-produces = ["text"]
-release_date = "2024-01-25"
-
-[models.cost]
-input = 1.0
-output = 2.0
-
-[[models]]
 id = "openai/gpt-3.5-turbo-16k"
 name = "GPT-3.5 Turbo 16k"
 context = 16385
@@ -800,3 +768,61 @@ input = 4.0
 output = 20.0
 cache_read = 0.4
 cache_write = 5.0
+
+[[models]]
+id = "openai/gpt-5.6-sol-pro"
+name = "GPT-5.6 Sol Pro"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 4.0
+output = 20.0
+cache_read = 0.4
+cache_write = 5.0
+
+[[models]]
+id = "openai/gpt-5.6-terra"
+name = "GPT-5.6 Terra"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-07-09"
+
+[models.cost]
+input = 2.0
+output = 12.0
+cache_read = 0.2
+cache_write = 2.5

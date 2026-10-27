@@ -248,7 +248,7 @@ output = 2.08
 id = "qwen/qwen3.5-27b"
 name = "Qwen3.5 27B"
 context = 262144
-output = 65536
+output = 81920
 input = [
     "text",
     "image",
@@ -260,9 +260,8 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.27
-output = 2.16
-cache_read = 0.27
+input = 0.26
+output = 2.6
 
 [[models]]
 id = "qwen/qwen3.5-35b-a3b"

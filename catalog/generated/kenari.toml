@@ -78,7 +78,7 @@ efforts = [
 id = "gemma-4-31b-it"
 name = "Gemma 4 31B IT"
 context = 262144
-output = 32768
+output = 16384
 input = [
     "text",
     "image",
@@ -194,6 +194,26 @@ input = [
 produces = ["text"]
 thinks = true
 efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6-1-terra"
+context = 1050000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
     "low",
     "medium",
     "high",

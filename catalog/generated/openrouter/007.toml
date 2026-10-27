@@ -642,7 +642,7 @@ cache_read = 0.2
 id = "xiaomi/mimo-v2.5"
 name = "MiMo-V2.5"
 context = 1050000
-output = 945000
+output = 65536
 input = [
     "text",
     "image",
@@ -656,15 +656,15 @@ release_date = "2026-04-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.119
-output = 0.238
-cache_read = 0.00255
+input = 0.4
+output = 2.0
+cache_read = 0.08
 
 [[models]]
 id = "xiaomi/mimo-v2.5-pro"
 name = "MiMo-V2.5-Pro"
 context = 1050000
-output = 945000
+output = 235929
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -673,9 +673,9 @@ release_date = "2026-04-22"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.3045
-output = 0.609
-cache_read = 0.0028
+input = 0.48
+output = 1.8
+cache_read = 0.096
 
 [[models]]
 id = "xiaomi/mimo-v2.6-flash"

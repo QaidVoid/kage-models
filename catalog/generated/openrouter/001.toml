@@ -6,19 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "deepseek/deepseek-chat"
-name = "DeepSeek Chat"
-context = 163840
-output = 16000
-input = ["text"]
-produces = ["text"]
-release_date = "2025-12-01"
-
-[models.cost]
-input = 0.2574
-output = 1.0287
-
-[[models]]
 id = "deepseek/deepseek-chat-v3-0324"
 name = "DeepSeek V3 0324"
 context = 163840
@@ -113,7 +100,7 @@ output = 0.41
 id = "deepseek/deepseek-v4-flash"
 name = "DeepSeek V4 Flash"
 context = 1048576
-output = 943717
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -126,15 +113,15 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.091
-output = 0.182
-cache_read = 0.0182
+input = 0.05
+output = 0.45
+cache_read = 0.05
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-0731"
 name = "DeepSeek V4 Flash 0731"
 context = 1048576
-output = 131072
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -147,9 +134,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.44
-output = 1.32
-cache_read = 0.014
+input = 0.119
+output = 0.238
+cache_read = 0.0238
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"
@@ -221,7 +208,7 @@ cache_read = 0.044
 id = "deepseek/deepseek-v4.1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -237,9 +224,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.02
-output = 1.0
-cache_read = 0.015
+input = 0.14
+output = 0.42
+cache_read = 0.0042
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -812,3 +799,23 @@ release_date = "2025-03-12"
 input = 0.08
 output = 0.35
 cache_read = 0.04
+
+[[models]]
+id = "google/gemma-4-26b-a4b-it"
+name = "Gemma 4 26B A4B IT"
+context = 262144
+output = 235929
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-02"
+
+[models.cost]
+input = 0.09
+output = 0.3
+cache_read = 0.05

@@ -147,7 +147,7 @@ cache_read = 0.24
 id = "z-ai/glm-5.1"
 name = "GLM-5.1"
 context = 204800
-output = 131072
+output = 128000
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -156,9 +156,9 @@ release_date = "2026-04-07"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 1.4
-output = 4.4
-cache_read = 0.26
+input = 0.966
+output = 3.036
+cache_read = 0.1794
 
 [[models]]
 id = "z-ai/glm-5.2"
@@ -439,9 +439,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.2565
+input = 0.2526
 output = 8.0
-cache_read = 0.26
+cache_read = 0.25
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
@@ -539,9 +539,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.225
-output = 20.0
-cache_read = 0.215
+input = 0.151
+output = 10.5634
+cache_read = 0.15
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -674,10 +674,10 @@ efforts = [
 release_date = "2026-09-11"
 
 [models.cost]
-input = 2.0
-output = 12.0
-cache_read = 0.2
-cache_write = 2.5
+input = 1.0
+output = 5.0
+cache_read = 0.05
+cache_write = 1.25
 
 [[models]]
 id = "~unbiased/pareto-latest"
@@ -725,7 +725,7 @@ cache_read = 0.5
 id = "~z-ai/glm-flash-latest"
 name = "GLM Flash Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = [
     "text",
     "image",
@@ -741,9 +741,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0413
-output = 0.0758
-cache_read = 0.03
+input = 0.033007
+output = 0.1
+cache_read = 0.015
 
 [[models]]
 id = "~z-ai/glm-latest"

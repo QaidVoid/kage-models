@@ -6,23 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "mistralai/devstral-2512"
-name = "Devstral 2"
-context = 262144
-output = 209715
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-12-09"
-
-[models.cost]
-input = 0.4
-output = 2.0
-cache_read = 0.04
-
-[[models]]
 id = "mistralai/ministral-14b-2512"
 name = "Ministral 3 14B 2512"
 context = 262144
@@ -420,8 +403,8 @@ thinks = true
 release_date = "2026-06-12"
 
 [models.cost]
-input = 0.6712
-output = 3.35
+input = 0.56
+output = 3.1
 cache_read = 0.15
 
 [[models]]
@@ -445,9 +428,9 @@ efforts = [
 release_date = "2026-07-16"
 
 [models.cost]
-input = 0.225
-output = 20.0
-cache_read = 0.215
+input = 0.159
+output = 11.5
+cache_read = 0.149
 
 [[models]]
 id = "moonshotai/kimi-k3.1-pro"
@@ -554,23 +537,6 @@ output = 2.4
 cache_read = 0.15
 
 [[models]]
-id = "nvidia/nemotron-3-super-120b-a12b:free"
-name = "Nemotron 3 Super (free)"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2026-03-11"
-
-[models.budget]
-min = 0
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
 id = "nvidia/nemotron-3-ultra-550b-a55b"
 name = "Nemotron 3 Ultra 550B A55B"
 context = 262144
@@ -655,3 +621,35 @@ release_date = "2026-10-15"
 input = 0.15
 output = 0.5
 cache_read = 0.02
+
+[[models]]
+id = "nvidia/nemotron-3.5-super-vl:free"
+name = "Nemotron 3.5 Super VL (free)"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-15"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "openai/gpt-3.5-turbo-0613"
+name = "GPT-3.5 Turbo (older v0613)"
+context = 4095
+output = 3685
+input = ["text"]
+produces = ["text"]
+release_date = "2024-01-25"
+
+[models.cost]
+input = 1.0
+output = 2.0
