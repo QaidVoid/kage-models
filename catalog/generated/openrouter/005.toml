@@ -716,6 +716,25 @@ output = 0.5
 cache_read = 0.0375
 
 [[models]]
+id = "prism-ml/ternary-bonsai-2-9b"
+name = "Ternary Bonsai 2 9B"
+context = 262144
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.08
+output = 0.13
+cache_read = 0.04
+
+[[models]]
 id = "qwen/qwen-2.5-72b-instruct"
 name = "Qwen2.5 72B Instruct"
 context = 32768
@@ -755,18 +774,3 @@ input = 0.26
 output = 0.78
 cache_read = 0.052
 cache_write = 0.325
-
-[[models]]
-id = "qwen/qwen3-14b"
-name = "Qwen3 14B"
-context = 40960
-output = 16384
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-04-28"
-
-[models.cost]
-input = 0.12
-output = 0.24

@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11
+
+[[models]]
 id = "z-ai/glm-4.5-air"
 name = "GLM-4.5-Air"
 context = 131072
@@ -147,7 +163,7 @@ cache_read = 0.24
 id = "z-ai/glm-5.1"
 name = "GLM-5.1"
 context = 204800
-output = 128000
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -156,9 +172,9 @@ release_date = "2026-04-07"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.966
-output = 3.036
-cache_read = 0.1794
+input = 1.4
+output = 4.4
+cache_read = 0.26
 
 [[models]]
 id = "z-ai/glm-5.2"
@@ -177,9 +193,9 @@ release_date = "2026-06-13"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.0341
+input = 0.014
 output = 7.0
-cache_read = 0.033
+cache_read = 0.013
 
 [[models]]
 id = "z-ai/glm-5.3"
@@ -418,9 +434,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.02
-output = 1.0
-cache_read = 0.015
+input = 0.0115
+output = 1.8
+cache_read = 0.0114
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -439,7 +455,7 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.2526
+input = 0.2542
 output = 8.0
 cache_read = 0.25
 
@@ -539,9 +555,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.151
-output = 10.5634
-cache_read = 0.15
+input = 0.169
+output = 20.0
+cache_read = 0.159
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -725,7 +741,7 @@ cache_read = 0.5
 id = "~z-ai/glm-flash-latest"
 name = "GLM Flash Latest"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -741,9 +757,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.033007
-output = 0.1
-cache_read = 0.015
+input = 0.0237
+output = 0.1042
+cache_read = 0.0237
 
 [[models]]
 id = "~z-ai/glm-latest"

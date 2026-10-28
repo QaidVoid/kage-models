@@ -428,9 +428,9 @@ efforts = [
 release_date = "2026-07-16"
 
 [models.cost]
-input = 0.159
-output = 11.5
-cache_read = 0.149
+input = 0.169
+output = 20.0
+cache_read = 0.159
 
 [[models]]
 id = "moonshotai/kimi-k3.1-pro"
@@ -494,6 +494,7 @@ release_date = "2025-12-15"
 [models.cost]
 input = 0.06
 output = 0.24
+cache_read = 0.012
 
 [[models]]
 id = "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"

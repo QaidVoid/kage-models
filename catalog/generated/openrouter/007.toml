@@ -6,6 +6,30 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "qwen/qwen3.8-omni-flash"
+name = "Qwen3.8 Omni Flash"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-17"
+
+[models.budget]
+min = 0
+
+[models.cost]
+input = 0.15
+output = 0.47
+cache_read = 0.016
+
+[[models]]
 id = "recursive/flint-v1.0:free"
 name = "Flint (free)"
 context = 262144
@@ -754,19 +778,3 @@ release_date = "2026-10-16"
 [models.cost]
 input = 0.0
 output = 0.0
-
-[[models]]
-id = "z-ai/glm-4.5"
-name = "GLM-4.5"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11

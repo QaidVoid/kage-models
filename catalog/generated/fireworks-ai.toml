@@ -296,6 +296,7 @@ input = ["text"]
 produces = ["text"]
 thinks = true
 efforts = [
+    "none",
     "low",
     "medium",
     "xhigh",
@@ -319,7 +320,12 @@ input = [
 ]
 produces = ["text"]
 thinks = true
-toggle = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
 release_date = "2026-08-03"
 
 [models.cost]
@@ -634,7 +640,12 @@ input = [
 ]
 produces = ["text"]
 thinks = true
-toggle = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
 release_date = "2026-08-03"
 
 [models.cost]
