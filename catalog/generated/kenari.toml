@@ -22,7 +22,6 @@ efforts = [
     "high",
     "max",
 ]
-toggle = true
 release_date = "2026-09-10"
 
 [[models]]
@@ -588,8 +587,8 @@ efforts = [
 [[models]]
 id = "nemotron-3-super-120b-a12b"
 name = "Nemotron 3 Super 120B A12B"
-context = 262144
-output = 235929
+context = 1048576
+output = 262144
 input = ["text"]
 produces = ["text"]
 thinks = true

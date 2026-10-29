@@ -39,6 +39,27 @@ output = 0.9
 cache_read = 0.03
 
 [[models]]
+id = "deepseek-v4-1-flash-1017"
+name = "DeepSeek V4.1 Flash 1017"
+context = 1048576
+output = 128000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-10-17"
+
+[models.cost]
+input = 0.3
+output = 1.2
+cache_read = 0.007
+
+[[models]]
 id = "devstral-2512"
 name = "Devstral 2"
 context = 262144

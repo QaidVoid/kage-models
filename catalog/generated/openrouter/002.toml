@@ -6,162 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "google/gemma-4-26b-a4b-it:free"
-name = "Gemma 4 26B A4B  (free)"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "google/gemma-4-31b-it"
-name = "Gemma 4 31B IT"
-context = 262144
-output = 16384
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.2
-output = 0.4
-
-[[models]]
-id = "google/gemma-4-31b-it:free"
-name = "Gemma 4 31B (free)"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.25
-cache_read = 0.015
-
-[[models]]
-id = "inception/mercury-2"
-name = "Mercury 2"
-context = 128000
-output = 50000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-02-24"
-
-[models.cost]
-input = 0.25
-output = 0.75
-cache_read = 0.025
-
-[[models]]
-id = "inception/mercury-2.5"
-name = "Mercury 2.5"
-context = 260000
-output = 65536
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-09-08"
-
-[models.cost]
-input = 0.04
-output = 0.15
-cache_read = 0.004
-
-[[models]]
-id = "inception/mercury-3"
-name = "Mercury 3"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.1
-output = 0.35
-cache_read = 0.01
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042
-
-[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -277,14 +121,15 @@ output = 0.4
 id = "meta-llama/llama-3.1-8b-instruct"
 name = "Llama-3.1-8B-Instruct"
 context = 131072
-output = 16384
+output = 117964
 input = ["text"]
 produces = ["text"]
 release_date = "2024-07-23"
 
 [models.cost]
-input = 0.02
-output = 0.04
+input = 0.05
+output = 0.08
+cache_read = 0.025
 
 [[models]]
 id = "meta-llama/llama-3.3-70b-instruct"
@@ -319,7 +164,7 @@ cache_read = 0.05
 [[models]]
 id = "meta-llama/llama-4-scout"
 name = "Llama 4 Scout"
-context = 1310720
+context = 327680
 output = 16384
 input = [
     "text",
@@ -497,7 +342,7 @@ cache_read = 0.002
 id = "meta/muse-spark-open"
 name = "Muse Spark Open"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -705,3 +550,216 @@ release_date = "2025-12-09"
 input = 0.4
 output = 2.0
 cache_read = 0.04
+
+[[models]]
+id = "mistralai/ministral-14b-2512"
+name = "Ministral 3 14B 2512"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2025-12-02"
+
+[models.cost]
+input = 0.2
+output = 0.2
+cache_read = 0.02
+
+[[models]]
+id = "mistralai/ministral-3b-2512"
+name = "Ministral 3 3B 2512"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2025-12-02"
+
+[models.cost]
+input = 0.1
+output = 0.1
+cache_read = 0.01
+
+[[models]]
+id = "mistralai/ministral-8b-2512"
+name = "Ministral 3 8B 2512"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2025-12-02"
+
+[models.cost]
+input = 0.15
+output = 0.15
+cache_read = 0.015
+
+[[models]]
+id = "mistralai/mistral-large"
+name = "Mistral Large"
+context = 128000
+output = 102400
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2024-02-26"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.2
+
+[[models]]
+id = "mistralai/mistral-large-2407"
+name = "Mistral Large 2407"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2024-07-24"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.2
+
+[[models]]
+id = "mistralai/mistral-large-2512"
+name = "Mistral Large 3"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-12-02"
+
+[models.cost]
+input = 0.5
+output = 1.5
+cache_read = 0.05
+
+[[models]]
+id = "mistralai/mistral-large-4-0"
+name = "Mistral Large 4"
+context = 1048576
+output = 262144
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-10-06"
+
+[models.cost]
+input = 1.36
+output = 4.18
+cache_read = 0.14
+
+[[models]]
+id = "mistralai/mistral-medium-3"
+name = "Mistral Medium 3"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-05-07"
+
+[models.cost]
+input = 0.4
+output = 2.0
+cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-medium-3-5"
+name = "Mistral Medium 3.5"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-04-30"
+
+[models.cost]
+input = 1.5
+output = 7.5
+
+[[models]]
+id = "mistralai/mistral-medium-3.1"
+name = "Mistral Medium 3.1"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-08-12"
+
+[models.cost]
+input = 0.4
+output = 2.0
+cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-nemo"
+name = "Mistral Nemo"
+context = 131072
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.029
+output = 0.03
+
+[[models]]
+id = "mistralai/mistral-saba"
+name = "Saba"
+context = 32768
+output = 26214
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-02-17"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.02

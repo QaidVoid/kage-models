@@ -6,66 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "deepseek/deepseek-chat-v3-0324"
-name = "DeepSeek V3 0324"
-context = 163840
-output = 115200
-input = ["text"]
-produces = ["text"]
-release_date = "2025-03-24"
-
-[models.cost]
-input = 0.29
-output = 1.14
-cache_read = 0.11
-
-[[models]]
-id = "deepseek/deepseek-chat-v3.1"
-name = "DeepSeek V3.1"
-context = 163840
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-21"
-
-[models.cost]
-input = 0.25
-output = 0.95
-cache_read = 0.13
-
-[[models]]
-id = "deepseek/deepseek-r1-0528"
-name = "DeepSeek R1 0528"
-context = 163840
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-05-28"
-
-[models.cost]
-input = 0.5
-output = 2.15
-cache_read = 0.35
-
-[[models]]
-id = "deepseek/deepseek-v3.1-terminus"
-name = "DeepSeek V3.1 Terminus"
-context = 163840
-output = 147456
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-09-22"
-
-[models.cost]
-input = 0.27
-output = 1.0
-
-[[models]]
 id = "deepseek/deepseek-v3.2"
 name = "DeepSeek V3.2"
 context = 163840
@@ -208,7 +148,7 @@ cache_read = 0.022
 id = "deepseek/deepseek-v4.1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1048576
-output = 131072
+output = 943718
 input = [
     "text",
     "image",
@@ -224,9 +164,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.14
-output = 0.42
-cache_read = 0.0042
+input = 0.045
+output = 0.5
+cache_read = 0.006
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -710,9 +650,9 @@ efforts = [
 release_date = "2026-09-02"
 
 [models.cost]
-input = 0.825
-output = 4.125
-cache_read = 0.0825
+input = 0.75
+output = 3.75
+cache_read = 0.075
 cache_write = 0.041667
 
 [[models]]
@@ -819,3 +759,159 @@ release_date = "2026-04-02"
 input = 0.09
 output = 0.3
 cache_read = 0.05
+
+[[models]]
+id = "google/gemma-4-26b-a4b-it:free"
+name = "Gemma 4 26B A4B  (free)"
+context = 262144
+output = 32768
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-02"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "google/gemma-4-31b-it"
+name = "Gemma 4 31B IT"
+context = 262144
+output = 16384
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-02"
+
+[models.cost]
+input = 0.2
+output = 0.4
+
+[[models]]
+id = "google/gemma-4-31b-it:free"
+name = "Gemma 4 31B (free)"
+context = 262144
+output = 32768
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-02"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "ibm-granite/granite-4.2-8b"
+name = "Granite 4.2 8B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-08-25"
+
+[models.cost]
+input = 0.06
+output = 0.15
+cache_read = 0.015
+
+[[models]]
+id = "inception/mercury-2"
+name = "Mercury 2"
+context = 128000
+output = 50000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-02-24"
+
+[models.cost]
+input = 0.25
+output = 0.75
+cache_read = 0.025
+
+[[models]]
+id = "inception/mercury-2.5"
+name = "Mercury 2.5"
+context = 260000
+output = 65536
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-09-08"
+
+[models.cost]
+input = 0.04
+output = 0.15
+cache_read = 0.004
+
+[[models]]
+id = "inception/mercury-3"
+name = "Mercury 3"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.1
+output = 0.35
+cache_read = 0.01
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042
