@@ -215,9 +215,9 @@ efforts = [
 release_date = "2026-07-16"
 
 [models.cost]
-input = 0.239
-output = 10.8
-cache_read = 0.21
+input = 0.192
+output = 15.0
+cache_read = 0.182
 
 [[models]]
 id = "moonshotai/kimi-k3.1-pro"

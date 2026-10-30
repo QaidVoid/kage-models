@@ -9,7 +9,7 @@ api = "https://openrouter.ai/api/v1"
 id = "qwen/qwen3.8-2.4t-a95b"
 name = "Qwen3.8 2.4T A95B"
 context = 1048576
-output = 909000
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -29,7 +29,7 @@ cache_read = 0.25
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
 context = 1000000
-output = 65536
+output = 235929
 input = [
     "text",
     "image",
@@ -46,9 +46,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.039
-output = 1.25
-cache_read = 0.0039
+input = 0.15
+output = 1.875
+cache_read = 0.0375
 
 [[models]]
 id = "qwen/qwen3.8-flash"
@@ -351,7 +351,7 @@ cache_read = 0.04
 [[models]]
 id = "stepfun/step-5-preview"
 name = "Step 5 Preview"
-context = 1000000
+context = 1048576
 input_limit = 1000000
 output = 64000
 input = [
@@ -597,28 +597,6 @@ release_date = "2026-09-22"
 input = 0.05
 output = 0.2
 cache_read = 0.005
-
-[[models]]
-id = "upstage/solar-pro-3"
-name = "Solar Pro 3"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-01-26"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.015
 
 [[models]]
 id = "upstage/solar-pro4"
@@ -883,3 +861,18 @@ release_date = "2026-09-21"
 input = 4.35
 output = 8.7
 cache_read = 0.036
+
+[[models]]
+id = "xingchen-agi/xing4.0-29b-a4b:free"
+name = "Xing4.0 29B A4B (free)"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.0
+output = 0.0

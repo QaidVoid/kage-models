@@ -1008,4 +1008,4 @@ release_date = "2026-10-28"
 [models.cost]
 input = 0.25
 output = 1.0
-cache_read = 0.03
+cache_read = 0.003

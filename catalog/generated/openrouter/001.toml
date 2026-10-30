@@ -119,9 +119,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.95526
-output = 1.91052
-cache_read = 0.079605
+input = 0.816234
+output = 1.632468
+cache_read = 0.06802
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"

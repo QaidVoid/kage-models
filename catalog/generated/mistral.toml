@@ -297,15 +297,40 @@ input = [
 produces = ["text"]
 thinks = true
 efforts = [
-    "none",
+    "low",
+    "medium",
     "high",
 ]
 release_date = "2026-10-06"
 
 [models.cost]
-input = 1.36
-output = 4.18
-cache_read = 0.14
+input = 0.7
+output = 2.1
+cache_read = 0.07
+
+[[models]]
+id = "mistral-large-4-0-8"
+name = "Mistral Large 4.0.8"
+context = 1048576
+output = 262144
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-06"
+
+[models.cost]
+input = 0.7
+output = 2.1
+cache_read = 0.07
 
 [[models]]
 id = "mistral-large-latest"
