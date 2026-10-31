@@ -1006,6 +1006,6 @@ efforts = [
 release_date = "2026-10-28"
 
 [models.cost]
-input = 0.25
-output = 1.0
+input = 0.05
+output = 0.5
 cache_read = 0.003

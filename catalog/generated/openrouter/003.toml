@@ -190,8 +190,8 @@ thinks = true
 release_date = "2026-06-12"
 
 [models.cost]
-input = 0.56
-output = 3.1
+input = 0.6
+output = 3.5
 cache_read = 0.15
 
 [[models]]

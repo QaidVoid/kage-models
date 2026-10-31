@@ -46,9 +46,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.15
-output = 1.875
-cache_read = 0.0375
+input = 0.04
+output = 2.3
+cache_read = 0.02
 
 [[models]]
 id = "qwen/qwen3.8-flash"

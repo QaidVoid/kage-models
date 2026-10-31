@@ -9,7 +9,7 @@ api = "https://openrouter.ai/api/v1"
 id = "deepseek/deepseek-v3.2"
 name = "DeepSeek V3.2"
 context = 163840
-output = 65536
+output = 147456
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -17,9 +17,9 @@ toggle = true
 release_date = "2025-12-01"
 
 [models.cost]
-input = 0.28
-output = 0.42
-cache_read = 0.028
+input = 0.26
+output = 0.38
+cache_read = 0.13
 
 [[models]]
 id = "deepseek/deepseek-v3.2-exp"
@@ -106,7 +106,7 @@ cache_read = 0.00686
 id = "deepseek/deepseek-v4-pro"
 name = "DeepSeek V4 Pro"
 context = 1048576
-output = 384000
+output = 393216
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -119,9 +119,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.816234
-output = 1.632468
-cache_read = 0.06802
+input = 1.6
+output = 3.2
+cache_read = 0.135
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -756,9 +756,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.0675
+output = 0.225
+cache_read = 0.0375
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"

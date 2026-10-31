@@ -557,7 +557,7 @@ cache_write = 0.375
 id = "qwen/qwen3.6-27b"
 name = "Qwen3.6 27B"
 context = 262144
-output = 81920
+output = 65536
 input = [
     "text",
     "image",
@@ -569,8 +569,8 @@ toggle = true
 release_date = "2026-04-22"
 
 [models.cost]
-input = 0.32
-output = 3.2
+input = 0.45
+output = 2.7
 
 [[models]]
 id = "qwen/qwen3.6-35b-a3b"
