@@ -6,6 +6,43 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "inception/mercury-3"
+name = "Mercury 3"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.1
+output = 0.35
+cache_read = 0.01
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042
+
+[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -666,7 +703,8 @@ input = [
 produces = ["text"]
 thinks = true
 efforts = [
-    "none",
+    "low",
+    "medium",
     "high",
 ]
 release_date = "2026-10-06"
@@ -715,51 +753,3 @@ release_date = "2026-04-30"
 [models.cost]
 input = 1.5
 output = 7.5
-
-[[models]]
-id = "mistralai/mistral-medium-3.1"
-name = "Mistral Medium 3.1"
-context = 131072
-output = 104857
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-08-12"
-
-[models.cost]
-input = 0.4
-output = 2.0
-cache_read = 0.04
-
-[[models]]
-id = "mistralai/mistral-nemo"
-name = "Mistral Nemo"
-context = 131072
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-18"
-
-[models.cost]
-input = 0.029
-output = 0.03
-
-[[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02

@@ -6,6 +6,63 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.6-pro"
+name = "MiMo-V2.6-Pro"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.435
+output = 0.87
+cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+name = "MiMo-V2.6-Pro-UltraSpeed"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-21"
+
+[models.cost]
+input = 4.35
+output = 8.7
+cache_read = 0.036
+
+[[models]]
+id = "xingchen-agi/xing4.0-29b-a4b:free"
+name = "Xing4.0 29B A4B (free)"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
 id = "z-ai/glm-4.5"
 name = "GLM-4.5"
 context = 131072
@@ -105,9 +162,9 @@ release_date = "2025-12-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.54
-output = 1.98
-cache_read = 0.099
+input = 0.6
+output = 2.2
+cache_read = 0.11
 
 [[models]]
 id = "z-ai/glm-4.7-flash"
@@ -213,9 +270,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.0699
-output = 1.4
-cache_read = 0.0689
+input = 0.08
+output = 3.6
+cache_read = 0.076
 
 [[models]]
 id = "z-ai/glm-5.3-flash"
@@ -237,9 +294,9 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.0163
-output = 0.1479
-cache_read = 0.0163
+input = 0.0285
+output = 0.0923
+cache_read = 0.0285
 
 [[models]]
 id = "z-ai/glm-5.3-flashx"
@@ -434,9 +491,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.0141
-output = 0.144
-cache_read = 0.013
+input = 0.035
+output = 0.5
+cache_read = 0.005
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -463,7 +520,7 @@ cache_read = 0.1
 id = "~deepseek/deepseek-v4-flash-latest"
 name = "DeepSeek V4 Flash Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -476,9 +533,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.05764
-output = 0.17292
-cache_read = 0.001834
+input = 0.0434
+output = 0.3
+cache_read = 0.035
 
 [[models]]
 id = "~google/gemini-flash-latest"
@@ -757,9 +814,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0163
-output = 0.1479
-cache_read = 0.0163
+input = 0.0285
+output = 0.0923
+cache_read = 0.0285
 
 [[models]]
 id = "~z-ai/glm-latest"

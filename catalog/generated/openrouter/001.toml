@@ -6,6 +6,21 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-v3.1-terminus"
+name = "DeepSeek V3.1 Terminus"
+context = 163840
+output = 147456
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-09-22"
+
+[models.cost]
+input = 0.27
+output = 1.0
+
+[[models]]
 id = "deepseek/deepseek-v3.2"
 name = "DeepSeek V3.2"
 context = 163840
@@ -127,7 +142,7 @@ cache_read = 0.135
 id = "deepseek/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 context = 1048576
-output = 393216
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -140,9 +155,9 @@ efforts = [
 release_date = "2026-08-13"
 
 [models.cost]
-input = 0.66
-output = 1.98
-cache_read = 0.022
+input = 0.115
+output = 4.0
+cache_read = 0.11
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -878,40 +893,3 @@ release_date = "2026-09-08"
 input = 0.04
 output = 0.15
 cache_read = 0.004
-
-[[models]]
-id = "inception/mercury-3"
-name = "Mercury 3"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.1
-output = 0.35
-cache_read = 0.01
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042
