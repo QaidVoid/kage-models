@@ -379,7 +379,7 @@ cache_read = 0.002
 id = "meta/muse-spark-open"
 name = "Muse Spark Open"
 context = 1048576
-output = 131072
+output = 943718
 input = [
     "text",
     "image",

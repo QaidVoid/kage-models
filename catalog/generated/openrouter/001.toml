@@ -759,7 +759,7 @@ cache_read = 0.04
 id = "google/gemma-4-26b-a4b-it"
 name = "Gemma 4 26B A4B IT"
 context = 262144
-output = 235929
+output = 32768
 input = [
     "text",
     "image",
@@ -771,9 +771,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.0675
-output = 0.225
-cache_read = 0.0375
+input = 0.1
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"

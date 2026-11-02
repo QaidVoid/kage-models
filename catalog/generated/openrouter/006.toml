@@ -65,7 +65,7 @@ cache_read = 0.25
 [[models]]
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
-context = 1000000
+context = 1024000
 output = 235929
 input = [
     "text",
