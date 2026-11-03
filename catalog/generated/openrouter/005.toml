@@ -327,8 +327,8 @@ produces = ["text"]
 release_date = "2025-07-31"
 
 [models.cost]
-input = 0.07
-output = 0.28
+input = 0.15
+output = 0.6
 
 [[models]]
 id = "qwen/qwen3-coder-flash"
@@ -363,14 +363,15 @@ cache_read = 0.07
 id = "qwen/qwen3-next-80b-a3b-instruct"
 name = "Qwen3-Next 80B-A3B Instruct"
 context = 262144
-output = 16384
+output = 235929
 input = ["text"]
 produces = ["text"]
 release_date = "2025-09"
 
 [models.cost]
-input = 0.09
+input = 0.1
 output = 1.1
+cache_read = 0.07
 
 [[models]]
 id = "qwen/qwen3-vl-235b-a22b-instruct"

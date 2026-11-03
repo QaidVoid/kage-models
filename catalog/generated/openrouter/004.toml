@@ -961,9 +961,9 @@ efforts = [
 release_date = "2025-08-05"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.075
+input = 0.025
+output = 0.092
+cache_read = 0.022
 
 [[models]]
 id = "openai/gpt-oss-20b"
