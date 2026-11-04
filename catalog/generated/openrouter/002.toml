@@ -142,19 +142,6 @@ output = 1.2
 cache_read = 0.006
 
 [[models]]
-id = "meta-llama/llama-3.1-70b-instruct"
-name = "Llama-3.1-70B-Instruct"
-context = 131072
-output = 8192
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-23"
-
-[models.cost]
-input = 0.72
-output = 0.72
-
-[[models]]
 id = "meta-llama/llama-3.1-8b-instruct"
 name = "Llama-3.1-8B-Instruct"
 context = 131072
@@ -551,9 +538,9 @@ efforts = [
 release_date = "2026-10-19"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.015
+input = 0.075
+output = 0.3
+cache_read = 0.0075
 
 [[models]]
 id = "mistralai/codestral-2508"
@@ -754,3 +741,21 @@ release_date = "2026-04-30"
 [models.cost]
 input = 1.5
 output = 7.5
+
+[[models]]
+id = "mistralai/mistral-medium-3.1"
+name = "Mistral Medium 3.1"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-08-12"
+
+[models.cost]
+input = 0.4
+output = 2.0
+cache_read = 0.04

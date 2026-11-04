@@ -6,26 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "openai/o3"
-name = "o3"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-04-16"
-
-[models.cost]
-input = 2.0
-output = 8.0
-cache_read = 0.5
-
-[[models]]
 id = "openai/o3-pro"
 name = "o3-pro"
 context = 200000
@@ -236,14 +216,15 @@ output = 0.24
 id = "qwen/qwen3-235b-a22b-2507"
 name = "Qwen3 235B A22B Instruct 2507"
 context = 262144
-output = 16384
+output = 117964
 input = ["text"]
 produces = ["text"]
 release_date = "2025-07-21"
 
 [models.cost]
-input = 0.09
-output = 0.55
+input = 0.14
+output = 0.8
+cache_read = 0.05
 
 [[models]]
 id = "qwen/qwen3-235b-a22b-thinking-2507"
@@ -698,3 +679,20 @@ input = 0.03
 output = 0.13
 cache_read = 0.006
 cache_write = 0.038
+
+[[models]]
+id = "qwen/qwen3.7-max"
+name = "Qwen3.7 Max"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-05-21"
+
+[models.cost]
+input = 1.475
+output = 4.425
+cache_read = 0.295
+cache_write = 1.84375

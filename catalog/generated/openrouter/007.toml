@@ -6,27 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "xiaomi/mimo-v2.6-pro"
-name = "MiMo-V2.6-Pro"
-context = 1050000
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.435
-output = 0.87
-cache_read = 0.0036
-
-[[models]]
 id = "xiaomi/mimo-v2.6-pro-ultraspeed"
 name = "MiMo-V2.6-Pro-UltraSpeed"
 context = 1048576
@@ -636,9 +615,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.1824
-output = 9.3388
-cache_read = 0.18
+input = 0.2
+output = 15.0
+cache_read = 0.19
 
 [[models]]
 id = "~openai/gpt-astra-latest"
