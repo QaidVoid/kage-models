@@ -6,93 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "xiaomi/mimo-v2.6-pro-ultraspeed"
-name = "MiMo-V2.6-Pro-UltraSpeed"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-21"
-
-[models.cost]
-input = 4.35
-output = 8.7
-cache_read = 0.036
-
-[[models]]
-id = "xingchen-agi/xing4.0-29b-a4b:free"
-name = "Xing4.0 29B A4B (free)"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "z-ai/glm-4.5"
-name = "GLM-4.5"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.5-air"
-name = "GLM-4.5-Air"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.13
-output = 0.85
-cache_read = 0.025
-
-[[models]]
-id = "z-ai/glm-4.5v"
-name = "GLM-4.5V"
-context = 65536
-output = 16384
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-11"
-
-[models.cost]
-input = 0.6
-output = 1.8
-cache_read = 0.11
-
-[[models]]
 id = "z-ai/glm-4.6"
 name = "GLM-4.6"
 context = 204800
@@ -249,15 +162,15 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.08
-output = 3.6
-cache_read = 0.076
+input = 0.0699
+output = 1.4
+cache_read = 0.0689
 
 [[models]]
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 131072
+output = 943717
 input = [
     "text",
     "image",
@@ -273,8 +186,8 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.0313
-output = 0.0846
+input = 0.15
+output = 0.5
 cache_read = 0.03
 
 [[models]]
@@ -494,9 +407,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.035
-output = 0.315
-cache_read = 0.006
+input = 0.006
+output = 0.5
+cache_read = 0.005
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -515,9 +428,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.1035
+input = 0.0927
 output = 8.0
-cache_read = 0.1
+cache_read = 0.0927
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
@@ -615,9 +528,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.2
-output = 15.0
-cache_read = 0.19
+input = 0.1558
+output = 10.5478
+cache_read = 0.15
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -818,9 +731,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0313
-output = 0.0846
-cache_read = 0.03
+input = 0.0285
+output = 0.0923
+cache_read = 0.0285
 
 [[models]]
 id = "~z-ai/glm-latest"

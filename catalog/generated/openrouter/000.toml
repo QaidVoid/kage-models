@@ -802,3 +802,18 @@ release_date = "2025-05-28"
 input = 0.5
 output = 2.15
 cache_read = 0.35
+
+[[models]]
+id = "deepseek/deepseek-v3.1-terminus"
+name = "DeepSeek V3.1 Terminus"
+context = 163840
+output = 147456
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-09-22"
+
+[models.cost]
+input = 0.27
+output = 1.0

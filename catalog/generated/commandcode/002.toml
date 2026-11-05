@@ -6,6 +6,19 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
+id = "moonshotai/Kimi-K3.1-Pro"
+name = "Kimi K3.1 Pro"
+context = 1048576
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+
+[[models]]
 id = "nvidia/nemotron-3-ultra-550b-a55b"
 name = "Nemotron 3 Ultra"
 context = 1000000
@@ -29,13 +42,6 @@ efforts = [
 id = "ornith/ornith-1.5-122b"
 name = "Ornith 1.5 122B"
 context = 262144
-input = ["text"]
-produces = ["text"]
-
-[[models]]
-id = "poolside/laguna-s-2.1-free"
-name = "Laguna S 2.1"
-context = 256000
 input = ["text"]
 produces = ["text"]
 
@@ -64,6 +70,21 @@ thinks = true
 efforts = [
     "high",
     "xhigh",
+]
+
+[[models]]
+id = "stealth/crouton-alpha"
+name = "Crouton Alpha"
+context = 1048576
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
 ]
 
 [[models]]

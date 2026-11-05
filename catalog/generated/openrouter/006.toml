@@ -6,120 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.7-plus"
-name = "Qwen3.7 Plus"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-06-02"
-
-[models.cost]
-input = 0.32
-output = 1.28
-cache_read = 0.064
-cache_write = 0.4
-
-[[models]]
-id = "qwen/qwen3.8-2.4t-a95b"
-name = "Qwen3.8 2.4T A95B"
-context = 1048576
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-12"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1024000
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.15
-output = 1.875
-cache_read = 0.0375
-
-[[models]]
-id = "qwen/qwen3.8-flash"
-name = "Qwen3.8 Flash"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-08-26"
-
-[models.budget]
-min = 0
-
-[models.cost]
-input = 0.15
-output = 0.47
-cache_read = 0.016
-
-[[models]]
-id = "qwen/qwen3.8-max-0902"
-name = "Qwen3.8 Max 0902"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-09-02"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
 id = "qwen/qwen3.8-max-prime"
 name = "Qwen 3.8 Max Prime"
 context = 1000000
@@ -236,6 +122,20 @@ input = 1.0
 output = 3.0
 
 [[models]]
+id = "ricursiveai/ripple-65b-preview"
+name = "ricursiveAI/Ripple-65B-Preview"
+context = 1048576
+output = 131072
+input = ["text"]
+produces = ["text"]
+release_date = "2026-11-04"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.05
+
+[[models]]
 id = "sakana/fugu-max"
 name = "Fugu Max"
 context = 1000000
@@ -330,6 +230,34 @@ output = 4.0
 cache_read = 0.15
 
 [[models]]
+id = "stealth/crouton-alpha"
+name = "Crouton Alpha"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-03"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
 id = "stepfun/step-3.5-flash"
 name = "Step 3.5 Flash"
 context = 262144
@@ -410,9 +338,9 @@ efforts = [
 release_date = "2026-07-06"
 
 [models.cost]
-input = 0.0825
-output = 0.33
-cache_read = 0.020625
+input = 0.132
+output = 0.528
+cache_read = 0.033
 
 [[models]]
 id = "tencent/hy3-preview"
@@ -435,6 +363,30 @@ output = 0.6
 cache_read = 0.06
 
 [[models]]
+id = "tencent/hy4"
+name = "Hy4"
+context = 1048576
+input_limit = 983010
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-11-04"
+
+[models.cost]
+input = 0.417
+output = 1.2505
+cache_read = 0.021
+
+[[models]]
 id = "tencent/hy4-preview"
 name = "Hy4 preview"
 context = 1048576
@@ -450,9 +402,9 @@ efforts = [
 release_date = "2026-08-28"
 
 [models.cost]
-input = 0.7506
-output = 2.2509
-cache_read = 0.0378
+input = 0.834
+output = 2.501
+cache_read = 0.042
 
 [[models]]
 id = "thinkingmachines/inkling"
@@ -507,58 +459,6 @@ release_date = "2026-07-30"
 input = 0.45
 output = 1.2
 cache_read = 0.1
-
-[[models]]
-id = "thinkingmachines/inkling-small:free"
-name = "Inkling Small (free)"
-context = 1048576
-output = 262144
-input = [
-    "text",
-    "image",
-    "audio",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "minimal",
-    "low",
-    "medium",
-    "high",
-    "max",
-]
-release_date = "2026-07-30"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "thinkingmachines/inkling:free"
-name = "Inkling (free)"
-context = 1048576
-output = 262144
-input = [
-    "text",
-    "image",
-    "audio",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "minimal",
-    "low",
-    "medium",
-    "high",
-    "max",
-]
-release_date = "2026-07-15"
-
-[models.cost]
-input = 0.0
-output = 0.0
 
 [[models]]
 id = "unbiased/pareto-26.10"
@@ -783,7 +683,7 @@ cache_read = 0.2
 [[models]]
 id = "xiaomi/mimo-v2.5"
 name = "MiMo-V2.5"
-context = 1050000
+context = 1000000
 output = 65536
 input = [
     "text",
@@ -860,3 +760,90 @@ release_date = "2026-09-22"
 input = 0.435
 output = 0.87
 cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+name = "MiMo-V2.6-Pro-UltraSpeed"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-21"
+
+[models.cost]
+input = 4.35
+output = 8.7
+cache_read = 0.036
+
+[[models]]
+id = "xingchen-agi/xing4.0-29b-a4b:free"
+name = "Xing4.0 29B A4B (free)"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11
+
+[[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.13
+output = 0.85
+cache_read = 0.025
+
+[[models]]
+id = "z-ai/glm-4.5v"
+name = "GLM-4.5V"
+context = 65536
+output = 16384
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-11"
+
+[models.cost]
+input = 0.6
+output = 1.8
+cache_read = 0.11

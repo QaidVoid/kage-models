@@ -6,43 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "inception/mercury-3"
-name = "Mercury 3"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.1
-output = 0.35
-cache_read = 0.01
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042
-
-[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -61,6 +24,22 @@ release_date = "2026-09-10"
 input = 0.06
 output = 0.18
 cache_read = 0.012
+
+[[models]]
+id = "inclusionai/ling-3.0-tiny"
+name = "Ling 3.0 Tiny"
+context = 262144
+output = 250000
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-08-06"
+
+[models.cost]
+input = 0.015
+output = 0.045
+cache_read = 0.003
 
 [[models]]
 id = "inclusionai/ling-3.1-flash"
@@ -173,7 +152,7 @@ cache_read = 0.1
 id = "meta-llama/llama-4-maverick"
 name = "Llama 4 Maverick"
 context = 524288
-output = 16384
+output = 32768
 input = [
     "text",
     "image",
@@ -182,9 +161,9 @@ produces = ["text"]
 release_date = "2025-04-05"
 
 [models.cost]
-input = 0.1875
-output = 0.6525
-cache_read = 0.05
+input = 0.35
+output = 1.0
+cache_read = 0.17
 
 [[models]]
 id = "meta-llama/llama-4-scout"
@@ -538,9 +517,9 @@ efforts = [
 release_date = "2026-10-19"
 
 [models.cost]
-input = 0.075
-output = 0.3
-cache_read = 0.0075
+input = 0.15
+output = 0.6
+cache_read = 0.015
 
 [[models]]
 id = "mistralai/codestral-2508"
@@ -759,3 +738,33 @@ release_date = "2025-08-12"
 input = 0.4
 output = 2.0
 cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-nemo"
+name = "Mistral Nemo"
+context = 131072
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.029
+output = 0.03
+
+[[models]]
+id = "mistralai/mistral-saba"
+name = "Saba"
+context = 32768
+output = 26214
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-02-17"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.02

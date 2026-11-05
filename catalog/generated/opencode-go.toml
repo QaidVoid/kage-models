@@ -346,6 +346,29 @@ output = 0.58
 cache_read = 0.035
 
 [[models]]
+id = "hy4"
+name = "Hy4"
+context = 1048576
+input_limit = 983010
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-11-04"
+
+[models.cost]
+input = 0.834
+output = 2.501
+cache_read = 0.042
+
+[[models]]
 id = "hy4-preview"
 name = "Hy4 preview"
 context = 1024000

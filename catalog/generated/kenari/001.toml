@@ -6,17 +6,15 @@ name = "Kenari"
 api = "https://kenari.id/v1"
 
 [[models]]
-id = "hy4-preview"
+id = "hy4"
 context = 1048576
-output = 64000
-input = ["text"]
+output = 65536
+input = [
+    "text",
+    "image",
+]
 produces = ["text"]
 thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
 
 [[models]]
 id = "kimi-k2-6"

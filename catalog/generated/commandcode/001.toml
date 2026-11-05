@@ -180,6 +180,19 @@ efforts = [
 ]
 
 [[models]]
+id = "inclusionai/ling-3.1-flash-1019"
+name = "Ling 3.1 Flash 1019"
+context = 1000000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+
+[[models]]
 id = "meituan/LongCat-2.0"
 name = "LongCat 2.0"
 context = 1048576
@@ -344,19 +357,6 @@ produces = ["text"]
 id = "moonshotai/Kimi-K3"
 name = "Kimi K3"
 context = 1000000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-
-[[models]]
-id = "moonshotai/Kimi-K3.1-Pro"
-name = "Kimi K3.1 Pro"
-context = 1048576
 input = ["text"]
 produces = ["text"]
 thinks = true
