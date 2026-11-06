@@ -749,14 +749,14 @@ output = 0.0
 id = "deepseek/deepseek-chat"
 name = "DeepSeek Chat"
 context = 163840
-output = 16000
+output = 16384
 input = ["text"]
 produces = ["text"]
 release_date = "2025-12-01"
 
 [models.cost]
-input = 0.2574
-output = 1.0287
+input = 0.32
+output = 0.89
 
 [[models]]
 id = "deepseek/deepseek-chat-v3-0324"
@@ -802,18 +802,3 @@ release_date = "2025-05-28"
 input = 0.5
 output = 2.15
 cache_read = 0.35
-
-[[models]]
-id = "deepseek/deepseek-v3.1-terminus"
-name = "DeepSeek V3.1 Terminus"
-context = 163840
-output = 147456
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-09-22"
-
-[models.cost]
-input = 0.27
-output = 1.0

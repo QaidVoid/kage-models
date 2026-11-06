@@ -6,6 +6,43 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "inception/mercury-3"
+name = "Mercury 3"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.1
+output = 0.35
+cache_read = 0.01
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042
+
+[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -138,15 +175,15 @@ cache_read = 0.025
 id = "meta-llama/llama-3.3-70b-instruct"
 name = "Llama-3.3-70B-Instruct"
 context = 131072
-output = 128000
+output = 32768
 input = ["text"]
 produces = ["text"]
 release_date = "2024-12-06"
 
 [models.cost]
-input = 0.2
-output = 0.52
-cache_read = 0.1
+input = 0.59
+output = 0.79
+cache_read = 0.295
 
 [[models]]
 id = "meta-llama/llama-4-maverick"
@@ -414,37 +451,6 @@ input = 0.55
 output = 2.2
 
 [[models]]
-id = "minimax/minimax-m2"
-name = "MiniMax-M2"
-context = 204800
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-10-27"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.255
-output = 1.02
-
-[[models]]
-id = "minimax/minimax-m2.1"
-name = "MiniMax-M2.1"
-context = 204800
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-12-23"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.3
-output = 1.2
-cache_read = 0.03
-
-[[models]]
 id = "minimax/minimax-m2.5"
 name = "MiniMax-M2.5"
 context = 204800
@@ -464,16 +470,16 @@ cache_read = 0.03
 id = "minimax/minimax-m2.7"
 name = "MiniMax-M2.7"
 context = 204800
-output = 131072
+output = 176947
 input = ["text"]
 produces = ["text"]
 thinks = true
 release_date = "2026-03-18"
 
 [models.cost]
-input = 0.3
-output = 1.2
-cache_read = 0.06
+input = 0.21
+output = 0.84
+cache_read = 0.042
 
 [[models]]
 id = "minimax/minimax-m3"
@@ -751,20 +757,3 @@ release_date = "2024-07-18"
 [models.cost]
 input = 0.029
 output = 0.03
-
-[[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02

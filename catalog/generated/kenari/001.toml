@@ -15,6 +15,11 @@ input = [
 ]
 produces = ["text"]
 thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
 
 [[models]]
 id = "kimi-k2-6"

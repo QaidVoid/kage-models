@@ -80,6 +80,34 @@ cache_read = 0.01
 cache_write = 0.125
 
 [[models]]
+id = "crouton-alpha-free"
+name = "Crouton Alpha Free"
+context = 1048576
+output = 270000
+input = [
+    "text",
+    "image",
+    "pdf",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-03"
+
+[models.cost]
+input = 0.0
+output = 0.0
+cache_read = 0.0
+
+[[models]]
 id = "deepseek-v4-pro"
 name = "DeepSeek V4 Pro"
 context = 1000000
