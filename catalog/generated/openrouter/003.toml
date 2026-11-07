@@ -6,6 +6,19 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "mistralai/mistral-nemo"
+name = "Mistral Nemo"
+context = 131072
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.029
+output = 0.03
+
+[[models]]
 id = "mistralai/mistral-saba"
 name = "Saba"
 context = 32768

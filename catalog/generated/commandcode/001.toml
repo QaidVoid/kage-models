@@ -365,3 +365,16 @@ efforts = [
     "high",
     "max",
 ]
+
+[[models]]
+id = "moonshotai/Kimi-K3.1-Pro"
+name = "Kimi K3.1 Pro"
+context = 1048576
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]

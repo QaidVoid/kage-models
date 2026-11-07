@@ -90,9 +90,9 @@ toggle = true
 release_date = "2026-09-29"
 
 [models.cost]
-input = 0.075
-output = 0.225
-cache_read = 0.015
+input = 0.045
+output = 0.135
+cache_read = 0.009
 
 [[models]]
 id = "liquid/lfm-2.5-2.6b"
@@ -137,6 +137,35 @@ release_date = "2026-10-13"
 input = 0.05
 output = 0.7
 cache_read = 0.025
+
+[[models]]
+id = "liquid/lfm-3-1.7b"
+name = "LFM3-1.7B"
+context = 262144
+output = 8192
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2026-11-06"
+
+[models.cost]
+input = 0.08
+output = 0.2
+cache_read = 0.02
+
+[[models]]
+id = "liquid/lfm-3-1.7b:free"
+name = "LFM3-1.7B (free)"
+context = 262144
+output = 8192
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2026-11-06"
+
+[models.cost]
+input = 0.0
+output = 0.0
 
 [[models]]
 id = "meituan/longcat-2.0"
@@ -454,7 +483,7 @@ output = 2.2
 id = "minimax/minimax-m2.5"
 name = "MiniMax-M2.5"
 context = 204800
-output = 32768
+output = 58982
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -462,9 +491,9 @@ release_date = "2026-02-12"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.27
-output = 0.95
-cache_read = 0.03
+input = 0.3
+output = 1.2
+cache_read = 0.06
 
 [[models]]
 id = "minimax/minimax-m2.7"
@@ -744,16 +773,3 @@ release_date = "2025-08-12"
 input = 0.4
 output = 2.0
 cache_read = 0.04
-
-[[models]]
-id = "mistralai/mistral-nemo"
-name = "Mistral Nemo"
-context = 131072
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-18"
-
-[models.cost]
-input = 0.029
-output = 0.03

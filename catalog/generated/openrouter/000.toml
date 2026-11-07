@@ -686,6 +686,19 @@ input = 0.1
 output = 0.4
 
 [[models]]
+id = "cohere/command-a"
+name = "Command A"
+context = 256000
+output = 8192
+input = ["text"]
+produces = ["text"]
+release_date = "2025-03-13"
+
+[models.cost]
+input = 2.5
+output = 10.0
+
+[[models]]
 id = "cohere/command-a-plus"
 name = "Command A+"
 context = 192000
@@ -729,6 +742,19 @@ release_date = "2024-08-30"
 [models.cost]
 input = 2.5
 output = 10.0
+
+[[models]]
+id = "cohere/command-r7b-12-2024"
+name = "Command R7B"
+context = 128000
+output = 4000
+input = ["text"]
+produces = ["text"]
+release_date = "2024-12-13"
+
+[models.cost]
+input = 0.0375
+output = 0.15
 
 [[models]]
 id = "cohere/north-mini-code:free"
@@ -787,18 +813,3 @@ release_date = "2025-08-21"
 input = 0.25
 output = 0.95
 cache_read = 0.13
-
-[[models]]
-id = "deepseek/deepseek-r1-0528"
-name = "DeepSeek R1 0528"
-context = 163840
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-05-28"
-
-[models.cost]
-input = 0.5
-output = 2.15
-cache_read = 0.35

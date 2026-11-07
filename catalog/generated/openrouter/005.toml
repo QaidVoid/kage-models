@@ -6,25 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "openrouter/auto"
-name = "Auto Router"
-context = 2000000
-output = 2000000
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-produces = [
-    "text",
-    "image",
-]
-thinks = true
-release_date = "2023-11-08"
-
-[[models]]
 id = "openrouter/free"
 name = "Free Models Router"
 context = 200000
@@ -696,3 +677,48 @@ input = 0.32
 output = 1.28
 cache_read = 0.064
 cache_write = 0.4
+
+[[models]]
+id = "qwen/qwen3.8-2.4t-a95b"
+name = "Qwen3.8 2.4T A95B"
+context = 1048576
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-12"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.25
+
+[[models]]
+id = "qwen/qwen3.8-27b"
+name = "Qwen3.8 27B"
+context = 1024000
+output = 235929
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-14"
+
+[models.cost]
+input = 0.15
+output = 1.875
+cache_read = 0.0375

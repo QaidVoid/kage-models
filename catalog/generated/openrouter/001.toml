@@ -6,6 +6,21 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-r1-0528"
+name = "DeepSeek R1 0528"
+context = 163840
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2025-05-28"
+
+[models.cost]
+input = 0.5
+output = 2.15
+cache_read = 0.35
+
+[[models]]
 id = "deepseek/deepseek-v3.1-terminus"
 name = "DeepSeek V3.1 Terminus"
 context = 163840
@@ -89,7 +104,7 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.059
+input = 0.05
 output = 0.3
 cache_read = 0.035
 
@@ -134,9 +149,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.95526
-output = 1.91052
-cache_read = 0.079605
+input = 0.778824
+output = 1.557648
+cache_read = 0.064902
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -771,9 +786,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.0675
+output = 0.225
+cache_read = 0.0375
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"

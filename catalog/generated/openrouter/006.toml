@@ -6,51 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.8-2.4t-a95b"
-name = "Qwen3.8 2.4T A95B"
-context = 1048576
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-12"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1024000
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.15
-output = 1.875
-cache_read = 0.0375
-
-[[models]]
 id = "qwen/qwen3.8-flash"
 name = "Qwen3.8 Flash"
 context = 1000000
@@ -217,7 +172,7 @@ output = 3.0
 
 [[models]]
 id = "ricursiveai/ripple-65b-preview"
-name = "ricursiveAI/Ripple-65B-Preview"
+name = "Ripple 65B Preview"
 context = 1048576
 output = 131072
 input = ["text"]
@@ -854,3 +809,55 @@ release_date = "2026-09-22"
 input = 0.435
 output = 0.87
 cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+name = "MiMo-V2.6-Pro-UltraSpeed"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-21"
+
+[models.cost]
+input = 4.35
+output = 8.7
+cache_read = 0.036
+
+[[models]]
+id = "xingchen-agi/xing4.0-29b-a4b:free"
+name = "Xing4.0 29B A4B (free)"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-10-16"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11

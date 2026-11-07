@@ -6,58 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "xiaomi/mimo-v2.6-pro-ultraspeed"
-name = "MiMo-V2.6-Pro-UltraSpeed"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-21"
-
-[models.cost]
-input = 4.35
-output = 8.7
-cache_read = 0.036
-
-[[models]]
-id = "xingchen-agi/xing4.0-29b-a4b:free"
-name = "Xing4.0 29B A4B (free)"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "z-ai/glm-4.5"
-name = "GLM-4.5"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
-
-[[models]]
 id = "z-ai/glm-4.5-air"
 name = "GLM-4.5-Air"
 context = 131072
@@ -536,7 +484,7 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.059
+input = 0.05
 output = 0.3
 cache_read = 0.035
 
@@ -615,9 +563,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.1529
-output = 9.3388
-cache_read = 0.15
+input = 0.1824
+output = 10.5572
+cache_read = 0.18
 
 [[models]]
 id = "~openai/gpt-astra-latest"
@@ -818,9 +766,9 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0284
+input = 0.0285
 output = 0.0923
-cache_read = 0.0284
+cache_read = 0.0285
 
 [[models]]
 id = "~z-ai/glm-latest"

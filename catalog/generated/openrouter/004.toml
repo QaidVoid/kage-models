@@ -909,9 +909,9 @@ efforts = [
 release_date = "2025-08-05"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.075
+input = 0.017
+output = 0.062
+cache_read = 0.015
 
 [[models]]
 id = "openai/gpt-oss-20b"
@@ -991,3 +991,22 @@ release_date = "2025-06-10"
 [models.cost]
 input = 20.0
 output = 80.0
+
+[[models]]
+id = "openrouter/auto"
+name = "Auto Router"
+context = 2000000
+output = 2000000
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = [
+    "text",
+    "image",
+]
+thinks = true
+release_date = "2023-11-08"
