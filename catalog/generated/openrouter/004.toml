@@ -6,6 +6,32 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/gpt-5-nano"
+name = "GPT-5 Nano"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.05
+output = 0.4
+cache_read = 0.005
+
+[[models]]
 id = "openai/gpt-5-pro"
 name = "GPT-5 Pro"
 context = 400000
@@ -909,9 +935,9 @@ efforts = [
 release_date = "2025-08-05"
 
 [models.cost]
-input = 0.017
-output = 0.062
-cache_read = 0.015
+input = 0.022
+output = 0.08
+cache_read = 0.02
 
 [[models]]
 id = "openai/gpt-oss-20b"
@@ -972,41 +998,3 @@ release_date = "2025-04-16"
 input = 2.0
 output = 8.0
 cache_read = 0.5
-
-[[models]]
-id = "openai/o3-pro"
-name = "o3-pro"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-06-10"
-
-[models.cost]
-input = 20.0
-output = 80.0
-
-[[models]]
-id = "openrouter/auto"
-name = "Auto Router"
-context = 2000000
-output = 2000000
-input = [
-    "text",
-    "image",
-    "pdf",
-    "audio",
-    "video",
-]
-produces = [
-    "text",
-    "image",
-]
-thinks = true
-release_date = "2023-11-08"

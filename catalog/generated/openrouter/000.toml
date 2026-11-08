@@ -797,19 +797,3 @@ release_date = "2025-03-24"
 input = 0.29
 output = 1.14
 cache_read = 0.11
-
-[[models]]
-id = "deepseek/deepseek-chat-v3.1"
-name = "DeepSeek V3.1"
-context = 163840
-output = 147456
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-21"
-
-[models.cost]
-input = 0.25
-output = 0.95
-cache_read = 0.13

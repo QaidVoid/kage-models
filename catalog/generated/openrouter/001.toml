@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-chat-v3.1"
+name = "DeepSeek V3.1"
+context = 163840
+output = 147456
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-21"
+
+[models.cost]
+input = 0.25
+output = 0.95
+cache_read = 0.13
+
+[[models]]
 id = "deepseek/deepseek-r1-0528"
 name = "DeepSeek R1 0528"
 context = 163840
@@ -104,7 +120,7 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.05
+input = 0.0434
 output = 0.3
 cache_read = 0.035
 
@@ -149,9 +165,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.778824
-output = 1.557648
-cache_read = 0.064902
+input = 0.353046
+output = 0.706092
+cache_read = 0.029421
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -170,9 +186,9 @@ efforts = [
 release_date = "2026-08-13"
 
 [models.cost]
-input = 0.1165
-output = 4.66
-cache_read = 0.111
+input = 0.111
+output = 4.44
+cache_read = 0.101
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -202,7 +218,7 @@ cache_read = 0.018
 id = "deepseek/deepseek-v4.1-flash-1017"
 name = "DeepSeek V4.1 Flash 1017"
 context = 1048576
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -218,9 +234,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.003
+input = 0.006
+output = 0.5
+cache_read = 0.005
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"
@@ -866,45 +882,3 @@ release_date = "2026-08-25"
 input = 0.06
 output = 0.25
 cache_read = 0.015
-
-[[models]]
-id = "inception/mercury-2"
-name = "Mercury 2"
-context = 128000
-output = 50000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-02-24"
-
-[models.cost]
-input = 0.25
-output = 0.75
-cache_read = 0.025
-
-[[models]]
-id = "inception/mercury-2.5"
-name = "Mercury 2.5"
-context = 260000
-output = 65536
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-09-08"
-
-[models.cost]
-input = 0.04
-output = 0.15
-cache_read = 0.004

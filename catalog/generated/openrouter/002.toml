@@ -6,27 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "inception/mercury-3"
-name = "Mercury 3"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.1
-output = 0.35
-cache_read = 0.01
-
-[[models]]
 id = "inclusionai/ling-3.0-flash"
 name = "Ling 3.0 Flash"
 context = 262144

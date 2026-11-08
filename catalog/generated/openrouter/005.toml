@@ -6,6 +6,44 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/o3-pro"
+name = "o3-pro"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-06-10"
+
+[models.cost]
+input = 20.0
+output = 80.0
+
+[[models]]
+id = "openrouter/auto"
+name = "Auto Router"
+context = 2000000
+output = 2000000
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = [
+    "text",
+    "image",
+]
+thinks = true
+release_date = "2023-11-08"
+
+[[models]]
 id = "openrouter/free"
 name = "Free Models Router"
 context = 200000
@@ -541,7 +579,7 @@ cache_write = 0.375
 id = "qwen/qwen3.6-27b"
 name = "Qwen3.6 27B"
 context = 262144
-output = 65536
+output = 81920
 input = [
     "text",
     "image",
@@ -553,8 +591,8 @@ toggle = true
 release_date = "2026-04-22"
 
 [models.cost]
-input = 0.45
-output = 2.7
+input = 0.32
+output = 3.2
 
 [[models]]
 id = "qwen/qwen3.6-35b-a3b"
@@ -657,68 +695,3 @@ input = 1.475
 output = 4.425
 cache_read = 0.295
 cache_write = 1.84375
-
-[[models]]
-id = "qwen/qwen3.7-plus"
-name = "Qwen3.7 Plus"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-06-02"
-
-[models.cost]
-input = 0.32
-output = 1.28
-cache_read = 0.064
-cache_write = 0.4
-
-[[models]]
-id = "qwen/qwen3.8-2.4t-a95b"
-name = "Qwen3.8 2.4T A95B"
-context = 1048576
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-12"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1024000
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.15
-output = 1.875
-cache_read = 0.0375
