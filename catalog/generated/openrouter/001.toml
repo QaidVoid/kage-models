@@ -165,9 +165,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.353046
-output = 0.706092
-cache_read = 0.029421
+input = 0.95526
+output = 1.91052
+cache_read = 0.079605
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -188,7 +188,7 @@ release_date = "2026-08-13"
 [models.cost]
 input = 0.111
 output = 4.44
-cache_read = 0.101
+cache_read = 0.097
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -783,7 +783,7 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.35
+output = 0.45
 cache_read = 0.04
 
 [[models]]
@@ -802,9 +802,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.0675
-output = 0.225
-cache_read = 0.0375
+input = 0.09
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"

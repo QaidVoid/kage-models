@@ -90,9 +90,9 @@ toggle = true
 release_date = "2025-07-28"
 
 [models.cost]
-input = 0.13
-output = 0.85
-cache_read = 0.025
+input = 0.2
+output = 1.1
+cache_read = 0.03
 
 [[models]]
 id = "z-ai/glm-4.5v"
@@ -636,8 +636,8 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.1672
-output = 10.1366
+input = 0.1624
+output = 10.1522
 cache_read = 0.16
 
 [[models]]

@@ -169,15 +169,14 @@ cache_read = 0.006
 id = "meta-llama/llama-3.1-8b-instruct"
 name = "Llama-3.1-8B-Instruct"
 context = 131072
-output = 117964
+output = 16384
 input = ["text"]
 produces = ["text"]
 release_date = "2024-07-23"
 
 [models.cost]
-input = 0.05
-output = 0.08
-cache_read = 0.025
+input = 0.02
+output = 0.04
 
 [[models]]
 id = "meta-llama/llama-3.3-70b-instruct"
@@ -391,7 +390,7 @@ cache_read = 0.002
 id = "meta/muse-spark-open"
 name = "Muse Spark Open"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
