@@ -59,6 +59,33 @@ cache_read = 0.25
 cache_write = 12.5
 
 [[models]]
+id = "claude-fable-5-2"
+name = "Claude Fable 5.2"
+context = 1000000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-09"
+
+[models.cost]
+input = 8.0
+output = 40.0
+cache_read = 0.2
+cache_write = 10.0
+
+[[models]]
 id = "claude-haiku-4-5"
 name = "Claude Haiku 4.5 (latest)"
 context = 200000

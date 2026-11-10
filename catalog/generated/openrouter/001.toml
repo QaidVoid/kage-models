@@ -210,9 +210,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.051
-output = 0.567
-cache_read = 0.018
+input = 0.006
+output = 0.5
+cache_read = 0.005
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -790,7 +790,7 @@ cache_read = 0.04
 id = "google/gemma-4-26b-a4b-it"
 name = "Gemma 4 26B A4B IT"
 context = 262144
-output = 235929
+output = 128000
 input = [
     "text",
     "image",
@@ -802,9 +802,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.08
+output = 0.1
+cache_read = 0.046
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
@@ -882,3 +882,19 @@ release_date = "2026-08-25"
 input = 0.06
 output = 0.25
 cache_read = 0.015
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042

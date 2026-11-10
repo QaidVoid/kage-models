@@ -516,6 +516,26 @@ output = 1.2
 cache_read = 0.006
 
 [[models]]
+id = "longcat-2.5-free"
+name = "LongCat 2.5 Free"
+context = 1000000
+output = 262144
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-02"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.0
+output = 0.0
+cache_read = 0.0
+
+[[models]]
 id = "longcat-2.5-preview-free"
 name = "LongCat 2.5 Preview Free"
 context = 1000000

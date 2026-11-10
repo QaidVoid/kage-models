@@ -6,22 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042
-
-[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -182,15 +166,15 @@ output = 0.04
 id = "meta-llama/llama-3.3-70b-instruct"
 name = "Llama-3.3-70B-Instruct"
 context = 131072
-output = 32768
+output = 115200
 input = ["text"]
 produces = ["text"]
 release_date = "2024-12-06"
 
 [models.cost]
-input = 0.59
-output = 0.79
-cache_read = 0.295
+input = 0.71
+output = 0.71
+cache_read = 0.71
 
 [[models]]
 id = "meta-llama/llama-4-maverick"
@@ -224,6 +208,36 @@ release_date = "2025-04-05"
 [models.cost]
 input = 0.1
 output = 0.3
+
+[[models]]
+id = "meta/muse-ember"
+name = "Muse Ember"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-09"
+
+[models.cost]
+input = 0.1
+output = 0.5
+cache_read = 0.004
+cache_write = 0.125
 
 [[models]]
 id = "meta/muse-glimmer-30b"
@@ -443,24 +457,9 @@ output = 20.0
 cache_read = 0.2
 
 [[models]]
-id = "minimax/minimax-m1"
-name = "MiniMax M1"
-context = 1000000
-output = 40000
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-06-17"
-
-[models.cost]
-input = 0.55
-output = 2.2
-
-[[models]]
 id = "minimax/minimax-m2.5"
 name = "MiniMax-M2.5"
-context = 204800
+context = 200000
 output = 58982
 input = ["text"]
 produces = ["text"]
@@ -476,7 +475,7 @@ cache_read = 0.06
 [[models]]
 id = "minimax/minimax-m2.7"
 name = "MiniMax-M2.7"
-context = 204800
+context = 196608
 output = 176947
 input = ["text"]
 produces = ["text"]
@@ -751,3 +750,33 @@ release_date = "2025-08-12"
 input = 0.4
 output = 2.0
 cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-nemo"
+name = "Mistral Nemo"
+context = 131072
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.029
+output = 0.03
+
+[[models]]
+id = "mistralai/mistral-saba"
+name = "Saba"
+context = 32768
+output = 26214
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-02-17"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.02

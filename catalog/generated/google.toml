@@ -7,7 +7,7 @@ name = "Google"
 [[models]]
 id = "deep-research-max-preview-04-2026"
 name = "Deep Research Max Preview (Apr-21-2026)"
-context = 131072
+context = 1048576
 output = 65536
 input = [
     "text",
@@ -31,7 +31,7 @@ cache_read = 0.2
 [[models]]
 id = "deep-research-preview-04-2026"
 name = "Deep Research Preview (Apr-21-2026)"
-context = 131072
+context = 1048576
 output = 65536
 input = [
     "text",
