@@ -491,6 +491,32 @@ output = 10.0
 cache_read = 0.1
 
 [[models]]
+id = "gemini-4-carbon"
+name = "Gemini 4 Carbon"
+context = 1048576
+output = 32768
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-11-10"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+
+[[models]]
 id = "gemini-flash-latest"
 name = "Gemini Flash Latest"
 context = 1048576

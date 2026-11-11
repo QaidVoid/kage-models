@@ -6,6 +6,33 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-chat"
+name = "DeepSeek Chat"
+context = 163840
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2025-12-01"
+
+[models.cost]
+input = 0.32
+output = 0.89
+
+[[models]]
+id = "deepseek/deepseek-chat-v3-0324"
+name = "DeepSeek V3 0324"
+context = 163840
+output = 115200
+input = ["text"]
+produces = ["text"]
+release_date = "2025-03-24"
+
+[models.cost]
+input = 0.29
+output = 1.14
+cache_read = 0.11
+
+[[models]]
 id = "deepseek/deepseek-chat-v3.1"
 name = "DeepSeek V3.1"
 context = 163840
@@ -86,7 +113,7 @@ output = 0.41
 id = "deepseek/deepseek-v4-flash"
 name = "DeepSeek V4 Flash"
 context = 1048576
-output = 943717
+output = 393216
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -99,9 +126,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.091
-output = 0.182
-cache_read = 0.0182
+input = 0.09
+output = 0.18
+cache_read = 0.018
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-0731"
@@ -210,9 +237,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.006
-output = 0.5
-cache_read = 0.005
+input = 0.051
+output = 0.567
+cache_read = 0.018
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -729,6 +756,33 @@ cache_read = 0.1
 cache_write = 0.1875
 
 [[models]]
+id = "google/gemini-4-carbon"
+name = "Gemini 4 Carbon"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-11-10"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+cache_write = 0.1875
+
+[[models]]
 id = "google/gemini-nano-banana-2.1"
 name = "Nano Banana 2.1"
 context = 65536
@@ -843,58 +897,3 @@ release_date = "2026-04-02"
 [models.cost]
 input = 0.2
 output = 0.4
-
-[[models]]
-id = "google/gemma-4-31b-it:free"
-name = "Gemma 4 31B (free)"
-context = 262144
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-02"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.25
-cache_read = 0.015
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042

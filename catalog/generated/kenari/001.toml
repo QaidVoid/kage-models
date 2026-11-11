@@ -6,22 +6,6 @@ name = "Kenari"
 api = "https://kenari.id/v1"
 
 [[models]]
-id = "hy4"
-context = 1048576
-output = 65536
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-
-[[models]]
 id = "kimi-k2-6"
 name = "Kimi K2.6"
 context = 262144
@@ -143,6 +127,26 @@ efforts = [
 ]
 
 [[models]]
+id = "muse-ember-1-0"
+context = 1048576
+output = 524288
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
 id = "muse-spark-1-2"
 context = 1048576
 output = 131072
@@ -243,6 +247,28 @@ efforts = [
     "xhigh",
     "max",
 ]
+
+[[models]]
+id = "muse-wonder-1-0-contributor"
+context = 1007997
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+
+[[models]]
+id = "muse-wonder-full-1-0-contributor"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
 
 [[models]]
 id = "nemotron-3-super-120b-a12b"

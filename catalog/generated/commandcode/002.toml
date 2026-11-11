@@ -71,21 +71,6 @@ efforts = [
 ]
 
 [[models]]
-id = "stealth/crouton-alpha"
-name = "Crouton Alpha"
-context = 1048576
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-
-[[models]]
 id = "stealth/glyph-cluster:free"
 name = "Glyph Cluster"
 context = 256000

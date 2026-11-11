@@ -6,6 +6,54 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "qwen/qwen3.8-27b"
+name = "Qwen3.8 27B"
+context = 1048575
+output = 235929
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-14"
+
+[models.cost]
+input = 0.15
+output = 1.875
+cache_read = 0.0375
+
+[[models]]
+id = "qwen/qwen3.8-flash"
+name = "Qwen3.8 Flash"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-08-26"
+
+[models.budget]
+min = 0
+
+[models.cost]
+input = 0.15
+output = 0.47
+cache_read = 0.016
+
+[[models]]
 id = "qwen/qwen3.8-max-0902"
 name = "Qwen3.8 Max 0902"
 context = 1000000
@@ -807,21 +855,6 @@ output = 8.7
 cache_read = 0.036
 
 [[models]]
-id = "xingchen-agi/xing4.0-29b-a4b:free"
-name = "Xing4.0 29B A4B (free)"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-10-16"
-
-[models.cost]
-input = 0.0
-output = 0.0
-
-[[models]]
 id = "z-ai/glm-4.5"
 name = "GLM-4.5"
 context = 131072
@@ -836,19 +869,3 @@ release_date = "2025-07-28"
 input = 0.6
 output = 2.2
 cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.5-air"
-name = "GLM-4.5-Air"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.2
-output = 1.1
-cache_read = 0.03

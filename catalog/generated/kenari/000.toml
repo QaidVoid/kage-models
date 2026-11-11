@@ -391,3 +391,19 @@ efforts = [
     "high",
 ]
 release_date = "2026-07-06"
+
+[[models]]
+id = "hy4"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
