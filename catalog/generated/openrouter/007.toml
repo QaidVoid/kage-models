@@ -6,41 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "z-ai/glm-4.5-air"
-name = "GLM-4.5-Air"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.2
-output = 1.1
-cache_read = 0.03
-
-[[models]]
-id = "z-ai/glm-4.5v"
-name = "GLM-4.5V"
-context = 65536
-output = 16384
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-11"
-
-[models.cost]
-input = 0.6
-output = 1.8
-cache_read = 0.11
-
-[[models]]
 id = "z-ai/glm-4.6"
 name = "GLM-4.6"
 context = 204800
@@ -156,9 +121,9 @@ release_date = "2026-04-07"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 1.33
-output = 4.18
-cache_read = 0.247
+input = 1.4
+output = 4.4
+cache_read = 0.26
 
 [[models]]
 id = "z-ai/glm-5.2"
@@ -442,9 +407,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.006
-output = 0.5
-cache_read = 0.005
+input = 0.022
+output = 0.4
+cache_read = 0.004
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"

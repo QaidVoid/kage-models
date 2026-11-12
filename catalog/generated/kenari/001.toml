@@ -273,7 +273,7 @@ produces = ["text"]
 [[models]]
 id = "nemotron-3-super-120b-a12b"
 name = "Nemotron 3 Super 120B A12B"
-context = 1048576
+context = 262144
 output = 16384
 input = ["text"]
 produces = ["text"]

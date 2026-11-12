@@ -6,80 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1048575
-output = 235929
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.15
-output = 1.875
-cache_read = 0.0375
-
-[[models]]
-id = "qwen/qwen3.8-flash"
-name = "Qwen3.8 Flash"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-08-26"
-
-[models.budget]
-min = 0
-
-[models.cost]
-input = 0.15
-output = 0.47
-cache_read = 0.016
-
-[[models]]
-id = "qwen/qwen3.8-max-0902"
-name = "Qwen3.8 Max 0902"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-09-02"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
 id = "qwen/qwen3.8-max-prime"
 name = "Qwen 3.8 Max Prime"
 context = 1000000
@@ -550,6 +476,23 @@ output = 3.2
 cache_read = 0.03
 
 [[models]]
+id = "unbiased/pareto-26.10-preview"
+name = "Pareto 26.10 Preview"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+release_date = "2026-10-01"
+
+[models.cost]
+input = 0.8
+output = 3.2
+cache_read = 0.03
+
+[[models]]
 id = "unbiased/pareto-26.9"
 name = "Pareto 26.9"
 context = 262144
@@ -868,4 +811,39 @@ release_date = "2025-07-28"
 [models.cost]
 input = 0.6
 output = 2.2
+cache_read = 0.11
+
+[[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.2
+output = 1.1
+cache_read = 0.03
+
+[[models]]
+id = "z-ai/glm-4.5v"
+name = "GLM-4.5V"
+context = 65536
+output = 16384
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-11"
+
+[models.cost]
+input = 0.6
+output = 1.8
 cache_read = 0.11

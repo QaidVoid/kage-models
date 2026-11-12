@@ -6,54 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "mistralai/mistral-medium-3.1"
-name = "Mistral Medium 3.1"
-context = 131072
-output = 104857
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-08-12"
-
-[models.cost]
-input = 0.4
-output = 2.0
-cache_read = 0.04
-
-[[models]]
-id = "mistralai/mistral-nemo"
-name = "Mistral Nemo"
-context = 131072
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-18"
-
-[models.cost]
-input = 0.029
-output = 0.03
-
-[[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02
-
-[[models]]
 id = "mistralai/mistral-small-2603"
 name = "Mistral Small 4"
 context = 262144
@@ -289,8 +241,8 @@ efforts = [
 release_date = "2026-10-23"
 
 [models.cost]
-input = 2.0
-output = 10.0
+input = 0.2375
+output = 8.4085
 cache_read = 0.2
 
 [[models]]
@@ -380,7 +332,7 @@ output = 0.0
 [[models]]
 id = "nvidia/nemotron-3-super-120b-a12b"
 name = "Nemotron 3 Super 120B A12B"
-context = 1048576
+context = 262144
 output = 16384
 input = ["text"]
 produces = ["text"]
@@ -724,3 +676,75 @@ release_date = "2025-08-07"
 input = 1.25
 output = 10.0
 cache_read = 0.125
+
+[[models]]
+id = "openai/gpt-5-mini"
+name = "GPT-5 Mini"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.25
+output = 2.0
+cache_read = 0.025
+
+[[models]]
+id = "openai/gpt-5-nano"
+name = "GPT-5 Nano"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.05
+output = 0.4
+cache_read = 0.005
+
+[[models]]
+id = "openai/gpt-5-pro"
+name = "GPT-5 Pro"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = ["high"]
+release_date = "2025-10-06"
+
+[models.cost]
+input = 15.0
+output = 120.0
