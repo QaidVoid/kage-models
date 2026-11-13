@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-chat-v3.1"
+name = "DeepSeek V3.1"
+context = 163840
+output = 147456
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-21"
+
+[models.cost]
+input = 0.25
+output = 0.95
+cache_read = 0.13
+
+[[models]]
 id = "deepseek/deepseek-r1-0528"
 name = "DeepSeek R1 0528"
 context = 163840
@@ -136,7 +152,7 @@ cache_read = 0.014
 id = "deepseek/deepseek-v4-pro"
 name = "DeepSeek V4 Pro"
 context = 1048576
-output = 384000
+output = 393216
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -149,9 +165,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.95526
-output = 1.91052
-cache_read = 0.079605
+input = 0.9
+output = 1.5
+cache_read = 0.25
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -194,9 +210,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.022
-output = 0.4
-cache_read = 0.004
+input = 0.3
+output = 1.2
+cache_read = 0.006
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -218,9 +234,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.003
+input = 0.3
+output = 1.2
+cache_read = 0.006
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"
@@ -740,6 +756,34 @@ cache_read = 0.1
 cache_write = 0.1875
 
 [[models]]
+id = "google/gemini-4-hydrogen"
+name = "Gemini 4 Hydrogen"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-11-12"
+
+[models.cost]
+input = 1.5
+output = 7.5
+cache_read = 0.075
+cache_write = 0.083333
+
+[[models]]
 id = "google/gemini-nano-banana-2.1"
 name = "Nano Banana 2.1"
 context = 65536
@@ -801,7 +845,7 @@ cache_read = 0.04
 id = "google/gemma-4-26b-a4b-it"
 name = "Gemma 4 26B A4B IT"
 context = 262144
-output = 128000
+output = 235929
 input = [
     "text",
     "image",
@@ -813,9 +857,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.08
-output = 0.1
-cache_read = 0.046
+input = 0.09
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
@@ -873,39 +917,3 @@ release_date = "2026-04-02"
 [models.cost]
 input = 0.0
 output = 0.0
-
-[[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.15
-cache_read = 0.015
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042

@@ -43,7 +43,10 @@ id = "deepseek-v4-1-flash-1017"
 name = "DeepSeek V4.1 Flash 1017"
 context = 1048576
 output = 128000
-input = ["text"]
+input = [
+    "text",
+    "image",
+]
 produces = ["text"]
 thinks = true
 efforts = [
@@ -335,7 +338,7 @@ cache_read = 0.07
 [[models]]
 id = "mistral-large-latest"
 name = "Mistral Large (latest)"
-context = 262144
+context = 1048576
 output = 262144
 input = [
     "text",
@@ -343,12 +346,18 @@ input = [
     "pdf",
 ]
 produces = ["text"]
-release_date = "2024-11-01"
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2026-10-06"
 
 [models.cost]
-input = 0.5
-output = 1.5
-cache_read = 0.05
+input = 0.7
+output = 2.1
+cache_read = 0.07
 
 [[models]]
 id = "mistral-medium-2505"

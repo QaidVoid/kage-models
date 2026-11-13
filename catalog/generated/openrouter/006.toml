@@ -6,6 +6,137 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "qwen/qwen3.7-max"
+name = "Qwen3.7 Max"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-05-21"
+
+[models.cost]
+input = 1.475
+output = 4.425
+cache_read = 0.295
+cache_write = 1.84375
+
+[[models]]
+id = "qwen/qwen3.7-plus"
+name = "Qwen3.7 Plus"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-06-02"
+
+[models.cost]
+input = 0.32
+output = 1.28
+cache_read = 0.064
+cache_write = 0.4
+
+[[models]]
+id = "qwen/qwen3.8-2.4t-a95b"
+name = "Qwen3.8 2.4T A95B"
+context = 1048576
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-12"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.25
+
+[[models]]
+id = "qwen/qwen3.8-27b"
+name = "Qwen3.8 27B"
+context = 1048575
+output = 235929
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-14"
+
+[models.cost]
+input = 0.15
+output = 1.875
+cache_read = 0.0375
+
+[[models]]
+id = "qwen/qwen3.8-flash"
+name = "Qwen3.8 Flash"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-08-26"
+
+[models.budget]
+min = 0
+
+[models.cost]
+input = 0.15
+output = 0.47
+cache_read = 0.016
+
+[[models]]
+id = "qwen/qwen3.8-max-0902"
+name = "Qwen3.8 Max 0902"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-09-02"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.25
+
+[[models]]
 id = "qwen/qwen3.8-max-prime"
 name = "Qwen 3.8 Max Prime"
 context = 1000000
@@ -133,9 +264,9 @@ toggle = true
 release_date = "2026-11-04"
 
 [models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.05
+input = 0.1
+output = 0.3
+cache_read = 0.025
 
 [[models]]
 id = "sakana/fugu-max"
@@ -406,6 +537,31 @@ release_date = "2026-07-15"
 input = 1.0
 output = 4.05
 cache_read = 0.17
+
+[[models]]
+id = "thinkingmachines/inkling-2-small"
+name = "Inkling 2 Small"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-11-05"
+
+[models.cost]
+input = 0.3
+output = 1.0
+cache_read = 0.03
 
 [[models]]
 id = "thinkingmachines/inkling-2-small:free"
@@ -716,134 +872,3 @@ interleaved = "reasoning_details"
 input = 0.4
 output = 2.0
 cache_read = 0.08
-
-[[models]]
-id = "xiaomi/mimo-v2.5-pro"
-name = "MiMo-V2.5-Pro"
-context = 1024000
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-22"
-interleaved = "reasoning_content"
-
-[models.cost]
-input = 0.48
-output = 1.8
-cache_read = 0.096
-
-[[models]]
-id = "xiaomi/mimo-v2.6-flash"
-name = "MiMo-V2.6-Flash"
-context = 1050000
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.14
-output = 0.28
-cache_read = 0.0028
-
-[[models]]
-id = "xiaomi/mimo-v2.6-pro"
-name = "MiMo-V2.6-Pro"
-context = 1050000
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.435
-output = 0.87
-cache_read = 0.0036
-
-[[models]]
-id = "xiaomi/mimo-v2.6-pro-ultraspeed"
-name = "MiMo-V2.6-Pro-UltraSpeed"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-21"
-
-[models.cost]
-input = 4.35
-output = 8.7
-cache_read = 0.036
-
-[[models]]
-id = "z-ai/glm-4.5"
-name = "GLM-4.5"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
-
-[[models]]
-id = "z-ai/glm-4.5-air"
-name = "GLM-4.5-Air"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.2
-output = 1.1
-cache_read = 0.03
-
-[[models]]
-id = "z-ai/glm-4.5v"
-name = "GLM-4.5V"
-context = 65536
-output = 16384
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-11"
-
-[models.cost]
-input = 0.6
-output = 1.8
-cache_read = 0.11

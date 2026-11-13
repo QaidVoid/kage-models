@@ -517,6 +517,33 @@ output = 10.0
 cache_read = 0.1
 
 [[models]]
+id = "gemini-4-hydrogen"
+name = "Gemini 4 Hydrogen"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-11-12"
+
+[models.cost]
+input = 1.5
+output = 7.5
+cache_read = 0.075
+
+[[models]]
 id = "gemini-flash-latest"
 name = "Gemini Flash Latest"
 context = 1048576
@@ -609,6 +636,10 @@ thinks = true
 toggle = true
 release_date = "2026-04-02"
 
+[models.cost]
+input = 0.0
+output = 0.0
+
 [[models]]
 id = "gemma-4-31b-it"
 name = "Gemma 4 31B IT"
@@ -622,3 +653,7 @@ produces = ["text"]
 thinks = true
 toggle = true
 release_date = "2026-04-02"
+
+[models.cost]
+input = 0.0
+output = 0.0

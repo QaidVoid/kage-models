@@ -6,6 +6,137 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.5-pro"
+name = "MiMo-V2.5-Pro"
+context = 1024000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-22"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.435
+output = 0.87
+cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-flash"
+name = "MiMo-V2.6-Flash"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.14
+output = 0.28
+cache_read = 0.0028
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro"
+name = "MiMo-V2.6-Pro"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.435
+output = 0.87
+cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+name = "MiMo-V2.6-Pro-UltraSpeed"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-21"
+
+[models.cost]
+input = 4.35
+output = 8.7
+cache_read = 0.036
+
+[[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11
+
+[[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.2
+output = 1.1
+cache_read = 0.03
+
+[[models]]
+id = "z-ai/glm-4.5v"
+name = "GLM-4.5V"
+context = 65536
+output = 16384
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-08-11"
+
+[models.cost]
+input = 0.6
+output = 1.8
+cache_read = 0.11
+
+[[models]]
 id = "z-ai/glm-4.6"
 name = "GLM-4.6"
 context = 204800
@@ -162,9 +293,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.0699
-output = 1.4
-cache_read = 0.0689
+input = 0.084
+output = 3.6
+cache_read = 0.079
 
 [[models]]
 id = "z-ai/glm-5.3-flash"
@@ -407,9 +538,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.022
-output = 0.4
-cache_read = 0.004
+input = 0.038
+output = 0.5
+cache_read = 0.01
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -457,7 +588,7 @@ cache_read = 0.035
 id = "~google/gemini-flash-latest"
 name = "Gemini Flash Latest"
 context = 1048576
-output = 65536
+output = 943718
 input = [
     "text",
     "image",
@@ -471,14 +602,15 @@ efforts = [
     "low",
     "medium",
     "high",
+    "xhigh",
 ]
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.75
-output = 3.75
+input = 1.5
+output = 7.5
 cache_read = 0.075
-cache_write = 0.041667
+cache_write = 0.083333
 
 [[models]]
 id = "~google/gemini-pro-latest"

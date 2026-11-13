@@ -6,6 +6,94 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "mistralai/mistral-medium-3"
+name = "Mistral Medium 3"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-05-07"
+
+[models.cost]
+input = 0.4
+output = 2.0
+cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-medium-3-5"
+name = "Mistral Medium 3.5"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-04-30"
+
+[models.cost]
+input = 1.5
+output = 7.5
+
+[[models]]
+id = "mistralai/mistral-medium-3.1"
+name = "Mistral Medium 3.1"
+context = 131072
+output = 104857
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-08-12"
+
+[models.cost]
+input = 0.4
+output = 2.0
+cache_read = 0.04
+
+[[models]]
+id = "mistralai/mistral-nemo"
+name = "Mistral Nemo"
+context = 131072
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2024-07-18"
+
+[models.cost]
+input = 0.029
+output = 0.03
+
+[[models]]
+id = "mistralai/mistral-saba"
+name = "Saba"
+context = 32768
+output = 26214
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-02-17"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.02
+
+[[models]]
 id = "mistralai/mistral-small-2603"
 name = "Mistral Small 4"
 context = 262144
@@ -141,7 +229,7 @@ cache_read = 0.15
 id = "moonshotai/kimi-k2.5"
 name = "Kimi K2.5"
 context = 262144
-output = 65536
+output = 235929
 input = [
     "text",
     "image",
@@ -153,9 +241,9 @@ release_date = "2026-01-27"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.532
-output = 3.325
-cache_read = 0.209
+input = 0.5
+output = 2.5
+cache_read = 0.15
 
 [[models]]
 id = "moonshotai/kimi-k2.6"
@@ -241,8 +329,8 @@ efforts = [
 release_date = "2026-10-23"
 
 [models.cost]
-input = 0.2375
-output = 8.4085
+input = 2.0
+output = 10.0
 cache_read = 0.2
 
 [[models]]
@@ -632,119 +720,3 @@ release_date = "2024-07-18"
 input = 0.15
 output = 0.6
 cache_read = 0.075
-
-[[models]]
-id = "openai/gpt-4o-mini-2024-07-18"
-name = "GPT-4o-mini (2024-07-18)"
-context = 128000
-output = 16384
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2024-07-18"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.075
-
-[[models]]
-id = "openai/gpt-5"
-name = "GPT-5"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-07"
-
-[models.cost]
-input = 1.25
-output = 10.0
-cache_read = 0.125
-
-[[models]]
-id = "openai/gpt-5-mini"
-name = "GPT-5 Mini"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-07"
-
-[models.cost]
-input = 0.25
-output = 2.0
-cache_read = 0.025
-
-[[models]]
-id = "openai/gpt-5-nano"
-name = "GPT-5 Nano"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-07"
-
-[models.cost]
-input = 0.05
-output = 0.4
-cache_read = 0.005
-
-[[models]]
-id = "openai/gpt-5-pro"
-name = "GPT-5 Pro"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = ["high"]
-release_date = "2025-10-06"
-
-[models.cost]
-input = 15.0
-output = 120.0
