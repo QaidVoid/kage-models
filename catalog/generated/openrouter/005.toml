@@ -6,65 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "openai/gpt-oss-safeguard-20b"
-name = "GPT OSS Safeguard 20B"
-context = 131072
-output = 65536
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-10-29"
-
-[models.cost]
-input = 0.075
-output = 0.3
-cache_read = 0.0375
-
-[[models]]
-id = "openai/o3"
-name = "o3"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-04-16"
-
-[models.cost]
-input = 2.0
-output = 8.0
-cache_read = 0.5
-
-[[models]]
-id = "openai/o3-pro"
-name = "o3-pro"
-context = 200000
-output = 100000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-06-10"
-
-[models.cost]
-input = 20.0
-output = 80.0
-
-[[models]]
 id = "openrouter/auto"
 name = "Auto Router"
 context = 2000000
@@ -567,9 +508,9 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.123
-output = 0.181
-cache_read = 0.111
+input = 0.141
+output = 0.208
+cache_read = 0.127
 
 [[models]]
 id = "qwen/qwen3.5-flash-02-23"
@@ -732,3 +673,60 @@ input = 0.03
 output = 0.13
 cache_read = 0.006
 cache_write = 0.038
+
+[[models]]
+id = "qwen/qwen3.7-max"
+name = "Qwen3.7 Max"
+context = 1000000
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-05-21"
+
+[models.cost]
+input = 1.475
+output = 4.425
+cache_read = 0.295
+cache_write = 1.84375
+
+[[models]]
+id = "qwen/qwen3.7-plus"
+name = "Qwen3.7 Plus"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-06-02"
+
+[models.cost]
+input = 0.32
+output = 1.28
+cache_read = 0.064
+cache_write = 0.4
+
+[[models]]
+id = "qwen/qwen3.8-2.4t-a95b"
+name = "Qwen3.8 2.4T A95B"
+context = 1048576
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-08-12"
+
+[models.cost]
+input = 2.0
+output = 6.0
+cache_read = 0.25

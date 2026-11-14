@@ -329,3 +329,16 @@ efforts = [
     "medium",
     "high",
 ]
+
+[[models]]
+id = "google/gemini-4-carbon"
+name = "Gemini 4 Carbon"
+context = 1000000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]

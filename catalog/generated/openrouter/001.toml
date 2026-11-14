@@ -6,22 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "deepseek/deepseek-chat-v3.1"
-name = "DeepSeek V3.1"
-context = 163840
-output = 147456
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-08-21"
-
-[models.cost]
-input = 0.25
-output = 0.95
-cache_read = 0.13
-
-[[models]]
 id = "deepseek/deepseek-r1-0528"
 name = "DeepSeek R1 0528"
 context = 163840
@@ -218,7 +202,7 @@ cache_read = 0.006
 id = "deepseek/deepseek-v4.1-flash-1017"
 name = "DeepSeek V4.1 Flash 1017"
 context = 1048576
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -234,9 +218,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.3
-output = 1.2
-cache_read = 0.006
+input = 0.038
+output = 0.5
+cache_read = 0.01
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"
@@ -917,3 +901,23 @@ release_date = "2026-04-02"
 [models.cost]
 input = 0.0
 output = 0.0
+
+[[models]]
+id = "ibm-granite/granite-4.2-8b"
+name = "Granite 4.2 8B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-08-25"
+
+[models.cost]
+input = 0.06
+output = 0.25
+cache_read = 0.015

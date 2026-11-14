@@ -214,6 +214,21 @@ input = ["text"]
 produces = ["text"]
 
 [[models]]
+id = "meta/muse-ember"
+name = "Muse Ember"
+context = 1048576
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
 id = "meta/muse-spark-1.1"
 name = "Muse Spark 1.1"
 context = 1048576
