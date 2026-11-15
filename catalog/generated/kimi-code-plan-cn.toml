@@ -9,7 +9,7 @@ api = "https://api.kimi.com/coding/v1"
 id = "k3"
 name = "Kimi K3"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -36,7 +36,7 @@ cache_write = 0.0
 id = "k3-256k"
 name = "Kimi K3-256K"
 context = 262144
-output = 131072
+output = 262144
 input = [
     "text",
     "image",
@@ -62,7 +62,7 @@ cache_write = 0.0
 id = "k3.1-pro"
 name = "Kimi K3.1 Pro"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -88,7 +88,7 @@ cache_write = 0.0
 id = "k3.1-pro-highspeed"
 name = "Kimi K3.1 Pro Highspeed"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",

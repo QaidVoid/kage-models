@@ -454,7 +454,7 @@ cache_read = 0.19
 id = "kimi-k3"
 name = "Kimi K3"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -476,7 +476,7 @@ cache_write = 3.0
 id = "kimi-k3.1-pro"
 name = "Kimi K3.1 Pro"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",

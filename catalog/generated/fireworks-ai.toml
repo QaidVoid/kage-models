@@ -130,7 +130,7 @@ cache_read = 0.03
 id = "accounts/fireworks/models/kimi-k3"
 name = "Kimi K3"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -156,7 +156,7 @@ cache_read = 0.3
 id = "accounts/fireworks/models/kimi-k3p1-pro"
 name = "Kimi K3.1 Pro"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -507,7 +507,7 @@ cache_read = 0.26
 id = "accounts/fireworks/routers/kimi-fast-latest"
 name = "Kimi Fast Latest"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -533,7 +533,7 @@ cache_read = 0.45
 id = "accounts/fireworks/routers/kimi-k3-fast"
 name = "Kimi K3 Fast"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -559,7 +559,7 @@ cache_read = 0.45
 id = "accounts/fireworks/routers/kimi-k3-spot"
 name = "Kimi K3 Spot"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
@@ -585,7 +585,7 @@ cache_read = 0.21
 id = "accounts/fireworks/routers/kimi-latest"
 name = "Kimi Latest"
 context = 1048576
-output = 131072
+output = 1048576
 input = [
     "text",
     "image",
