@@ -54,9 +54,9 @@ toggle = true
 release_date = "2025-07-28"
 
 [models.cost]
-input = 0.2
-output = 1.1
-cache_read = 0.03
+input = 0.13
+output = 0.85
+cache_read = 0.025
 
 [[models]]
 id = "z-ai/glm-4.5v"
@@ -126,9 +126,9 @@ release_date = "2025-12-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
+input = 0.4
+output = 1.75
+cache_read = 0.08
 
 [[models]]
 id = "z-ai/glm-4.7-flash"
@@ -184,7 +184,7 @@ cache_read = 0.24
 id = "z-ai/glm-5.1"
 name = "GLM-5.1"
 context = 204800
-output = 131072
+output = 182476
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -234,9 +234,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.084
-output = 3.6
-cache_read = 0.079
+input = 0.0699
+output = 1.4
+cache_read = 0.0689
 
 [[models]]
 id = "z-ai/glm-5.3-flash"
@@ -479,7 +479,7 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.038
+input = 0.036
 output = 0.5
 cache_read = 0.01
 

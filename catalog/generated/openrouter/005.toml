@@ -6,6 +6,25 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/o3-pro"
+name = "o3-pro"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-06-10"
+
+[models.cost]
+input = 20.0
+output = 80.0
+
+[[models]]
 id = "openrouter/auto"
 name = "Auto Router"
 context = 2000000
@@ -65,7 +84,7 @@ efforts = [
 release_date = "2026-10-28"
 
 [models.cost]
-input = 0.05
+input = 0.06
 output = 0.5
 cache_read = 0.003
 
@@ -381,23 +400,6 @@ input = 0.15
 output = 0.6
 
 [[models]]
-id = "qwen/qwen3-vl-30b-a3b-thinking"
-name = "Qwen3 VL 30B A3B Thinking"
-context = 262144
-output = 235929
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-release_date = "2025-10-06"
-
-[models.cost]
-input = 0.29
-output = 1.0
-
-[[models]]
 id = "qwen/qwen3-vl-8b-instruct"
 name = "Qwen3 VL 8B Instruct"
 context = 262144
@@ -476,7 +478,7 @@ cache_read = 0.05
 id = "qwen/qwen3.5-397b-a17b"
 name = "Qwen3.5 397B-A17B"
 context = 262144
-output = 64000
+output = 81920
 input = [
     "text",
     "image",
@@ -488,9 +490,9 @@ toggle = true
 release_date = "2026-02-15"
 
 [models.cost]
-input = 0.6
-output = 3.6
-cache_read = 0.12
+input = 0.45
+output = 3.0
+cache_read = 0.22
 
 [[models]]
 id = "qwen/qwen3.5-9b"
@@ -508,9 +510,9 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.141
-output = 0.208
-cache_read = 0.127
+input = 0.17
+output = 0.25
+cache_read = 0.153
 
 [[models]]
 id = "qwen/qwen3.5-flash-02-23"

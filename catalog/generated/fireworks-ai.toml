@@ -603,9 +603,9 @@ release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 3.0
-output = 15.0
-cache_read = 0.3
+input = 2.0
+output = 10.0
+cache_read = 0.2
 
 [[models]]
 id = "accounts/fireworks/routers/minimax-latest"

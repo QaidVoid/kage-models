@@ -8,7 +8,7 @@ api = "https://openrouter.ai/api/v1"
 [[models]]
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
-context = 1048575
+context = 1024000
 output = 235929
 input = [
     "text",
@@ -128,6 +128,32 @@ min = 0
 input = 0.15
 output = 0.47
 cache_read = 0.016
+
+[[models]]
+id = "qwen/qwen4-max"
+name = "Qwen4 Max"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+    "xhigh",
+]
+release_date = "2026-11-16"
+
+[models.cost]
+input = 1.5
+output = 4.5
+cache_read = 0.075
+cache_write = 1.875
 
 [[models]]
 id = "recursive/flint-v1.0:free"
@@ -306,20 +332,6 @@ output = 4.0
 cache_read = 0.15
 
 [[models]]
-id = "stepfun/step-3.5-flash"
-name = "Step 3.5 Flash"
-context = 262144
-output = 65536
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2026-01-29"
-
-[models.cost]
-input = 0.1
-output = 0.3
-
-[[models]]
 id = "stepfun/step-3.7-flash"
 name = "Step 3.7 Flash"
 context = 262144
@@ -386,9 +398,9 @@ efforts = [
 release_date = "2026-07-06"
 
 [models.cost]
-input = 0.0825
-output = 0.33
-cache_read = 0.020625
+input = 0.132
+output = 0.528
+cache_read = 0.033
 
 [[models]]
 id = "tencent/hy3-preview"
@@ -450,9 +462,9 @@ efforts = [
 release_date = "2026-08-28"
 
 [models.cost]
-input = 0.7506
-output = 2.2509
-cache_read = 0.0378
+input = 0.834
+output = 2.501
+cache_read = 0.042
 
 [[models]]
 id = "thinkingmachines/inkling"

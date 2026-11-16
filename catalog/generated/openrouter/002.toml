@@ -74,6 +74,24 @@ output = 0.135
 cache_read = 0.009
 
 [[models]]
+id = "inclusionai/ling-3.2-flash:free"
+name = "Ling 3.2 Flash (free)"
+context = 1048576
+output = 262144
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-13"
+
+[models.cost]
+input = 0.0
+output = 0.0
+
+[[models]]
 id = "kt/midm-k-3.0-pro"
 name = "Mi:dm K 3.0 Pro"
 context = 261795
@@ -476,7 +494,7 @@ cache_read = 0.2
 id = "minimax/minimax-m2.5"
 name = "MiniMax-M2.5"
 context = 198000
-output = 32768
+output = 176947
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -484,9 +502,9 @@ release_date = "2026-02-12"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.27
-output = 0.95
-cache_read = 0.03
+input = 0.295
+output = 1.2
+cache_read = 0.06
 
 [[models]]
 id = "minimax/minimax-m2.7"
@@ -545,9 +563,9 @@ efforts = [
 release_date = "2026-10-19"
 
 [models.cost]
-input = 0.075
-output = 0.3
-cache_read = 0.0075
+input = 0.15
+output = 0.6
+cache_read = 0.015
 
 [[models]]
 id = "mistralai/codestral-2508"
@@ -766,16 +784,3 @@ release_date = "2025-08-12"
 input = 0.4
 output = 2.0
 cache_read = 0.04
-
-[[models]]
-id = "mistralai/mistral-nemo"
-name = "Mistral Nemo"
-context = 131072
-output = 16384
-input = ["text"]
-produces = ["text"]
-release_date = "2024-07-18"
-
-[models.cost]
-input = 0.029
-output = 0.03
