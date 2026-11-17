@@ -510,9 +510,9 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.17
-output = 0.25
-cache_read = 0.153
+input = 0.138
+output = 0.203
+cache_read = 0.124
 
 [[models]]
 id = "qwen/qwen3.5-flash-02-23"

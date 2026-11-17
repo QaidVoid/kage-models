@@ -150,10 +150,10 @@ efforts = [
 release_date = "2026-11-16"
 
 [models.cost]
-input = 1.5
-output = 4.5
-cache_read = 0.075
-cache_write = 1.875
+input = 1.425
+output = 4.275
+cache_read = 0.07125
+cache_write = 1.78125
 
 [[models]]
 id = "recursive/flint-v1.0:free"
@@ -445,6 +445,26 @@ release_date = "2026-11-04"
 input = 0.417
 output = 1.2505
 cache_read = 0.021
+
+[[models]]
+id = "tencent/hy4-flash"
+name = "Hy4 flash"
+context = 1048576
+input_limit = 983040
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-16"
+
+[models.cost]
+input = 0.035
+output = 0.1405
+cache_read = 0.0015
 
 [[models]]
 id = "tencent/hy4-preview"
@@ -865,24 +885,3 @@ release_date = "2026-09-22"
 input = 0.14
 output = 0.28
 cache_read = 0.0028
-
-[[models]]
-id = "xiaomi/mimo-v2.6-pro"
-name = "MiMo-V2.6-Pro"
-context = 1050000
-output = 131072
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-09-22"
-
-[models.cost]
-input = 0.435
-output = 0.87
-cache_read = 0.0036

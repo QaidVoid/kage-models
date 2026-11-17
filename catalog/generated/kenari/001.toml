@@ -6,7 +6,8 @@ name = "Kenari"
 api = "https://kenari.id/v1"
 
 [[models]]
-id = "hy4"
+id = "hy4-flash"
+name = "Hy4 flash"
 context = 1048576
 output = 65536
 input = [
@@ -15,11 +16,7 @@ input = [
 ]
 produces = ["text"]
 thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
+release_date = "2026-11-16"
 
 [[models]]
 id = "kimi-k2-6"
@@ -68,6 +65,7 @@ release_date = "2026-07-16"
 
 [[models]]
 id = "kimi-k3-1-pro"
+name = "Kimi K3.1 Pro"
 context = 1048576
 output = 943718
 input = [
@@ -82,6 +80,7 @@ efforts = [
     "high",
     "max",
 ]
+release_date = "2026-10-23"
 
 [[models]]
 id = "mimo-v2-6-flash"
@@ -125,6 +124,7 @@ release_date = "2026-06-01"
 
 [[models]]
 id = "minimax-m3-1-flash"
+name = "MiniMax-M3.1-Flash"
 context = 1000000
 output = 512000
 input = [
@@ -141,9 +141,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-10-19"
 
 [[models]]
 id = "muse-ember-1-0"
+name = "Muse Ember"
 context = 1048576
 output = 524288
 input = [
@@ -161,9 +163,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-11-09"
 
 [[models]]
 id = "muse-spark-1-2"
+name = "Muse Spark 1.2"
 context = 1048576
 output = 131072
 input = [
@@ -181,9 +185,11 @@ efforts = [
     "high",
     "xhigh",
 ]
+release_date = "2026-08-05"
 
 [[models]]
 id = "muse-spark-1-2-contributor"
+name = "Muse Spark 1.2 Contributor"
 context = 1048576
 output = 131072
 input = [
@@ -201,9 +207,11 @@ efforts = [
     "high",
     "xhigh",
 ]
+release_date = "2026-08-05"
 
 [[models]]
 id = "muse-spark-1-3"
+name = "Muse Spark 1.3"
 context = 1048576
 output = 131072
 input = [
@@ -222,9 +230,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-02"
 
 [[models]]
 id = "muse-spark-1-3-contributor"
+name = "Muse Spark 1.3 Contributor"
 context = 1048576
 output = 131072
 input = [
@@ -243,9 +253,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-02"
 
 [[models]]
 id = "muse-wonder-1-0"
+name = "Muse Wonder"
 context = 1007997
 output = 128000
 input = [
@@ -263,6 +275,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-10-12"
 
 [[models]]
 id = "nemotron-3-super-120b-a12b"
@@ -338,6 +351,7 @@ thinks = true
 
 [[models]]
 id = "step-5-preview"
+name = "Step 5 Preview"
 context = 1000000
 output = 64000
 input = [
@@ -352,3 +366,4 @@ efforts = [
     "medium",
     "high",
 ]
+release_date = "2026-09-16"

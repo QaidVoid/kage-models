@@ -6,6 +6,27 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.6-pro"
+name = "MiMo-V2.6-Pro"
+context = 1050000
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.435
+output = 0.87
+cache_read = 0.0036
+
+[[models]]
 id = "xiaomi/mimo-v2.6-pro-ultraspeed"
 name = "MiMo-V2.6-Pro-UltraSpeed"
 context = 1048576
@@ -326,9 +347,9 @@ efforts = [
 release_date = "2026-09-23"
 
 [models.cost]
-input = 2.8
-output = 8.8
-cache_read = 0.56
+input = 1.68
+output = 5.28
+cache_read = 0.336
 
 [[models]]
 id = "z-ai/glm-5v-turbo"

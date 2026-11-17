@@ -7,6 +7,7 @@ api = "https://kenari.id"
 
 [[models]]
 id = "claude-haiku-5-5"
+name = "Claude Haiku 5.5"
 context = 1000000
 output = 128000
 input = [
@@ -23,6 +24,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-10-07"
 
 [[models]]
 id = "claude-opus-5"
@@ -47,6 +49,7 @@ release_date = "2026-07-24"
 
 [[models]]
 id = "claude-opus-5-5"
+name = "Claude Opus 5.5"
 context = 1000000
 output = 128000
 input = [
@@ -63,6 +66,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-22"
 
 [[models]]
 id = "claude-sonnet-5"
@@ -87,6 +91,7 @@ release_date = "2026-06-30"
 
 [[models]]
 id = "claude-sonnet-5-5"
+name = "Claude Sonnet 5.5"
 context = 1000000
 output = 128000
 input = [
@@ -103,3 +108,4 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-28"

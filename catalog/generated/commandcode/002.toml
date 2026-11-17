@@ -6,19 +6,6 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
-id = "moonshotai/Kimi-K3"
-name = "Kimi K3"
-context = 1000000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
-
-[[models]]
 id = "moonshotai/Kimi-K3.1-Pro"
 name = "Kimi K3.1 Pro"
 context = 1048576
@@ -54,6 +41,13 @@ efforts = [
 [[models]]
 id = "ornith/ornith-1.5-122b"
 name = "Ornith 1.5 122B"
+context = 262144
+input = ["text"]
+produces = ["text"]
+
+[[models]]
+id = "recursive/flint-v1.0:free"
+name = "Flint"
 context = 262144
 input = ["text"]
 produces = ["text"]
@@ -117,6 +111,16 @@ name = "Tencent Hy3"
 context = 262144
 input = ["text"]
 produces = ["text"]
+
+[[models]]
+id = "tencent/hy4-flash"
+name = "Tencent Hy4 Flash"
+context = 1024000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = ["high"]
+toggle = true
 
 [[models]]
 id = "tencent/hy4-preview"

@@ -969,7 +969,7 @@ cache_read = 0.075
 id = "openai/gpt-oss-20b"
 name = "GPT OSS 20B"
 context = 131072
-output = 65536
+output = 117964
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -981,9 +981,9 @@ efforts = [
 release_date = "2025-08-05"
 
 [models.cost]
-input = 0.075
-output = 0.3
-cache_read = 0.0375
+input = 0.03
+output = 0.13
+cache_read = 0.03
 
 [[models]]
 id = "openai/gpt-oss-safeguard-20b"

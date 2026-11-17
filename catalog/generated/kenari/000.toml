@@ -22,7 +22,6 @@ efforts = [
     "high",
     "max",
 ]
-toggle = true
 release_date = "2026-09-10"
 
 [[models]]
@@ -100,6 +99,7 @@ release_date = "2026-08-13"
 
 [[models]]
 id = "gemini-3-8-flash"
+name = "Gemini 3.8 Flash"
 context = 1048576
 output = 65536
 input = [
@@ -116,6 +116,7 @@ efforts = [
     "medium",
     "high",
 ]
+release_date = "2026-09-02"
 
 [[models]]
 id = "gemma-4-31b-it"
@@ -227,6 +228,7 @@ release_date = "2026-07-09"
 
 [[models]]
 id = "gpt-6-1-sol"
+name = "GPT-6.1 Sol"
 context = 1050000
 output = 128000
 input = [
@@ -243,9 +245,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-29"
 
 [[models]]
 id = "gpt-6-1-terra"
+name = "GPT-6.1 Terra"
 context = 1050000
 output = 128000
 input = [
@@ -263,9 +267,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-10-26"
 
 [[models]]
 id = "gpt-6-astra"
+name = "GPT-6 Astra"
 context = 1050000
 output = 128000
 input = [
@@ -282,9 +288,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-04"
 
 [[models]]
 id = "gpt-6-luna"
+name = "GPT-6 Luna"
 context = 1050000
 output = 128000
 input = [
@@ -302,9 +310,11 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-22"
 
 [[models]]
 id = "gpt-6-sol"
+name = "GPT-6 Sol"
 context = 1050000
 output = 128000
 input = [
@@ -322,6 +332,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+release_date = "2026-09-22"
 
 [[models]]
 id = "gpt-oss-120b"
@@ -361,6 +372,7 @@ release_date = "2026-08-12"
 
 [[models]]
 id = "grok-4-7"
+name = "Grok 4.7"
 context = 500000
 output = 450000
 input = [
@@ -376,6 +388,7 @@ efforts = [
     "high",
     "xhigh",
 ]
+release_date = "2026-09-21"
 
 [[models]]
 id = "hy3"
@@ -391,3 +404,21 @@ efforts = [
     "high",
 ]
 release_date = "2026-07-06"
+
+[[models]]
+id = "hy4"
+name = "Hy4"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-11-04"

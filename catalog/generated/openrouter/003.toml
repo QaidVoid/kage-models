@@ -221,8 +221,8 @@ thinks = true
 release_date = "2026-06-12"
 
 [models.cost]
-input = 0.6
-output = 3.5
+input = 0.7
+output = 3.75
 cache_read = 0.16
 
 [[models]]
@@ -396,7 +396,7 @@ output = 0.4
 id = "nvidia/nemotron-3-ultra-550b-a55b"
 name = "Nemotron 3 Ultra 550B A55B"
 context = 262144
-output = 182520
+output = 16384
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -406,9 +406,9 @@ release_date = "2026-06-04"
 min = 0
 
 [models.cost]
-input = 0.6
-output = 2.4
-cache_read = 0.12
+input = 0.5
+output = 2.2
+cache_read = 0.1
 
 [[models]]
 id = "nvidia/nemotron-3-ultra-550b-a55b:free"
@@ -430,7 +430,7 @@ output = 0.0
 [[models]]
 id = "nvidia/nemotron-3.5-lightning"
 name = "Nemotron 3.5 Lightning 30B A3B"
-context = 262144
+context = 1048576
 output = 235929
 input = ["text"]
 produces = ["text"]

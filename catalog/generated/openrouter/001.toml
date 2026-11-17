@@ -178,7 +178,7 @@ cache_read = 0.097
 id = "deepseek/deepseek-v4.1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1048576
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -194,9 +194,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.14
-output = 0.42
-cache_read = 0.0042
+input = 0.051
+output = 0.567
+cache_read = 0.018
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"

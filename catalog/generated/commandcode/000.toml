@@ -146,6 +146,20 @@ efforts = [
 ]
 
 [[models]]
+id = "Qwen/Qwen4-Max"
+name = "Qwen 4 Max"
+context = 1000000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "xhigh",
+]
+toggle = true
+
+[[models]]
 id = "deepseek/deepseek-v4-flash"
 name = "DeepSeek V4 Flash (latest)"
 context = 1000000
