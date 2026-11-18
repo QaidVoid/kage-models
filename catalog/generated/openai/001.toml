@@ -5,29 +5,6 @@
 name = "OpenAI"
 
 [[models]]
-id = "gpt-5.4-pro"
-name = "GPT-5.4 Pro"
-context = 1050000
-input_limit = 922000
-output = 128000
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-03-05"
-
-[models.cost]
-input = 30.0
-output = 180.0
-
-[[models]]
 id = "gpt-5.5"
 name = "GPT-5.5"
 context = 1050000
@@ -336,6 +313,62 @@ input = 1.0
 output = 5.0
 cache_read = 0.05
 cache_write = 1.25
+
+[[models]]
+id = "gpt-6.2-astra"
+name = "GPT-6.2 Astra"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-17"
+
+[models.cost]
+input = 8.0
+output = 40.0
+cache_read = 0.4
+cache_write = 10.0
+
+[[models]]
+id = "gpt-6.2-sol"
+name = "GPT-6.2 Sol"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-17"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+cache_write = 2.5
 
 [[models]]
 id = "gpt-daybreak-blue-latest"

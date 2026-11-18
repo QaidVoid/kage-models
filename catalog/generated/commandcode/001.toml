@@ -6,20 +6,6 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
-id = "gpt-5.3-codex"
-name = "GPT-5.3 Codex"
-context = 400000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-
-[[models]]
 id = "gpt-5.4"
 name = "GPT-5.4"
 context = 400000
@@ -168,6 +154,36 @@ efforts = [
 [[models]]
 id = "gpt-6.1-terra"
 name = "GPT-6.1 Terra"
+context = 1050000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6.2-astra"
+name = "GPT-6.2 Astra"
+context = 1050000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+
+[[models]]
+id = "gpt-6.2-sol"
+name = "GPT-6.2 Sol"
 context = 1050000
 input = ["text"]
 produces = ["text"]

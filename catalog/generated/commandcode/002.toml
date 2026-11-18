@@ -113,6 +113,19 @@ input = ["text"]
 produces = ["text"]
 
 [[models]]
+id = "tencent/hy4"
+name = "Tencent Hy4"
+context = 1024000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+
+[[models]]
 id = "tencent/hy4-flash"
 name = "Tencent Hy4 Flash"
 context = 1024000
