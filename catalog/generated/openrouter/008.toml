@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.13
+output = 0.85
+cache_read = 0.025
+
+[[models]]
 id = "z-ai/glm-4.5v"
 name = "GLM-4.5V"
 context = 65536
@@ -131,7 +147,7 @@ cache_read = 0.24
 id = "z-ai/glm-5.1"
 name = "GLM-5.1"
 context = 204800
-output = 182476
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -140,9 +156,9 @@ release_date = "2026-04-07"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 1.4
-output = 4.4
-cache_read = 0.26
+input = 1.19
+output = 3.74
+cache_read = 0.6
 
 [[models]]
 id = "z-ai/glm-5.2"
@@ -161,9 +177,9 @@ release_date = "2026-06-13"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.007
-output = 6.8
-cache_read = 0.006
+input = 0.62
+output = 2.42
+cache_read = 0.14
 
 [[models]]
 id = "z-ai/glm-5.3"
@@ -426,9 +442,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.036
-output = 0.5
-cache_read = 0.01
+input = 0.035
+output = 0.15
+cache_read = 0.0015
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -455,7 +471,7 @@ cache_read = 0.0999
 id = "~deepseek/deepseek-v4-flash-latest"
 name = "DeepSeek V4 Flash Latest"
 context = 1048576
-output = 943718
+output = 384000
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -468,9 +484,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.0434
-output = 0.3
-cache_read = 0.035
+input = 0.06
+output = 0.18
+cache_read = 0.015
 
 [[models]]
 id = "~google/gemini-flash-latest"

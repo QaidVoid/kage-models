@@ -6,6 +6,20 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "qwen/qwen3-235b-a22b-2507"
+name = "Qwen3 235B A22B Instruct 2507"
+context = 262144
+output = 117964
+input = ["text"]
+produces = ["text"]
+release_date = "2025-07-21"
+
+[models.cost]
+input = 0.14
+output = 0.8
+cache_read = 0.05
+
+[[models]]
 id = "qwen/qwen3-235b-a22b-thinking-2507"
 name = "Qwen3 235B-A22B Thinking 2507"
 context = 128000
@@ -218,8 +232,8 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.3
-output = 2.4
+input = 0.195
+output = 1.56
 
 [[models]]
 id = "qwen/qwen3.5-35b-a3b"
@@ -277,9 +291,9 @@ toggle = true
 release_date = "2026-02-23"
 
 [models.cost]
-input = 0.17
-output = 0.25
-cache_read = 0.153
+input = 0.142
+output = 0.208
+cache_read = 0.127
 
 [[models]]
 id = "qwen/qwen3.5-flash-02-23"
@@ -663,25 +677,3 @@ release_date = "2026-10-21"
 [models.cost]
 input = 0.0
 output = 0.0
-
-[[models]]
-id = "reflection/beam-1.0-501b-a23b"
-name = "Beam 1.0 501B A23B"
-context = 1048576
-output = 943718
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-10-05"
-
-[models.cost]
-input = 0.3
-output = 1.0
-cache_read = 0.04

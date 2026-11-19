@@ -6,6 +6,34 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "google/gemini-4-neon"
+name = "Gemini 4 Neon"
+context = 1048576
+output = 943718
+input = [
+    "text",
+    "image",
+    "pdf",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2026-11-18"
+
+[models.cost]
+input = 3.0
+output = 15.0
+cache_read = 0.15
+cache_write = 0.083333
+
+[[models]]
 id = "google/gemini-nano-banana-2.1"
 name = "Nano Banana 2.1"
 context = 65536
@@ -50,7 +78,7 @@ output = 0.15
 id = "google/gemma-3-27b-it"
 name = "Gemma 3 27B IT"
 context = 131072
-output = 117964
+output = 16384
 input = [
     "text",
     "image",
@@ -60,8 +88,7 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.45
-cache_read = 0.04
+output = 0.16
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it"
@@ -695,29 +722,3 @@ release_date = "2026-06-01"
 input = 0.3
 output = 1.2
 cache_read = 0.06
-
-[[models]]
-id = "minimax/minimax-m3.1-flash"
-name = "MiniMax-M3.1-Flash"
-context = 1048576
-output = 524288
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-    "max",
-]
-release_date = "2026-10-19"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.015

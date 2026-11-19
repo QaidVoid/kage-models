@@ -148,7 +148,7 @@ cache_read = 0.018
 id = "deepseek/deepseek-v4-flash-0731"
 name = "DeepSeek V4 Flash 0731"
 context = 1048576
-output = 384000
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -161,9 +161,9 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.06
-output = 0.18
-cache_read = 0.015
+input = 0.062
+output = 0.3
+cache_read = 0.035
 
 [[models]]
 id = "deepseek/deepseek-v4-flash-vision-exp"
@@ -259,7 +259,7 @@ cache_read = 0.006
 id = "deepseek/deepseek-v4.1-flash-1017"
 name = "DeepSeek V4.1 Flash 1017"
 context = 1048576
-output = 943718
+output = 393216
 input = [
     "text",
     "image",
@@ -275,9 +275,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.036
-output = 0.5
-cache_read = 0.01
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "dots-studio/dots-3-note-preview:free"
