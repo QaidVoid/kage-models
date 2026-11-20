@@ -341,9 +341,9 @@ release_date = "2026-10-17"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.21
-output = 0.84
-cache_read = 0.0042
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast"
@@ -366,9 +366,9 @@ release_date = "2026-10-17"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 2.4
-output = 9.6
-cache_read = 0.048
+input = 1.2
+output = 4.8
+cache_read = 0.024
 
 [[models]]
 id = "accounts/fireworks/routers/deepseek-v4p1-flash-spot"
@@ -391,9 +391,9 @@ release_date = "2026-09-10"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.21
-output = 0.84
-cache_read = 0.0042
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "accounts/fireworks/routers/glm-5p3-fast"
@@ -433,9 +433,9 @@ release_date = "2026-08-14"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.98
-output = 3.08
-cache_read = 0.182
+input = 0.7
+output = 2.2
+cache_read = 0.13
 
 [[models]]
 id = "accounts/fireworks/routers/glm-fast-latest"
