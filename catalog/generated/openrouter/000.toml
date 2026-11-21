@@ -774,15 +774,14 @@ output = 1.0287
 id = "deepseek/deepseek-chat-v3-0324"
 name = "DeepSeek V3 0324"
 context = 163840
-output = 115200
+output = 147456
 input = ["text"]
 produces = ["text"]
 release_date = "2025-03-24"
 
 [models.cost]
-input = 0.29
-output = 1.14
-cache_read = 0.11
+input = 0.25
+output = 1.0
 
 [[models]]
 id = "deepseek/deepseek-chat-v3.1"

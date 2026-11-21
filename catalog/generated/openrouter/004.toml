@@ -6,58 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "openai/gpt-5-mini"
-name = "GPT-5 Mini"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-07"
-
-[models.cost]
-input = 0.25
-output = 2.0
-cache_read = 0.025
-
-[[models]]
-id = "openai/gpt-5-nano"
-name = "GPT-5 Nano"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-08-07"
-
-[models.cost]
-input = 0.05
-output = 0.4
-cache_read = 0.005
-
-[[models]]
 id = "openai/gpt-5-pro"
 name = "GPT-5 Pro"
 context = 400000
@@ -1054,3 +1002,42 @@ release_date = "2026-05-05"
 input = 5.0
 output = 30.0
 cache_read = 0.5
+
+[[models]]
+id = "openai/gpt-oss-120b"
+name = "GPT OSS 120B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-05"
+
+[models.cost]
+input = 0.09
+output = 0.36
+
+[[models]]
+id = "openai/gpt-oss-20b"
+name = "GPT OSS 20B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-05"
+
+[models.cost]
+input = 0.017
+output = 0.085
+cache_read = 0.0085

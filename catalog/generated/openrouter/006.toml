@@ -6,48 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.7-flash"
-name = "Qwen3.7 Flash"
-context = 1000000
-input_limit = 991808
-output = 65536
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-15"
-
-[models.budget]
-min = 0
-
-[models.cost]
-input = 0.03
-output = 0.13
-cache_read = 0.006
-cache_write = 0.038
-
-[[models]]
-id = "qwen/qwen3.7-max"
-name = "Qwen3.7 Max"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-05-21"
-
-[models.cost]
-input = 1.475
-output = 4.425
-cache_read = 0.295
-cache_write = 1.84375
-
-[[models]]
 id = "qwen/qwen3.7-plus"
 name = "Qwen3.7 Plus"
 context = 1000000
@@ -109,7 +67,7 @@ release_date = "2026-08-14"
 
 [models.cost]
 input = 0.06
-output = 2.2
+output = 1.96
 cache_read = 0.059
 
 [[models]]
@@ -236,6 +194,30 @@ input = 1.425
 output = 4.275
 cache_read = 0.07125
 cache_write = 1.78125
+
+[[models]]
+id = "radixark/daisyrose-27b"
+name = "DaisyRose 27B"
+context = 262144
+output = 235929
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "xhigh",
+]
+release_date = "2026-11-21"
+
+[models.cost]
+input = 0.15
+output = 1.875
+cache_read = 0.0375
 
 [[models]]
 id = "recursive/flint-v1.0:free"
@@ -485,26 +467,6 @@ output = 0.528
 cache_read = 0.033
 
 [[models]]
-id = "tencent/hy3-preview"
-name = "Hy3 preview"
-context = 262144
-output = 235929
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-04-20"
-
-[models.cost]
-input = 0.18
-output = 0.6
-cache_read = 0.06
-
-[[models]]
 id = "tencent/hy4"
 name = "Hy4"
 context = 1048576
@@ -594,6 +556,32 @@ release_date = "2026-07-15"
 input = 1.0
 output = 4.05
 cache_read = 0.17
+
+[[models]]
+id = "thinkingmachines/inkling-2-mini"
+name = "Inkling 2 Mini"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+release_date = "2026-11-21"
+
+[models.cost]
+input = 0.1
+output = 0.4
+cache_read = 0.02
 
 [[models]]
 id = "thinkingmachines/inkling-2-small"
@@ -886,3 +874,20 @@ interleaved = "reasoning_details"
 input = 0.4
 output = 2.0
 cache_read = 0.08
+
+[[models]]
+id = "xiaomi/mimo-v2.5-pro"
+name = "MiMo-V2.5-Pro"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-22"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.48
+output = 1.8
+cache_read = 0.096

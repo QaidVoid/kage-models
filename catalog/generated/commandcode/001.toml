@@ -6,6 +6,20 @@ name = "Command Code"
 api = "https://api.commandcode.ai/provider/v1"
 
 [[models]]
+id = "gpt-5.3-codex"
+name = "GPT-5.3 Codex"
+context = 400000
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+
+[[models]]
 id = "gpt-5.4"
 name = "GPT-5.4"
 context = 400000
@@ -397,16 +411,3 @@ name = "Kimi K2.7 Code HighSpeed"
 context = 262000
 input = ["text"]
 produces = ["text"]
-
-[[models]]
-id = "moonshotai/Kimi-K3"
-name = "Kimi K3"
-context = 1000000
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "low",
-    "high",
-    "max",
-]
