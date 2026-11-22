@@ -29,7 +29,7 @@ cache_write = 0.4
 id = "qwen/qwen3.8-2.4t-a95b"
 name = "Qwen3.8 2.4T A95B"
 context = 1048576
-output = 131072
+output = 65536
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -49,7 +49,7 @@ cache_read = 0.25
 id = "qwen/qwen3.8-27b"
 name = "Qwen3.8 27B"
 context = 1024000
-output = 235929
+output = 131072
 input = [
     "text",
     "image",
@@ -66,9 +66,9 @@ efforts = [
 release_date = "2026-08-14"
 
 [models.cost]
-input = 0.06
-output = 1.96
-cache_read = 0.059
+input = 0.035
+output = 1.5
+cache_read = 0.0175
 
 [[models]]
 id = "qwen/qwen3.8-flash"
@@ -450,7 +450,7 @@ id = "tencent/hy3"
 name = "Hy3"
 context = 262144
 input_limit = 192000
-output = 128000
+output = 235929
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -462,9 +462,9 @@ efforts = [
 release_date = "2026-07-06"
 
 [models.cost]
-input = 0.132
-output = 0.528
-cache_read = 0.033
+input = 0.14
+output = 0.58
+cache_read = 0.035
 
 [[models]]
 id = "tencent/hy4"
@@ -579,9 +579,9 @@ efforts = [
 release_date = "2026-11-21"
 
 [models.cost]
-input = 0.1
-output = 0.4
-cache_read = 0.02
+input = 0.075
+output = 0.3
+cache_read = 0.015
 
 [[models]]
 id = "thinkingmachines/inkling-2-small"

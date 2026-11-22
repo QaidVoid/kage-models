@@ -1026,7 +1026,7 @@ output = 0.36
 id = "openai/gpt-oss-20b"
 name = "GPT OSS 20B"
 context = 131072
-output = 117964
+output = 65536
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -1038,6 +1038,6 @@ efforts = [
 release_date = "2025-08-05"
 
 [models.cost]
-input = 0.017
-output = 0.085
-cache_read = 0.0085
+input = 0.075
+output = 0.3
+cache_read = 0.0375

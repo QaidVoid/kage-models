@@ -168,9 +168,9 @@ release_date = "2025-12-22"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.4
-output = 1.75
-cache_read = 0.08
+input = 0.6
+output = 2.2
+cache_read = 0.11
 
 [[models]]
 id = "z-ai/glm-4.7-flash"
@@ -284,7 +284,7 @@ cache_read = 0.0689
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 131072
+output = 943717
 input = [
     "text",
     "image",
@@ -300,8 +300,8 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.0399
-output = 0.0784
+input = 0.15
+output = 0.5
 cache_read = 0.03
 
 [[models]]
@@ -643,7 +643,7 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.1805
+input = 0.1824
 output = 11.0055
 cache_read = 0.18
 
@@ -846,8 +846,8 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0399
-output = 0.0784
+input = 0.0466
+output = 0.0729
 cache_read = 0.03
 
 [[models]]
