@@ -6,24 +6,6 @@ name = "Kenari"
 api = "https://kenari.id/v1"
 
 [[models]]
-id = "hy4"
-name = "Hy4"
-context = 1048576
-output = 65536
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-11-04"
-
-[[models]]
 id = "hy4-flash"
 name = "Hy4 flash"
 context = 1048576
@@ -35,6 +17,18 @@ input = [
 produces = ["text"]
 thinks = true
 release_date = "2026-11-16"
+
+[[models]]
+id = "inkling-2-mini-uncensored"
+context = 262144
+output = 32768
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
 
 [[models]]
 id = "kimi-k2-6"

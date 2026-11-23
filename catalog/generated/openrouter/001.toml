@@ -89,7 +89,7 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.0443
+input = 0.0434
 output = 0.3
 cache_read = 0.035
 
@@ -206,6 +206,24 @@ release_date = "2026-10-17"
 input = 0.15
 output = 0.6
 cache_read = 0.003
+
+[[models]]
+id = "dots-studio/dots-3-note-preview:free"
+name = "Dots3-Note Preview (free)"
+context = 512000
+output = 460800
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-08-14"
+
+[models.cost]
+input = 0.0
+output = 0.0
 
 [[models]]
 id = "elorian/glimpse"
@@ -807,7 +825,7 @@ output = 0.15
 id = "google/gemma-3-27b-it"
 name = "Gemma 3 27B IT"
 context = 131072
-output = 117964
+output = 16384
 input = [
     "text",
     "image",
@@ -817,8 +835,7 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.45
-cache_read = 0.04
+output = 0.16
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it"
@@ -836,9 +853,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.0675
-output = 0.225
-cache_read = 0.0375
+input = 0.09
+output = 0.3
+cache_read = 0.05
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"
@@ -916,19 +933,3 @@ release_date = "2026-08-25"
 input = 0.06
 output = 0.15
 cache_read = 0.015
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042

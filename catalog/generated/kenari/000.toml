@@ -421,7 +421,7 @@ release_date = "2026-09-21"
 id = "hy3"
 name = "Hy3"
 context = 196608
-output = 128000
+output = 235929
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -431,3 +431,21 @@ efforts = [
     "high",
 ]
 release_date = "2026-07-06"
+
+[[models]]
+id = "hy4"
+name = "Hy4"
+context = 1048576
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-11-04"

@@ -169,6 +169,21 @@ input = ["text"]
 produces = ["text"]
 
 [[models]]
+id = "thinkingmachines/inkling-2-mini"
+name = "Inkling 2 Mini"
+context = 1048576
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+toggle = true
+
+[[models]]
 id = "thinkingmachines/inkling-small"
 name = "Inkling Small"
 context = 1000000

@@ -6,6 +6,23 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.5-pro"
+name = "MiMo-V2.5-Pro"
+context = 262144
+output = 235929
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-04-22"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.48
+output = 1.8
+cache_read = 0.096
+
+[[models]]
 id = "xiaomi/mimo-v2.6-flash"
 name = "MiMo-V2.6-Flash"
 context = 1048576
@@ -284,7 +301,7 @@ cache_read = 0.0689
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 943717
+output = 131072
 input = [
     "text",
     "image",
@@ -300,8 +317,8 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.15
-output = 0.5
+input = 0.0399
+output = 0.074
 cache_read = 0.03
 
 [[models]]
@@ -543,14 +560,14 @@ release_date = "2026-09-14"
 
 [models.cost]
 input = 0.0999
-output = 8.0
+output = 5.0
 cache_read = 0.0999
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
 name = "DeepSeek V4 Flash Latest"
 context = 1048576
-output = 131072
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -563,9 +580,9 @@ efforts = [
 release_date = "2026-08-01"
 
 [models.cost]
-input = 0.044
-output = 0.132
-cache_read = 0.0014
+input = 0.0434
+output = 0.3
+cache_read = 0.035
 
 [[models]]
 id = "~google/gemini-flash-latest"
@@ -846,8 +863,8 @@ efforts = [
 release_date = "2026-08-27"
 
 [models.cost]
-input = 0.0466
-output = 0.0729
+input = 0.0399
+output = 0.074
 cache_read = 0.03
 
 [[models]]

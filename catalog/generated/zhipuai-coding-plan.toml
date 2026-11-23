@@ -97,3 +97,30 @@ input = 0.0
 output = 0.0
 cache_read = 0.0
 cache_write = 0.0
+
+[[models]]
+id = "glm-5.4"
+name = "GLM-5.4"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "pdf",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-11-23"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.0
+output = 0.0
+cache_read = 0.0
+cache_write = 0.0

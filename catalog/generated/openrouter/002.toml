@@ -6,6 +6,22 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042
+
+[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -44,7 +60,7 @@ cache_read = 0.003
 [[models]]
 id = "inclusionai/ling-3.1-flash"
 name = "Ling 3.1 Flash"
-context = 1000000
+context = 1048576
 output = 262144
 input = ["text"]
 produces = ["text"]
@@ -761,20 +777,3 @@ release_date = "2024-07-18"
 [models.cost]
 input = 0.029
 output = 0.03
-
-[[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02

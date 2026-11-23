@@ -6,6 +6,26 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "openai/gpt-oss-20b"
+name = "GPT OSS 20B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-05"
+
+[models.cost]
+input = 0.03
+output = 0.13
+cache_read = 0.03
+
+[[models]]
 id = "openai/gpt-oss-safeguard-20b"
 name = "GPT OSS Safeguard 20B"
 context = 131072
@@ -647,8 +667,8 @@ toggle = true
 release_date = "2026-04-17"
 
 [models.cost]
-input = 0.1
-output = 0.9
+input = 0.05
+output = 0.7
 cache_read = 0.025
 
 [[models]]
@@ -715,20 +735,3 @@ input = 0.03
 output = 0.13
 cache_read = 0.006
 cache_write = 0.038
-
-[[models]]
-id = "qwen/qwen3.7-max"
-name = "Qwen3.7 Max"
-context = 1000000
-output = 131072
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-05-21"
-
-[models.cost]
-input = 1.475
-output = 4.425
-cache_read = 0.295
-cache_write = 1.84375
