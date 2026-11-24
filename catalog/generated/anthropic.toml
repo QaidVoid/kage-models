@@ -252,6 +252,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+toggle = true
 release_date = "2026-04-14"
 
 [models.cost]
@@ -279,6 +280,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+toggle = true
 release_date = "2026-05-28"
 
 [models.cost]
@@ -306,6 +308,7 @@ efforts = [
     "xhigh",
     "max",
 ]
+toggle = true
 release_date = "2026-07-24"
 
 [models.cost]

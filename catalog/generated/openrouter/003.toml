@@ -112,48 +112,6 @@ output = 0.3
 cache_read = 0.01
 
 [[models]]
-id = "moonshotai/kimi-k2"
-name = "Kimi K2 0711"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-release_date = "2025-07-11"
-
-[models.cost]
-input = 0.57
-output = 2.3
-
-[[models]]
-id = "moonshotai/kimi-k2-0905"
-name = "Kimi K2 Instruct 0905"
-context = 262144
-output = 98304
-input = ["text"]
-produces = ["text"]
-release_date = "2025-09-05"
-
-[models.cost]
-input = 0.6
-output = 2.5
-
-[[models]]
-id = "moonshotai/kimi-k2-thinking"
-name = "Kimi K2 Thinking"
-context = 262144
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-11-06"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.6
-output = 2.5
-cache_read = 0.15
-
-[[models]]
 id = "moonshotai/kimi-k2.5"
 name = "Kimi K2.5"
 context = 262144
@@ -425,9 +383,9 @@ toggle = true
 release_date = "2026-08-11"
 
 [models.cost]
-input = 0.07
+input = 0.05
 output = 0.2
-cache_read = 0.04
+cache_read = 0.01
 
 [[models]]
 id = "nvidia/nemotron-3.5-lightning:free"
@@ -734,3 +692,75 @@ release_date = "2025-08-07"
 input = 0.25
 output = 2.0
 cache_read = 0.025
+
+[[models]]
+id = "openai/gpt-5-nano"
+name = "GPT-5 Nano"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-08-07"
+
+[models.cost]
+input = 0.05
+output = 0.4
+cache_read = 0.005
+
+[[models]]
+id = "openai/gpt-5-pro"
+name = "GPT-5 Pro"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = ["high"]
+release_date = "2025-10-06"
+
+[models.cost]
+input = 15.0
+output = 120.0
+
+[[models]]
+id = "openai/gpt-5.1"
+name = "GPT-5.1"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-11-13"
+
+[models.cost]
+input = 1.25
+output = 10.0
+cache_read = 0.125

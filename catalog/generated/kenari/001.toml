@@ -20,6 +20,7 @@ release_date = "2026-11-16"
 
 [[models]]
 id = "inkling-2-mini-uncensored"
+name = "Inkling 2 Mini Uncensored"
 context = 262144
 output = 32768
 input = [
@@ -29,6 +30,7 @@ input = [
 produces = ["text"]
 thinks = true
 toggle = true
+release_date = "2026-11-20"
 
 [[models]]
 id = "kimi-k2-6"
@@ -73,6 +75,7 @@ efforts = [
     "high",
     "max",
 ]
+toggle = true
 release_date = "2026-07-16"
 
 [[models]]

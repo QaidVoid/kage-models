@@ -69,9 +69,9 @@ toggle = true
 release_date = "2026-09-29"
 
 [models.cost]
-input = 0.06
-output = 0.18
-cache_read = 0.012
+input = 0.075
+output = 0.225
+cache_read = 0.015
 
 [[models]]
 id = "inclusionai/ling-3.2-flash:free"
@@ -168,14 +168,15 @@ output = 0.72
 id = "meta-llama/llama-3.1-8b-instruct"
 name = "Llama-3.1-8B-Instruct"
 context = 131072
-output = 16384
+output = 117964
 input = ["text"]
 produces = ["text"]
 release_date = "2024-07-23"
 
 [models.cost]
-input = 0.02
-output = 0.04
+input = 0.05
+output = 0.08
+cache_read = 0.025
 
 [[models]]
 id = "meta-llama/llama-3.3-70b-instruct"
@@ -525,7 +526,7 @@ cache_read = 0.05
 id = "minimax/minimax-m3.1-flash"
 name = "MiniMax-M3.1-Flash"
 context = 1048576
-output = 512000
+output = 943718
 input = [
     "text",
     "image",
@@ -543,9 +544,9 @@ efforts = [
 release_date = "2026-10-19"
 
 [models.cost]
-input = 0.135
-output = 0.54
-cache_read = 0.0135
+input = 0.1
+output = 0.4
+cache_read = 0.025
 
 [[models]]
 id = "mistralai/codestral-2508"
