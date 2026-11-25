@@ -397,7 +397,7 @@ cache_read = 0.035
 id = "hy4"
 name = "Hy4"
 context = 1048576
-input_limit = 983010
+input_limit = 983040
 output = 65536
 input = [
     "text",
@@ -442,8 +442,9 @@ cache_read = 0.0
 [[models]]
 id = "hy4-preview"
 name = "Hy4 preview"
-context = 1024000
-output = 64000
+context = 1048576
+input_limit = 983040
+output = 65536
 input = ["text"]
 produces = ["text"]
 thinks = true

@@ -6,61 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02
-
-[[models]]
-id = "mistralai/mistral-small-2603"
-name = "Mistral Small 4"
-context = 262144
-output = 209715
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "high",
-]
-release_date = "2026-03-16"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.015
-
-[[models]]
-id = "mistralai/mistral-small-3.1-24b-instruct"
-name = "Mistral Small 3.1 24B"
-context = 128000
-output = 102400
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-release_date = "2025-03-17"
-
-[models.cost]
-input = 0.351
-output = 0.555
-
-[[models]]
 id = "mistralai/mistral-small-3.2-24b-instruct"
 name = "Mistral Small 3.2 24B"
 context = 256000
@@ -115,7 +60,7 @@ cache_read = 0.01
 id = "moonshotai/kimi-k2.5"
 name = "Kimi K2.5"
 context = 262144
-output = 235929
+output = 262144
 input = [
     "text",
     "image",
@@ -135,7 +80,7 @@ cache_read = 0.15
 id = "moonshotai/kimi-k2.6"
 name = "Kimi K2.6"
 context = 262144
-output = 235929
+output = 262144
 input = [
     "text",
     "image",
@@ -155,7 +100,7 @@ cache_read = 0.15
 id = "moonshotai/kimi-k2.7-code"
 name = "Kimi K2.7 Code"
 context = 262144
-output = 235929
+output = 262144
 input = [
     "text",
     "image",
@@ -173,7 +118,7 @@ cache_read = 0.12
 id = "moonshotai/kimi-k3"
 name = "Kimi K3"
 context = 1048576
-output = 943718
+output = 1048576
 input = [
     "text",
     "image",
@@ -198,7 +143,7 @@ cache_read = 0.182
 id = "moonshotai/kimi-k3.1-pro"
 name = "Kimi K3.1 Pro"
 context = 1048576
-output = 943718
+output = 1048576
 input = [
     "text",
     "image",
@@ -284,7 +229,7 @@ cache_read = 0.024
 id = "nvidia/nemotron-3-nano-30b-a3b"
 name = "Nemotron 3 Nano 30B A3B"
 context = 262144
-output = 235929
+output = 262144
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -375,7 +320,7 @@ output = 0.0
 id = "nvidia/nemotron-3.5-lightning"
 name = "Nemotron 3.5 Lightning 30B A3B"
 context = 1048576
-output = 235929
+output = 262144
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -383,9 +328,9 @@ toggle = true
 release_date = "2026-08-11"
 
 [models.cost]
-input = 0.05
+input = 0.07
 output = 0.2
-cache_read = 0.01
+cache_read = 0.04
 
 [[models]]
 id = "nvidia/nemotron-3.5-lightning:free"
@@ -406,7 +351,7 @@ output = 0.0
 id = "nvidia/nemotron-3.5-super-vl"
 name = "Nemotron 3.5 Super VL"
 context = 1048576
-output = 943718
+output = 8192
 input = [
     "text",
     "image",
@@ -520,7 +465,7 @@ cache_read = 0.1
 id = "openai/gpt-4.1-nano"
 name = "GPT-4.1 nano"
 context = 1047576
-output = 942818
+output = 32768
 input = [
     "text",
     "image",
@@ -764,3 +709,76 @@ release_date = "2025-11-13"
 input = 1.25
 output = 10.0
 cache_read = 0.125
+
+[[models]]
+id = "openai/gpt-5.1-codex"
+name = "GPT-5.1 Codex"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-11-13"
+
+[models.cost]
+input = 1.25
+output = 10.0
+cache_read = 0.13
+
+[[models]]
+id = "openai/gpt-5.1-codex-max"
+name = "GPT-5.1 Codex Max"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+]
+release_date = "2025-11-13"
+
+[models.cost]
+input = 1.25
+output = 10.0
+cache_read = 0.125
+
+[[models]]
+id = "openai/gpt-5.1-codex-mini"
+name = "GPT-5.1 Codex mini"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-11-13"
+
+[models.cost]
+input = 0.25
+output = 2.0
+cache_read = 0.03

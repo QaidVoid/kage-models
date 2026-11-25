@@ -24,7 +24,7 @@ output = 1.0
 id = "deepseek/deepseek-v3.2"
 name = "DeepSeek V3.2"
 context = 163840
-output = 147456
+output = 64000
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -76,7 +76,7 @@ cache_read = 0.018
 id = "deepseek/deepseek-v4-flash-0731"
 name = "DeepSeek V4 Flash 0731"
 context = 1048576
-output = 943718
+output = 384000
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -97,7 +97,7 @@ cache_read = 0.035
 id = "deepseek/deepseek-v4-flash-vision-exp"
 name = "DeepSeek V4 Flash Vision Exp"
 context = 1048576
-output = 262144
+output = 393216
 input = [
     "text",
     "image",
@@ -113,9 +113,9 @@ efforts = [
 release_date = "2026-08-21"
 
 [models.cost]
-input = 0.2156
-output = 0.6468
-cache_read = 0.00686
+input = 0.44
+output = 1.32
+cache_read = 0.028
 
 [[models]]
 id = "deepseek/deepseek-v4-pro"
@@ -142,7 +142,7 @@ cache_read = 0.108
 id = "deepseek/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 context = 1048576
-output = 943718
+output = 384000
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -203,27 +203,9 @@ efforts = [
 release_date = "2026-10-17"
 
 [models.cost]
-input = 0.03
-output = 0.2
-cache_read = 0.001
-
-[[models]]
-id = "dots-studio/dots-3-note-preview:free"
-name = "Dots3-Note Preview (free)"
-context = 512000
-output = 460800
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.0
-output = 0.0
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "elorian/glimpse"
@@ -249,7 +231,7 @@ cache_read = 0.06
 id = "fireworks/ember-1"
 name = "Ember-1"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -674,7 +656,7 @@ cache_write = 0.041667
 id = "google/gemini-4-argon"
 name = "Gemini 4 Argon"
 context = 1048576
-output = 943718
+output = 65536
 input = [
     "text",
     "image",
@@ -701,7 +683,7 @@ cache_write = 0.1875
 id = "google/gemini-4-carbon"
 name = "Gemini 4 Carbon"
 context = 1048576
-output = 943718
+output = 65536
 input = [
     "text",
     "image",
@@ -728,7 +710,7 @@ cache_write = 0.1875
 id = "google/gemini-4-hydrogen"
 name = "Gemini 4 Hydrogen"
 context = 1048576
-output = 943718
+output = 65536
 input = [
     "text",
     "image",
@@ -756,7 +738,7 @@ cache_write = 0.083333
 id = "google/gemini-4-neon"
 name = "Gemini 4 Neon"
 context = 1048576
-output = 943718
+output = 65536
 input = [
     "text",
     "image",
@@ -784,7 +766,7 @@ cache_write = 0.083333
 id = "google/gemini-nano-banana-2.1"
 name = "Nano Banana 2.1"
 context = 65536
-output = 58982
+output = 32768
 input = [
     "text",
     "image",
@@ -841,7 +823,7 @@ output = 0.16
 id = "google/gemma-4-26b-a4b-it"
 name = "Gemma 4 26B A4B IT"
 context = 262144
-output = 235929
+output = 32768
 input = [
     "text",
     "image",
@@ -933,3 +915,19 @@ release_date = "2026-08-25"
 input = 0.06
 output = 0.15
 cache_read = 0.015
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042

@@ -350,6 +350,33 @@ cache_read = 0.075
 cache_write = 0.0
 
 [[models]]
+id = "glm-5.3-flashx-legal"
+name = "GLM-5.3-FlashX-Legal"
+context = 1000000
+output = 131072
+input = [
+    "text",
+    "image",
+    "pdf",
+    "video",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-11-02"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.37
+output = 1.25
+cache_read = 0.075
+cache_write = 0.0
+
+[[models]]
 id = "glm-5v-turbo"
 name = "GLM-5V-Turbo"
 context = 200000

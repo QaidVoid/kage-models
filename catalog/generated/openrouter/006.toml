@@ -6,80 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1024000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.035
-output = 1.5
-cache_read = 0.0175
-
-[[models]]
-id = "qwen/qwen3.8-flash"
-name = "Qwen3.8 Flash"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-08-26"
-
-[models.budget]
-min = 0
-
-[models.cost]
-input = 0.15
-output = 0.47
-cache_read = 0.016
-
-[[models]]
-id = "qwen/qwen3.8-max-0902"
-name = "Qwen3.8 Max 0902"
-context = 1000000
-output = 131072
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "minimal",
-    "low",
-    "medium",
-    "high",
-    "xhigh",
-]
-release_date = "2026-09-02"
-
-[models.cost]
-input = 2.0
-output = 6.0
-cache_read = 0.25
-
-[[models]]
 id = "qwen/qwen3.8-max-prime"
 name = "Qwen 3.8 Max Prime"
 context = 1000000
@@ -360,7 +286,7 @@ id = "stepfun/step-3.7-flash"
 name = "Step 3.7 Flash"
 context = 256000
 input_limit = 256000
-output = 230400
+output = 256000
 input = [
     "text",
     "image",
@@ -430,7 +356,7 @@ cache_read = 0.033
 id = "tencent/hy4"
 name = "Hy4"
 context = 1048576
-input_limit = 983010
+input_limit = 983040
 output = 65536
 input = [
     "text",
@@ -474,6 +400,7 @@ cache_read = 0.0015
 id = "tencent/hy4-preview"
 name = "Hy4 preview"
 context = 1048576
+input_limit = 983040
 output = 64000
 input = ["text"]
 produces = ["text"]
@@ -494,7 +421,7 @@ cache_read = 0.042
 id = "thinkingmachines/inkling"
 name = "Inkling"
 context = 1048576
-output = 471859
+output = 524288
 input = [
     "text",
     "image",
@@ -549,7 +476,7 @@ cache_read = 0.015
 id = "thinkingmachines/inkling-2-small"
 name = "Inkling 2 Small"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -651,6 +578,30 @@ output = 7.5
 cache_read = 0.25
 
 [[models]]
+id = "upstage/solar-mini-4-5"
+name = "Solar Mini 4.5 (Preview)"
+context = 524288
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
+
+[models.cost]
+input = 0.01
+output = 0.04
+cache_read = 0.001
+
+[[models]]
 id = "upstage/solar-mini4"
 name = "Solar Mini 4"
 context = 524288
@@ -673,6 +624,30 @@ release_date = "2026-09-22"
 input = 0.05
 output = 0.2
 cache_read = 0.005
+
+[[models]]
+id = "upstage/solar-pro-4-contributor"
+name = "Solar Pro 4 Contributor"
+context = 524288
+output = 131072
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
+
+[models.cost]
+input = 0.09
+output = 0.36
+cache_read = 0.018
 
 [[models]]
 id = "upstage/solar-pro4"
@@ -722,7 +697,7 @@ cache_read = 0.2
 id = "x-ai/grok-4.3"
 name = "Grok 4.3"
 context = 1000000
-output = 900000
+output = 30000
 input = [
     "text",
     "image",
@@ -747,7 +722,7 @@ cache_read = 0.2
 id = "x-ai/grok-4.5"
 name = "Grok 4.5"
 context = 500000
-output = 450000
+output = 500000
 input = [
     "text",
     "image",
@@ -771,7 +746,7 @@ cache_read = 0.3
 id = "x-ai/grok-4.6"
 name = "Grok 4.6"
 context = 500000
-output = 450000
+output = 500000
 input = [
     "text",
     "image",
@@ -796,7 +771,7 @@ cache_read = 0.5
 id = "x-ai/grok-4.7"
 name = "Grok 4.7"
 context = 500000
-output = 450000
+output = 500000
 input = [
     "text",
     "image",
@@ -818,28 +793,6 @@ output = 6.0
 cache_read = 0.5
 
 [[models]]
-id = "xiaomi/mimo-v2.5"
-name = "MiMo-V2.5"
-context = 1000000
-output = 65536
-input = [
-    "text",
-    "image",
-    "audio",
-    "video",
-]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-04-22"
-interleaved = "reasoning_details"
-
-[models.cost]
-input = 0.4
-output = 2.0
-cache_read = 0.08
-
-[[models]]
 id = "xiaomi/mimo-v2.6-flash"
 name = "MiMo-V2.6-Flash"
 context = 1048576
@@ -859,6 +812,27 @@ release_date = "2026-09-22"
 input = 0.14
 output = 0.28
 cache_read = 0.0028
+
+[[models]]
+id = "xiaomi/mimo-v2.6-flash-mopd"
+name = "MiMo-V2.6-Flash-MOPD"
+context = 1048576
+output = 32768
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-23"
+
+[models.cost]
+input = 0.5
+output = 1.0
+cache_read = 0.05
 
 [[models]]
 id = "xiaomi/mimo-v2.6-pro"
@@ -895,9 +869,25 @@ input = [
 produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2026-09-21"
+release_date = "2026-09-22"
 
 [models.cost]
 input = 4.35
 output = 8.7
 cache_read = 0.036
+
+[[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11

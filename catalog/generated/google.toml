@@ -191,6 +191,8 @@ output = 4096
 input = [
     "text",
     "image",
+    "pdf",
+    "video",
 ]
 produces = [
     "text",

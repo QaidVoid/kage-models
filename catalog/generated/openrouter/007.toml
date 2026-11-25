@@ -6,22 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "z-ai/glm-4.5"
-name = "GLM-4.5"
-context = 131072
-output = 98304
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2025-07-28"
-
-[models.cost]
-input = 0.6
-output = 2.2
-cache_read = 0.11
-
-[[models]]
 id = "z-ai/glm-4.5-air"
 name = "GLM-4.5-Air"
 context = 131072
@@ -33,9 +17,8 @@ toggle = true
 release_date = "2025-07-28"
 
 [models.cost]
-input = 0.13
-output = 0.85
-cache_read = 0.025
+input = 0.14
+output = 0.86
 
 [[models]]
 id = "z-ai/glm-4.5v"
@@ -90,7 +73,7 @@ release_date = "2025-12-08"
 [models.cost]
 input = 0.3
 output = 0.9
-cache_read = 0.055
+cache_read = 0.05
 
 [[models]]
 id = "z-ai/glm-4.7"
@@ -112,8 +95,8 @@ cache_read = 0.11
 [[models]]
 id = "z-ai/glm-4.7-flash"
 name = "GLM-4.7-Flash"
-context = 200000
-output = 117964
+context = 131072
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -180,7 +163,7 @@ cache_read = 0.26
 id = "z-ai/glm-5.2"
 name = "GLM-5.2"
 context = 1048576
-output = 943718
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -201,7 +184,7 @@ cache_read = 0.14
 id = "z-ai/glm-5.3"
 name = "GLM-5.3"
 context = 1048576
-output = 943718
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -221,7 +204,7 @@ cache_read = 0.0689
 id = "z-ai/glm-5.3-flash"
 name = "GLM-5.3-Flash"
 context = 1048576
-output = 943718
+output = 131072
 input = [
     "text",
     "image",
@@ -267,7 +250,7 @@ cache_read = 0.075
 
 [[models]]
 id = "z-ai/glm-5.3-flashx-legal"
-name = "GLM 5.3 FlashX Legal"
+name = "GLM-5.3-FlashX-Legal"
 context = 1048576
 output = 131072
 input = [
@@ -442,7 +425,7 @@ cache_write = 2.5
 id = "~deepseek/deepseek-flash-latest"
 name = "DeepSeek Flash Latest"
 context = 1048576
-output = 393216
+output = 943718
 input = [
     "text",
     "image",
@@ -458,9 +441,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.03
-output = 0.2
-cache_read = 0.001
+input = 0.036
+output = 0.5
+cache_read = 0.01
 
 [[models]]
 id = "~deepseek/deepseek-pro-latest"
@@ -580,9 +563,9 @@ efforts = [
 release_date = "2026-04-27"
 
 [models.cost]
-input = 0.19
-output = 10.6066
-cache_read = 0.19
+input = 0.1824
+output = 11.0055
+cache_read = 0.18
 
 [[models]]
 id = "~openai/gpt-astra-latest"

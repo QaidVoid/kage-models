@@ -122,7 +122,7 @@ release_date = "2026-09-02"
 id = "glm-5-2"
 name = "GLM-5.2"
 context = 1048576
-output = 943718
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -365,7 +365,7 @@ release_date = "2026-09-22"
 id = "gpt-oss-120b"
 name = "GPT OSS 120B"
 context = 128000
-output = 117964
+output = 131072
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -381,7 +381,7 @@ release_date = "2025-08-05"
 id = "grok-4-6"
 name = "Grok 4.6"
 context = 500000
-output = 450000
+output = 500000
 input = [
     "text",
     "image",
@@ -401,7 +401,7 @@ release_date = "2026-08-12"
 id = "grok-4-7"
 name = "Grok 4.7"
 context = 500000
-output = 450000
+output = 500000
 input = [
     "text",
     "image",

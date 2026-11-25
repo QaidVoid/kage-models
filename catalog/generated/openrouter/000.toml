@@ -621,7 +621,7 @@ cache_read = 0.113
 id = "bytedance-seed/seed-2-1-turbo"
 name = "Seed 2.1 Turbo"
 context = 262144
-output = 235929
+output = 256000
 input = [
     "text",
     "image",
@@ -787,7 +787,7 @@ output = 1.0
 id = "deepseek/deepseek-chat-v3.1"
 name = "DeepSeek V3.1"
 context = 163840
-output = 147456
+output = 32768
 input = ["text"]
 produces = ["text"]
 thinks = true

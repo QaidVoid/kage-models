@@ -248,7 +248,7 @@ efforts = [
     "medium",
     "high",
 ]
-release_date = "2026-10-06"
+release_date = "2026-10-05"
 
 [models.cost]
 input = 0.7
@@ -272,7 +272,7 @@ efforts = [
     "medium",
     "high",
 ]
-release_date = "2026-10-06"
+release_date = "2026-10-05"
 
 [models.cost]
 input = 0.7
@@ -295,7 +295,7 @@ efforts = [
     "none",
     "high",
 ]
-release_date = "2026-04-29"
+release_date = "2026-04-28"
 
 [models.cost]
 input = 1.5
@@ -318,7 +318,7 @@ efforts = [
     "none",
     "high",
 ]
-release_date = "2026-04-29"
+release_date = "2026-04-28"
 
 [models.cost]
 input = 1.5

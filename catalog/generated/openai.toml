@@ -603,6 +603,33 @@ cache_read = 1.0
 cache_write = 12.5
 
 [[models]]
+id = "gpt-6-astra-healthcare"
+name = "GPT-6 Astra Healthcare"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
+
+[models.cost]
+input = 10.0
+output = 50.0
+cache_read = 1.0
+
+[[models]]
 id = "gpt-6-luna"
 name = "GPT-6 Luna"
 context = 1050000
@@ -689,6 +716,33 @@ cache_read = 0.1
 cache_write = 2.5
 
 [[models]]
+id = "gpt-6.1-sol-healthcare"
+name = "GPT-6.1 Sol Healthcare"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+
+[[models]]
 id = "gpt-6.1-terra"
 name = "GPT-6.1 Terra"
 context = 1050000
@@ -746,6 +800,34 @@ cache_read = 0.4
 cache_write = 10.0
 
 [[models]]
+id = "gpt-6.2-astra-healthcare"
+name = "GPT-6.2 Astra Healthcare"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
+
+[models.cost]
+input = 8.0
+output = 40.0
+cache_read = 0.4
+cache_write = 10.0
+
+[[models]]
 id = "gpt-6.2-sol"
 name = "GPT-6.2 Sol"
 context = 1050000
@@ -766,6 +848,34 @@ efforts = [
     "max",
 ]
 release_date = "2026-11-17"
+
+[models.cost]
+input = 2.0
+output = 10.0
+cache_read = 0.1
+cache_write = 2.5
+
+[[models]]
+id = "gpt-6.2-sol-healthcare"
+name = "GPT-6.2 Sol Healthcare"
+context = 1050000
+input_limit = 922000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+]
+release_date = "2026-11-24"
 
 [models.cost]
 input = 2.0

@@ -8,7 +8,7 @@ api = "https://api.fireworks.ai/inference/v1/"
 [[models]]
 id = "accounts/fireworks/models/deepseek-v4p1-flash"
 name = "DeepSeek V4.1 Flash"
-context = 1000000
+context = 1048576
 output = 384000
 input = [
     "text",
@@ -33,7 +33,7 @@ cache_read = 0.006
 [[models]]
 id = "accounts/fireworks/models/deepseek-v4p1-flash-1017"
 name = "DeepSeek V4.1 Flash 1017"
-context = 1000000
+context = 1048576
 output = 384000
 input = [
     "text",
@@ -127,6 +127,28 @@ output = 0.5
 cache_read = 0.03
 
 [[models]]
+id = "accounts/fireworks/models/hy4-flash"
+name = "Hy4 flash"
+context = 524288
+output = 65536
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+release_date = "2026-11-16"
+interleaved = "reasoning_content"
+
+[models.budget]
+min = 0
+
+[models.cost]
+input = 0.07
+output = 0.281
+cache_read = 0.003
+
+[[models]]
 id = "accounts/fireworks/models/kimi-k3"
 name = "Kimi K3"
 context = 1048576
@@ -202,7 +224,7 @@ cache_read = 0.06
 [[models]]
 id = "accounts/fireworks/models/minimax-m3p1-flash"
 name = "MiniMax-M3.1-Flash"
-context = 1000000
+context = 1048576
 output = 512000
 input = [
     "text",
@@ -296,6 +318,55 @@ output = 6.0
 cache_read = 0.25
 
 [[models]]
+id = "accounts/fireworks/models/qwen4-max"
+name = "Qwen4 Max"
+context = 262144
+output = 262144
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+    "xhigh",
+]
+release_date = "2026-11-16"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 1.5
+output = 4.5
+cache_read = 0.075
+
+[[models]]
+id = "accounts/fireworks/models/ultramarine-1-flash-us"
+name = "Ultramarine 1 Flash"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-11-12"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.15
+output = 0.5
+cache_read = 0.03
+
+[[models]]
 id = "accounts/fireworks/routers/deepseek-flash-latest"
 name = "DeepSeek Flash Latest"
 context = 1000000
@@ -319,6 +390,31 @@ interleaved = "reasoning_content"
 input = 0.3
 output = 1.2
 cache_read = 0.006
+
+[[models]]
+id = "accounts/fireworks/routers/deepseek-v4p1-flash-1017-flex"
+name = "DeepSeek V4.1 Flash 1017 Flex"
+context = 1048576
+output = 384000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+toggle = true
+release_date = "2026-10-17"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.003
 
 [[models]]
 id = "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot"
@@ -371,6 +467,31 @@ output = 4.8
 cache_read = 0.024
 
 [[models]]
+id = "accounts/fireworks/routers/deepseek-v4p1-flash-1017-us"
+name = "DeepSeek V4.1 Flash 1017 (US)"
+context = 1048576
+output = 384000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+toggle = true
+release_date = "2026-10-17"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.45
+output = 1.8
+cache_read = 0.009
+
+[[models]]
 id = "accounts/fireworks/routers/deepseek-v4p1-flash-spot"
 name = "DeepSeek V4.1 Flash Spot"
 context = 1000000
@@ -394,6 +515,31 @@ interleaved = "reasoning_content"
 input = 0.15
 output = 0.6
 cache_read = 0.003
+
+[[models]]
+id = "accounts/fireworks/routers/deepseek-v4p1-flash-us"
+name = "DeepSeek V4.1 Flash (US)"
+context = 1048576
+output = 384000
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+toggle = true
+release_date = "2026-09-10"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.45
+output = 1.8
+cache_read = 0.009
 
 [[models]]
 id = "accounts/fireworks/routers/glm-5p3-fast"
@@ -436,6 +582,27 @@ interleaved = "reasoning_content"
 input = 0.7
 output = 2.2
 cache_read = 0.13
+
+[[models]]
+id = "accounts/fireworks/routers/glm-5p3-us"
+name = "GLM 5.3 (US)"
+context = 1048573
+output = 262144
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-08-14"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 2.1
+output = 6.6
+cache_read = 0.39
 
 [[models]]
 id = "accounts/fireworks/routers/glm-fast-latest"
@@ -556,8 +723,8 @@ output = 22.5
 cache_read = 0.45
 
 [[models]]
-id = "accounts/fireworks/routers/kimi-k3-spot"
-name = "Kimi K3 Spot"
+id = "accounts/fireworks/routers/kimi-k3-us"
+name = "Kimi K3 (US)"
 context = 1048576
 output = 1048576
 input = [
@@ -577,13 +744,13 @@ release_date = "2026-07-16"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 2.1
-output = 10.5
-cache_read = 0.21
+input = 4.5
+output = 22.5
+cache_read = 0.45
 
 [[models]]
-id = "accounts/fireworks/routers/kimi-latest"
-name = "Kimi Latest"
+id = "accounts/fireworks/routers/kimi-k3p1-pro-us"
+name = "Kimi K3.1 Pro (US)"
 context = 1048576
 output = 1048576
 input = [
@@ -599,7 +766,33 @@ efforts = [
     "max",
 ]
 toggle = true
-release_date = "2026-07-16"
+release_date = "2026-10-23"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 2.5
+output = 12.5
+cache_read = 0.25
+
+[[models]]
+id = "accounts/fireworks/routers/kimi-latest"
+name = "Kimi Latest (Kimi K3.1 Pro)"
+context = 1048576
+output = 1048576
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+    "max",
+]
+toggle = true
+release_date = "2026-10-23"
 interleaved = "reasoning_content"
 
 [models.cost]
