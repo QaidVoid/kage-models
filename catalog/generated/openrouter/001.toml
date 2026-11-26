@@ -6,6 +6,20 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "deepseek/deepseek-r1-0528"
+name = "DeepSeek R1 0528"
+context = 163840
+output = 32000
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2025-05-28"
+
+[models.cost]
+input = 0.571
+output = 2.286
+
+[[models]]
 id = "deepseek/deepseek-v3.1-terminus"
 name = "DeepSeek V3.1 Terminus"
 context = 163840
@@ -134,9 +148,9 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 1.28
-output = 2.56
-cache_read = 0.108
+input = 0.888188
+output = 1.5082
+cache_read = 0.2
 
 [[models]]
 id = "deepseek/deepseek-v4-pro-0813"
@@ -289,7 +303,7 @@ input = [
 produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2025-06-17"
+release_date = "2025-07-22"
 
 [models.cost]
 input = 0.1
@@ -807,7 +821,7 @@ output = 0.15
 id = "google/gemma-3-27b-it"
 name = "Gemma 3 27B IT"
 context = 131072
-output = 16384
+output = 131072
 input = [
     "text",
     "image",
@@ -817,7 +831,8 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.16
+output = 0.45
+cache_read = 0.04
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it"
@@ -895,39 +910,3 @@ release_date = "2026-04-02"
 [models.cost]
 input = 0.0
 output = 0.0
-
-[[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.15
-cache_read = 0.015
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042

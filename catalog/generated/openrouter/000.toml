@@ -640,6 +640,7 @@ output = 2.5
 id = "bytedance-seed/seed-2.0-lite"
 name = "Seed 2.0 Lite"
 context = 262144
+input_limit = 224000
 output = 131072
 input = [
     "text",
@@ -665,6 +666,7 @@ output = 2.0
 id = "bytedance-seed/seed-2.0-mini"
 name = "Seed 2.0 Mini"
 context = 262144
+input_limit = 224000
 output = 131072
 input = [
     "text",
@@ -798,17 +800,3 @@ release_date = "2025-08-21"
 input = 0.25
 output = 0.95
 cache_read = 0.13
-
-[[models]]
-id = "deepseek/deepseek-r1-0528"
-name = "DeepSeek R1 0528"
-context = 163840
-output = 32000
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-05-28"
-
-[models.cost]
-input = 0.571
-output = 2.286

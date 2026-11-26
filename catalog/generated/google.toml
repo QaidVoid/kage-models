@@ -93,7 +93,7 @@ input = [
 produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2025-06-17"
+release_date = "2025-07-22"
 
 [models.budget]
 min = 512

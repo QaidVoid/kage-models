@@ -6,6 +6,85 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
+id = "xiaomi/mimo-v2.6-flash-mopd"
+name = "MiMo-V2.6-Flash-MOPD"
+context = 1048576
+output = 32768
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-23"
+
+[models.cost]
+input = 0.5
+output = 1.0
+cache_read = 0.05
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro"
+name = "MiMo-V2.6-Pro"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 0.435
+output = 0.87
+cache_read = 0.0036
+
+[[models]]
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+name = "MiMo-V2.6-Pro-UltraSpeed"
+context = 1048576
+output = 131072
+input = [
+    "text",
+    "image",
+    "audio",
+    "video",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-09-22"
+
+[models.cost]
+input = 4.35
+output = 8.7
+cache_read = 0.036
+
+[[models]]
+id = "z-ai/glm-4.5"
+name = "GLM-4.5"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.6
+output = 2.2
+cache_read = 0.11
+
+[[models]]
 id = "z-ai/glm-4.5-air"
 name = "GLM-4.5-Air"
 context = 131072
@@ -17,8 +96,9 @@ toggle = true
 release_date = "2025-07-28"
 
 [models.cost]
-input = 0.14
-output = 0.86
+input = 0.2
+output = 1.1
+cache_read = 0.03
 
 [[models]]
 id = "z-ai/glm-4.5v"
@@ -220,9 +300,9 @@ efforts = [
 release_date = "2026-08-26"
 
 [models.cost]
-input = 0.12
-output = 0.38
-cache_read = 0.02
+input = 0.15
+output = 0.5
+cache_read = 0.03
 
 [[models]]
 id = "z-ai/glm-5.3-flashx"
@@ -449,7 +529,7 @@ cache_read = 0.01
 id = "~deepseek/deepseek-pro-latest"
 name = "DeepSeek Pro Latest"
 context = 1048576
-output = 393216
+output = 943718
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -462,9 +542,9 @@ efforts = [
 release_date = "2026-09-14"
 
 [models.cost]
-input = 0.0999
-output = 5.0
-cache_read = 0.0999
+input = 0.111
+output = 4.44
+cache_read = 0.097
 
 [[models]]
 id = "~deepseek/deepseek-v4-flash-latest"
@@ -702,23 +782,6 @@ input = 1.0
 output = 5.0
 cache_read = 0.05
 cache_write = 1.25
-
-[[models]]
-id = "~unbiased/pareto-latest"
-name = "Pareto Latest"
-context = 1048576
-output = 131072
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-release_date = "2026-10-13"
-
-[models.cost]
-input = 0.8
-output = 3.2
-cache_read = 0.03
 
 [[models]]
 id = "~x-ai/grok-latest"

@@ -563,6 +563,51 @@ output = 6.6
 cache_read = 0.39
 
 [[models]]
+id = "accounts/fireworks/routers/glm-5p3-flash-flex"
+name = "GLM 5.3 Flash Flex"
+context = 1048573
+output = 131072
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-08-26"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.075
+output = 0.25
+cache_read = 0.015
+
+[[models]]
+id = "accounts/fireworks/routers/glm-5p3-flex"
+name = "GLM 5.3 Flex"
+context = 1048573
+output = 262144
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "high",
+    "max",
+]
+release_date = "2026-08-14"
+interleaved = "reasoning_content"
+
+[models.cost]
+input = 0.7
+output = 2.2
+cache_read = 0.13
+
+[[models]]
 id = "accounts/fireworks/routers/glm-5p3-spot"
 name = "GLM 5.3 Spot"
 context = 1048573

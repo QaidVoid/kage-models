@@ -335,7 +335,6 @@ output = 500000
 input = [
     "text",
     "image",
-    "pdf",
 ]
 produces = ["text"]
 thinks = true

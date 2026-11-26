@@ -6,6 +6,19 @@ name = "Z.AI"
 api = "https://api.z.ai/api/paas/v4"
 
 [[models]]
+id = "glm-4-32b-0414-128k"
+name = "GLM-4-32B-0414-128K"
+context = 128000
+output = 16384
+input = ["text"]
+produces = ["text"]
+release_date = "2025-04-14"
+
+[models.cost]
+input = 0.1
+output = 0.1
+
+[[models]]
 id = "glm-4.5"
 name = "GLM-4.5"
 context = 131072
