@@ -6,45 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "mistralai/mistral-saba"
-name = "Saba"
-context = 32768
-output = 26214
-input = [
-    "text",
-    "pdf",
-]
-produces = ["text"]
-release_date = "2025-02-17"
-
-[models.cost]
-input = 0.2
-output = 0.6
-cache_read = 0.02
-
-[[models]]
-id = "mistralai/mistral-small-2603"
-name = "Mistral Small 4"
-context = 262144
-output = 209715
-input = [
-    "text",
-    "image",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "high",
-]
-release_date = "2026-03-16"
-
-[models.cost]
-input = 0.15
-output = 0.6
-cache_read = 0.015
-
-[[models]]
 id = "mistralai/mistral-small-3.1-24b-instruct"
 name = "Mistral Small 3.1 24B"
 context = 128000
@@ -112,10 +73,36 @@ output = 0.3
 cache_read = 0.01
 
 [[models]]
+id = "moonshotai/kimi-k2"
+name = "Kimi K2 0711"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+release_date = "2025-07-11"
+
+[models.cost]
+input = 0.57
+output = 2.3
+
+[[models]]
+id = "moonshotai/kimi-k2-0905"
+name = "Kimi K2 Instruct 0905"
+context = 262144
+output = 98304
+input = ["text"]
+produces = ["text"]
+release_date = "2025-09-05"
+
+[models.cost]
+input = 0.6
+output = 2.5
+
+[[models]]
 id = "moonshotai/kimi-k2.5"
 name = "Kimi K2.5"
 context = 262144
-output = 262144
+output = 131072
 input = [
     "text",
     "image",
@@ -127,9 +114,8 @@ release_date = "2026-01-27"
 interleaved = "reasoning_details"
 
 [models.cost]
-input = 0.5
-output = 2.5
-cache_read = 0.15
+input = 0.6
+output = 3.0
 
 [[models]]
 id = "moonshotai/kimi-k2.6"
@@ -738,3 +724,29 @@ release_date = "2025-10-06"
 [models.cost]
 input = 15.0
 output = 120.0
+
+[[models]]
+id = "openai/gpt-5.1"
+name = "GPT-5.1"
+context = 400000
+input_limit = 272000
+output = 128000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-11-13"
+
+[models.cost]
+input = 1.25
+output = 10.0
+cache_read = 0.125

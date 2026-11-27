@@ -6,20 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "deepseek/deepseek-r1-0528"
-name = "DeepSeek R1 0528"
-context = 163840
-output = 32000
-input = ["text"]
-produces = ["text"]
-thinks = true
-release_date = "2025-05-28"
-
-[models.cost]
-input = 0.571
-output = 2.286
-
-[[models]]
 id = "deepseek/deepseek-v3.1-terminus"
 name = "DeepSeek V3.1 Terminus"
 context = 163840
@@ -111,7 +97,7 @@ cache_read = 0.035
 id = "deepseek/deepseek-v4-flash-vision-exp"
 name = "DeepSeek V4 Flash Vision Exp"
 context = 1048576
-output = 393216
+output = 262144
 input = [
     "text",
     "image",
@@ -127,9 +113,9 @@ efforts = [
 release_date = "2026-08-21"
 
 [models.cost]
-input = 0.44
-output = 1.32
-cache_read = 0.028
+input = 0.2156
+output = 0.6468
+cache_read = 0.00686
 
 [[models]]
 id = "deepseek/deepseek-v4-pro"
@@ -156,7 +142,7 @@ cache_read = 0.2
 id = "deepseek/deepseek-v4-pro-0813"
 name = "DeepSeek V4 Pro 0813"
 context = 1048576
-output = 384000
+output = 393216
 input = ["text"]
 produces = ["text"]
 thinks = true
@@ -169,9 +155,9 @@ efforts = [
 release_date = "2026-08-13"
 
 [models.cost]
-input = 0.111
-output = 4.44
-cache_read = 0.097
+input = 0.0999
+output = 5.0
+cache_read = 0.0999
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash"
@@ -821,7 +807,7 @@ output = 0.15
 id = "google/gemma-3-27b-it"
 name = "Gemma 3 27B IT"
 context = 131072
-output = 131072
+output = 16384
 input = [
     "text",
     "image",
@@ -831,8 +817,7 @@ release_date = "2025-03-12"
 
 [models.cost]
 input = 0.08
-output = 0.45
-cache_read = 0.04
+output = 0.16
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it"
@@ -910,3 +895,39 @@ release_date = "2026-04-02"
 [models.cost]
 input = 0.0
 output = 0.0
+
+[[models]]
+id = "ibm-granite/granite-4.2-8b"
+name = "Granite 4.2 8B"
+context = 131072
+output = 117964
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "low",
+    "high",
+]
+release_date = "2026-08-25"
+
+[models.cost]
+input = 0.06
+output = 0.15
+cache_read = 0.015
+
+[[models]]
+id = "inclusionai/ling-3.0-flash"
+name = "Ling 3.0 Flash"
+context = 262144
+output = 32768
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-07-23"
+
+[models.cost]
+input = 0.021
+output = 0.063
+cache_read = 0.0042

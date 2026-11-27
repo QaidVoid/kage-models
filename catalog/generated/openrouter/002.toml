@@ -6,42 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "ibm-granite/granite-4.2-8b"
-name = "Granite 4.2 8B"
-context = 131072
-output = 117964
-input = ["text"]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "high",
-]
-release_date = "2026-08-25"
-
-[models.cost]
-input = 0.06
-output = 0.15
-cache_read = 0.015
-
-[[models]]
-id = "inclusionai/ling-3.0-flash"
-name = "Ling 3.0 Flash"
-context = 262144
-output = 32768
-input = ["text"]
-produces = ["text"]
-thinks = true
-toggle = true
-release_date = "2026-07-23"
-
-[models.cost]
-input = 0.021
-output = 0.063
-cache_read = 0.0042
-
-[[models]]
 id = "inclusionai/ling-3.0-flash-vl"
 name = "Ling 3.0 Flash VL"
 context = 131072
@@ -70,7 +34,7 @@ input = ["text"]
 produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2026-08-06"
+release_date = "2026-08-07"
 
 [models.cost]
 input = 0.015
@@ -94,8 +58,8 @@ output = 0.225
 cache_read = 0.015
 
 [[models]]
-id = "inclusionai/ling-3.2-flash:free"
-name = "Ling 3.2 Flash (free)"
+id = "inclusionai/ling-3.2-flash"
+name = "Ling 3.2 Flash"
 context = 1048576
 output = 262144
 input = [
@@ -105,11 +69,31 @@ input = [
 produces = ["text"]
 thinks = true
 toggle = true
-release_date = "2026-11-13"
+release_date = "2026-11-05"
 
 [models.cost]
-input = 0.0
-output = 0.0
+input = 0.3
+output = 0.9
+cache_read = 0.06
+
+[[models]]
+id = "inclusionai/lingsante-3.1-air-vl"
+name = "LingSante 3.1 Air VL"
+context = 131072
+output = 32768
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2026-11-19"
+
+[models.cost]
+input = 0.06
+output = 0.18
+cache_read = 0.012
 
 [[models]]
 id = "kt/midm-k-3.0-pro"
@@ -202,15 +186,15 @@ cache_read = 0.025
 id = "meta-llama/llama-3.3-70b-instruct"
 name = "Llama-3.3-70B-Instruct"
 context = 131072
-output = 4096
+output = 32768
 input = ["text"]
 produces = ["text"]
 release_date = "2024-12-06"
 
 [models.cost]
-input = 0.71
-output = 0.71
-cache_read = 0.71
+input = 0.59
+output = 0.79
+cache_read = 0.295
 
 [[models]]
 id = "meta-llama/llama-4-maverick"
@@ -279,7 +263,7 @@ cache_write = 0.125
 id = "meta/muse-glimmer-30b"
 name = "Muse Glimmer 30B"
 context = 131072
-output = 131072
+output = 16384
 input = [
     "text",
     "image",
@@ -295,8 +279,8 @@ efforts = [
 release_date = "2026-08-10"
 
 [models.cost]
-input = 0.35
-output = 1.5
+input = 0.3
+output = 1.2
 cache_read = 0.04
 
 [[models]]
@@ -762,3 +746,42 @@ release_date = "2024-07-18"
 [models.cost]
 input = 0.029
 output = 0.03
+
+[[models]]
+id = "mistralai/mistral-saba"
+name = "Saba"
+context = 32768
+output = 26214
+input = [
+    "text",
+    "pdf",
+]
+produces = ["text"]
+release_date = "2025-02-17"
+
+[models.cost]
+input = 0.2
+output = 0.6
+cache_read = 0.02
+
+[[models]]
+id = "mistralai/mistral-small-2603"
+name = "Mistral Small 4"
+context = 262144
+output = 209715
+input = [
+    "text",
+    "image",
+]
+produces = ["text"]
+thinks = true
+efforts = [
+    "none",
+    "high",
+]
+release_date = "2026-03-16"
+
+[models.cost]
+input = 0.15
+output = 0.6
+cache_read = 0.015

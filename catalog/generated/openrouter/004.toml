@@ -6,32 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "openai/gpt-5.1"
-name = "GPT-5.1"
-context = 400000
-input_limit = 272000
-output = 128000
-input = [
-    "text",
-    "image",
-    "pdf",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "high",
-]
-release_date = "2025-11-13"
-
-[models.cost]
-input = 1.25
-output = 10.0
-cache_read = 0.125
-
-[[models]]
 id = "openai/gpt-5.1-codex"
 name = "GPT-5.1 Codex"
 context = 400000
@@ -1029,3 +1003,43 @@ release_date = "2025-08-05"
 input = 0.03
 output = 0.13
 cache_read = 0.03
+
+[[models]]
+id = "openai/gpt-oss-safeguard-20b"
+name = "GPT OSS Safeguard 20B"
+context = 131072
+output = 65536
+input = ["text"]
+produces = ["text"]
+thinks = true
+efforts = [
+    "low",
+    "medium",
+    "high",
+]
+release_date = "2025-10-29"
+
+[models.cost]
+input = 0.075
+output = 0.3
+cache_read = 0.0375
+
+[[models]]
+id = "openai/o3"
+name = "o3"
+context = 200000
+output = 100000
+input = [
+    "text",
+    "image",
+    "pdf",
+]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-04-16"
+
+[models.cost]
+input = 2.0
+output = 8.0
+cache_read = 0.5

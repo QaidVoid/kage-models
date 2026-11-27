@@ -589,7 +589,12 @@ output = 921600
 input = ["text"]
 produces = ["text"]
 thinks = true
-efforts = ["high"]
+efforts = [
+    "none",
+    "low",
+    "medium",
+    "high",
+]
 release_date = "2026-11-10"
 
 [models.cost]
@@ -800,3 +805,17 @@ release_date = "2025-08-21"
 input = 0.25
 output = 0.95
 cache_read = 0.13
+
+[[models]]
+id = "deepseek/deepseek-r1-0528"
+name = "DeepSeek R1 0528"
+context = 163840
+output = 32000
+input = ["text"]
+produces = ["text"]
+thinks = true
+release_date = "2025-05-28"
+
+[models.cost]
+input = 0.571
+output = 2.286
