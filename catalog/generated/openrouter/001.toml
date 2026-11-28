@@ -89,8 +89,8 @@ efforts = [
 release_date = "2026-07-31"
 
 [models.cost]
-input = 0.047
-output = 0.3
+input = 0.0456
+output = 0.27
 cache_read = 0.035
 
 [[models]]
@@ -134,8 +134,8 @@ release_date = "2026-04-24"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.888188
-output = 1.5082
+input = 0.89
+output = 1.5069
 cache_read = 0.2
 
 [[models]]
@@ -163,7 +163,7 @@ cache_read = 0.0999
 id = "deepseek/deepseek-v4.1-flash"
 name = "DeepSeek V4.1 Flash"
 context = 1048576
-output = 393216
+output = 384000
 input = [
     "text",
     "image",
@@ -179,9 +179,9 @@ efforts = [
 release_date = "2026-09-10"
 
 [models.cost]
-input = 0.14
-output = 0.42
-cache_read = 0.0042
+input = 0.051
+output = 0.567
+cache_read = 0.018
 
 [[models]]
 id = "deepseek/deepseek-v4.1-flash-1017"
@@ -835,9 +835,9 @@ toggle = true
 release_date = "2026-04-02"
 
 [models.cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.0675
+output = 0.225
+cache_read = 0.0375
 
 [[models]]
 id = "google/gemma-4-26b-a4b-it:free"

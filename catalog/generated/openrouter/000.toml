@@ -810,12 +810,12 @@ cache_read = 0.13
 id = "deepseek/deepseek-r1-0528"
 name = "DeepSeek R1 0528"
 context = 163840
-output = 32000
+output = 32768
 input = ["text"]
 produces = ["text"]
 thinks = true
 release_date = "2025-05-28"
 
 [models.cost]
-input = 0.571
-output = 2.286
+input = 0.5
+output = 2.18

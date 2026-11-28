@@ -6,31 +6,6 @@ name = "OpenRouter"
 api = "https://openrouter.ai/api/v1"
 
 [[models]]
-id = "qwen/qwen3.8-27b"
-name = "Qwen3.8 27B"
-context = 1024000
-output = 32768
-input = [
-    "text",
-    "image",
-    "video",
-]
-produces = ["text"]
-thinks = true
-efforts = [
-    "none",
-    "low",
-    "medium",
-    "xhigh",
-]
-release_date = "2026-08-14"
-
-[models.cost]
-input = 0.06
-output = 1.96
-cache_read = 0.059
-
-[[models]]
 id = "qwen/qwen3.8-flash"
 name = "Qwen3.8 Flash"
 context = 1000000
@@ -568,8 +543,8 @@ release_date = "2026-11-05"
 interleaved = "reasoning_content"
 
 [models.cost]
-input = 0.3
-output = 1.0
+input = 0.15
+output = 0.5
 cache_read = 0.03
 
 [[models]]
@@ -914,3 +889,19 @@ release_date = "2025-07-28"
 input = 0.6
 output = 2.2
 cache_read = 0.11
+
+[[models]]
+id = "z-ai/glm-4.5-air"
+name = "GLM-4.5-Air"
+context = 131072
+output = 98304
+input = ["text"]
+produces = ["text"]
+thinks = true
+toggle = true
+release_date = "2025-07-28"
+
+[models.cost]
+input = 0.2
+output = 1.1
+cache_read = 0.03

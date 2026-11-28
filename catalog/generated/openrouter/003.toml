@@ -369,9 +369,9 @@ toggle = true
 release_date = "2026-08-11"
 
 [models.cost]
-input = 0.07
+input = 0.05
 output = 0.2
-cache_read = 0.04
+cache_read = 0.01
 
 [[models]]
 id = "nvidia/nemotron-3.5-lightning:free"
@@ -392,7 +392,7 @@ output = 0.0
 id = "nvidia/nemotron-3.5-super-vl"
 name = "Nemotron 3.5 Super VL"
 context = 1048576
-output = 8192
+output = 131072
 input = [
     "text",
     "image",
@@ -405,7 +405,7 @@ release_date = "2026-10-15"
 
 [models.cost]
 input = 0.15
-output = 0.47
+output = 0.45
 cache_read = 0.02
 
 [[models]]
